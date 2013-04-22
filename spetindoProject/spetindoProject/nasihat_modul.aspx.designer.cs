@@ -10,51 +10,51 @@
 namespace spetindoProject {
     
     
-    public partial class Site1 {
+    public partial class nasihat_modul {
         
         /// <summary>
-        /// ContentSlider control.
+        /// form2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentSlider;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
         
         /// <summary>
-        /// ContentTemplate control.
+        /// DropDownList2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentTemplate;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
         
         /// <summary>
-        /// ContentAsideTemplate control.
+        /// DropDownSuhu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentAsideTemplate;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownSuhu;
         
         /// <summary>
-        /// labeltesting control.
+        /// DropDownTinggiTanah control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labeltesting;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownTinggiTanah;
         
         /// <summary>
-        /// MainContent control.
+        /// DropDownLuas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownLuas;
     }
 }

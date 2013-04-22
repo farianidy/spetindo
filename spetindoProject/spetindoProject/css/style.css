@@ -49,8 +49,9 @@ fieldset {border:0}
 .list li a {color:#e5e5e5}
 .list li a {text-decoration:none}
 .list li a:hover {color:#6fa803}
-.list1 {padding-bottom:11px} 
+.list1 .listt {padding-bottom:11px} 
 .list1 li {padding:0 0 15px 10px;height:1%;background:url(../images/general/marker.gif) no-repeat left 4px}
+.listt li {padding:0 0 15px 10px;height:1%; left 4px}
 .banners {padding:12px 0 0 0}
 .banners li {float:left;font-size:26px;line-height:2.4em;letter-spacing:-1px;margin-left:6px}
 .banners li:first-child {margin-left:0}

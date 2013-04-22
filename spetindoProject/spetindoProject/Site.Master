@@ -33,6 +33,7 @@
         });
     </script>
 </head>
+
 <body id="page1" onLoad="new ElementMaxHeight();>
     <div class="tail-top">
         <!-- header -->
@@ -86,20 +87,7 @@
         <!-- content -->
 	    <section id="content">
 		    <div class="container">
-			    <div id="faded">
-				    <ul class="slides">
-					    <li><img src="images/general/slide-title1.gif"><a href="#"><span><span>Pelajari Lagi</span></span></a></li>
-					    <li><img src="images/general/slide-title4.gif"><a href="#"><span><span>Pelajari Lagi</span></span></a></li>
-					    <li><img src="images/general/slide-title3.gif"><a href="#"><span><span>Pelajari Lagi</span></span></a></li>
-					    <li><img src="images/general/slide-title2.gif"><a href="#"><span><span>Pelajari Lagi</span></span></a></li>
-				    </ul>
-				    <ul class="pagination">
-					    <li><a href="#" rel="0"><span>Beranda</span><small>Selengkapnya</small></a></li>
-					    <li><a href="#" rel="1"><span>Nasihat</span><small>Selengkapnya</small></a></li>
-					    <li><a href="#" rel="2"><span>Budidaya</span><small>Selengkapnya</small></a></li>
-					    <li><a href="#" rel="3"><span>Profil Pasar</span><small>Selengkapnya</small></a></li>
-				    </ul>
-			    </div>
+                <asp:ContentPlaceHolder ID="ContentSlider" runat="server" />
                 <asp:ContentPlaceHolder ID="ContentTemplate" runat="server" />
 		    </div>
 	    </section>
