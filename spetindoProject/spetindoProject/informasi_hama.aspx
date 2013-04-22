@@ -17,8 +17,7 @@
 	    <div class="wrap row-2">
             <form id="form1" runat="server">
 			    <article class="col-1">
-				    <h2>Rekomendasi Pencegahan Hama yang Kemungkinan Menyerang</h2>		
-					<a href="#" class="link2"><span><span>More Solutions</span></span></a>
+				    <h2>Rekomendasi Pencegahan Hama yang Kemungkinan Menyerang</h2>
                 </article>
 				<article class="col-2">
                     <ul class="list1">
@@ -40,11 +39,26 @@
                             <asp:DropDownList ID="DropDownListHama" runat="server"></asp:DropDownList>
                         </li>
                     </ul>
+                    <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton1_Click"  CssClass="link2"
+                        ImageUrl="~/images/button/button_lihat_hasil.png" />
                 </article>
             </form>
             <div class="clear"></div>
 		</div>
 	</div>
+
+    <asp:GridView ID="GridView1" runat="server" CellPadding="4" 
+        EnableModelValidation="True" ForeColor="#333333" GridLines="None" 
+        EmptyDataText="Data tidak tersedia." AllowPaging="True" AllowSorting="True" 
+        OnSorting="GridView1_Sorting" OnPageIndexChanging="GridView1_PageIndexChanging">
+        <AlternatingRowStyle BackColor="White" />
+        <EditRowStyle BackColor="#7C6F57" />
+        <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+        <RowStyle BackColor="#E3EAEB" />
+        <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+    </asp:GridView>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentAsideTemplate" runat="server">
