@@ -8,7 +8,7 @@
 						<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
 					</div>
 				</div>
-				<h2 class="extra">Hosting Plans</h2>
+				<h2 class="extra">Lengkapi Data Sawah Anda Disini</h2>
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentTemplate" runat="server">
@@ -17,33 +17,35 @@
 					<div class="wrap row-2">
                         <form id="form2" runat="server">
 						<article class="col-1">
-							<h2>Lengkapi Data Sawah Anda Disini</h2>
-							
-							<a href="#" class="link2"><span><span>More Solutions</span></span></a> </article>
+							<h2></h2>
+						</article>
 						<article class="col-2">
 							<h2></h2>
                             <ul class="list1">
-								<li>Jenis Tanah <a href="informasi.aspx" class="comments_link"></li>
-								<li>Suhu</li>
-								<li>Ketinggian Tanah</li>
+								<li>Jenis Tanah <br /><a href="informasi_tanah.aspx" class="comments_link">Cara Penentuan</a></li>
+								<li>Suhu <br /> <a href="informasi_ukur_suhu.aspx" class="comments_link">Cara Ukur Suhu</a></li>
+								<li>Ketinggian Tanah <br /> <a href="informasi_ukur_tinggi.aspx" class="comments_link">Cara Ukur Tinggi</a></li>
 								<li>Luas Lahan</li>
 							</ul>
 						</article>
                         <article class="col-3">
                             <h2></h2>
                             <ul class="listt">
-								<li><asp:DropDownList ID="DropDownList2" runat="server" Width="130px" Height="20px">
+								<li><asp:DropDownList ID="DropDownJenisTanah" runat="server" Width="130px" Height="20px">
                                         <asp:ListItem Value="3">Aluvial</asp:ListItem>
                                         <asp:ListItem Value="4">Litosol</asp:ListItem>
                                     </asp:DropDownList></li>
+                                <li></li>
 								<li><asp:DropDownList ID="DropDownSuhu" runat="server" Width="130px" Height="20px">
                                         <asp:ListItem Value="5">18°C - 26 °C </asp:ListItem>
                                         <asp:ListItem Value="6">27 °C - 31 °C </asp:ListItem>
                                     </asp:DropDownList></li>
+                                <li></li>
 								<li><asp:DropDownList ID="DropDownTinggiTanah" runat="server" Width="130px" Height="20px">
                                         <asp:ListItem Value="7">Dataran Rendah</asp:ListItem>
                                         <asp:ListItem Value="8">Dataran Tinggi</asp:ListItem>
                                     </asp:DropDownList></li>
+                                <li></li>
 								<li><asp:DropDownList ID="DropDownLuas" runat="server" Width="130px" Height="20px">
                                         <asp:ListItem Value="9">0-30 Ha</asp:ListItem>
                                         <asp:ListItem Value="10">31-918 Ha</asp:ListItem>
@@ -55,6 +57,9 @@
                                         <asp:ListItem Value="16">5359-More Ha</asp:ListItem>
                                     </asp:DropDownList></li>
 							</ul>
+                            <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton1_Click"  CssClass="link2"
+                                        ImageUrl="~/images/button/data_selesai.jpg" />
+                            <!--<a href="hasil_modul_nasihat.aspx" class="link2"><span><span>Data Selesai</span></span></a>-->
                         </article>
                         </form>
 						<div class="clear"></div>
