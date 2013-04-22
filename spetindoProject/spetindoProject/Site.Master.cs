@@ -11,9 +11,10 @@ namespace spetindoProject
     {
         public String parsing = null;
         index Currentpage = null;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            Page.Title = "SPETINDO - ";
+            Page.Title = "SPETINDO";
 
             Currentpage = this.Page as index;
             if (Currentpage != null)
@@ -21,10 +22,6 @@ namespace spetindoProject
                 //labeltesting.Text = Currentpage.LocationCheck();
                 //this.HyperLink1.NavigateUrl = this.HyperLink1.NavigateUrl + "?" + Currentpage.CheckString();
             }
-        } 
-
-        public Site1()
-        {
         }
 
         public virtual string LocationCheck()
@@ -32,5 +29,4 @@ namespace spetindoProject
             return "";
         }
     }
-
 }

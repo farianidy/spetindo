@@ -11,7 +11,7 @@ namespace spetindoProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Page.Title = Page.Title + "Beranda";
+            Page.Title = "SPETINDO - Beranda";
         }
 
         public string LocationCheck()
