@@ -1,24 +1,9 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Content.master.cs" Inherits="spetindoProject.Content" %>
 
-<asp:Content ID="ContentSlider" ContentPlaceHolderID="ContentSlider" runat="server">
-    <div id="faded">
-		<ul class="slides">
-			<li><img src="images/general/slide-title1.gif"><a href="#"><span><span>Pelajari Lagi</span></span></a></li>
-			<li><img src="images/general/slide-title4.gif"><a href="#"><span><span>Pelajari Lagi</span></span></a></li>
-			<li><img src="images/general/slide-title3.gif"><a href="#"><span><span>Pelajari Lagi</span></span></a></li>
-			<li><img src="images/general/slide-title2.gif"><a href="#"><span><span>Pelajari Lagi</span></span></a></li>
-		</ul>
-		<ul class="pagination">
-			<li><a href="#" rel="0"><span>Beranda</span><small>Selengkapnya</small></a></li>
-			<li><a href="#" rel="1"><span>Nasihat</span><small>Selengkapnya</small></a></li>
-			<li><a href="#" rel="2"><span>Budidaya</span><small>Selengkapnya</small></a></li>
-		    <li><a href="#" rel="3"><span>Profil Pasar</span><small>Selengkapnya</small></a></li>
-		</ul>
-	</div>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentSlider" runat="server">
 </asp:Content>
 
-
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentTemplate" runat="server">   
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentTemplate" runat="server">   
     <div class="inside">
 	    <div class="wrapper row-1">
             <div class="box col-1 maxheight">
@@ -251,7 +236,4 @@
 	    </div>
     </aside>
     <!-- aside -->
-</asp:Content>
-
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 </asp:Content>
