@@ -109,11 +109,5 @@
 
     <script type="text/javascript">    Cufon.now(); </script>
 
-    <form>
-        <asp:Label ID="labeltesting" runat="server"></asp:Label>
-        <asp:ContentPlaceHolder id="MainContent" runat="server">
-        </asp:ContentPlaceHolder>
-    </form>
-
 </body>
 </html>
