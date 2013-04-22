@@ -126,7 +126,8 @@
 									</tr>
 								</table>
 								<div align="none" style="padding:10px">
-                                    <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton1_Click" ImageUrl="~/images/buttmasuk.png" /></div>
+                                    <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton1_Click" 
+                                        ImageUrl="~/images/lihatrekom.png" /></div>
 							</div>
 							
 						

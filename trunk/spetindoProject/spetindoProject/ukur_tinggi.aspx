@@ -80,11 +80,26 @@
                     <!--<asp:Label ID="LabelNama" runat="server" Text="di SPETINDO" Visible="true"></asp:Label></div>-->
                     
 				<asp:Panel ID="panelIsiUtama" runat="server" Visible="true">
+                <div class="body_textarea">
+						<div align="justify"><b>Bahan dan Alat</b></div>
+                        <div align="justify">Bahan yang digunakan adalah tekanan udara di sekitar lahan sebagai objek pengamatan dan kertas sebagai media pencatat hasil.</div>
+                        <asp:Image ID="ImageTekanan" runat="server" Height="93px" 
+                            ImageUrl="~/images/tekanan_udara.jpeg" Width="146px" />
+                            <asp:Image ID="ImageKertas" runat="server" Height="93px" 
+                            ImageUrl="~/images/kertas.jpg" Width="92px" />
+                        <div align="justify">Alat yang digunakan adalah Barometer aneroid sebagai alat untuk pengukuran tekanan udara dan pulpen sebagai alat untuk mencatat hasil pengamatan. </div>
+                        <asp:Image ID="ImageBarometer" runat="server" Height="93px" 
+                            ImageUrl="~/images/Barometer.jpg" Width="109px" />
+                             <asp:Image ID="ImagePulpen" runat="server" Height="93px" 
+                            ImageUrl="~/images/pulpen.jpg" Width="54px" />
+                    </div>
 					<div class="body_textarea">
-						<div align="justify"><b>Rumus Perhitungan</b></div>
+                    <div align="justify"><b>Prosedur Percobaan</b></div>
+                        <div align="justify">- Ukur Tekanan udara di sekitar lahan menggunakan barometer.</div>
+						<div align="justify"><b>Rumus Perhitungan Ketinggian Tanah</b></div>
                         <div align="justify">H = (76 - P)100</div>
 					    <div align="justify">H = ketinggian dari permukaan laut (meter)</div>
-                        <div align="justify">P = tekanan udara (cm Hg) *Diukur menggunakan Barometer*</div>
+                        <div align="justify">P = tekanan udara (cm Hg) *Hasil perhitungan menggunakan Barometer*</div>
                     </div>	
                 </asp:Panel>
 			</div>

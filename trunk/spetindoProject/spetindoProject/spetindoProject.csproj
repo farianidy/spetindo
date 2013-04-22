@@ -59,6 +59,12 @@
     <Content Include="contain.aspx" />
     <Content Include="edit_hama.aspx" />
     <Content Include="edit_pupuk.aspx" />
+    <Content Include="images\Barometer.jpg" />
+    <Content Include="images\kertas.jpg" />
+    <Content Include="images\pulpen.jpg" />
+    <Content Include="images\tanah.jpg" />
+    <Content Include="images\tekanan_udara.jpeg" />
+    <Content Include="images\termometer_tanah.jpg" />
     <Content Include="informasi.aspx" />
     <Content Include="info_permintaanpasar.aspx" />
     <Content Include="info_hargapasar.aspx" />
