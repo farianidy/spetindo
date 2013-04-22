@@ -26,16 +26,46 @@ namespace spetindoProject
         protected void Page_Load(object sender, EventArgs e)
         {
             Page.Title = "Informasi Hama";
+
+            panelHama.Visible = false;
+            ButtonHama.Visible = false;
+            GridView1.Visible = false;
+        }
+
+        protected void DropDownListTanaman_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            id_tanaman = DropDownListTanaman.SelectedValue;
+            string strconnect = ConfigurationManager.ConnectionStrings["Connection"].ConnectionString;
+            connect.ConnectionString = strconnect;
+            listHama.Items.Clear();
+
+            // List hama
+            string strhama = "select nama_hama from hama a, detail_hama b where a.id_hama=b.id_hama and b.id_tanaman = '" + id_tanaman + "'";
+            OracleCommand command1 = new OracleCommand(strhama, connect);
+            try
+            {
+                connect.Open();
+                reader = command1.ExecuteReader();
+                while (reader.Read())
+                {
+                    //listHama.DataSource = reader["nama_hama"].ToString();
+                    //listHama.DataBind();
+                    listHama.Items.Add(reader["nama_hama"].ToString());
+                }
+                reader.Close();
+            }
+            finally
+            {
+                connect.Close();
+            }
+
+            panelHama.Visible = true;
+            ButtonHama.Visible = true;
+
         }
 
         protected void ButtonHama_Click(object sender, EventArgs e)
         {
-            string namapupuk = "";
-            string hargapupuk = "";
-            string takaran = "";
-            string namajenispupuk = "";
-
-
             id_tanaman = DropDownListTanaman.Text;
             nama_hama = listHama.Text;
 
@@ -45,6 +75,7 @@ namespace spetindoProject
             string strquery = "select nama_hama, cara_pencegahan from hama a, detail_hama b, tanaman c where a.id_hama= b.id_hama and b.id_tanaman= c.id_tanaman and c.id_tanaman='" + id_tanaman + "' and a.nama_hama='" + nama_hama + "'";
             OracleCommand command = new OracleCommand(strquery, connect);
             //OracleDataReader read = connect.ExecuteReader(strquery);
+
             try
             {
                 connect.Open();
@@ -72,35 +103,8 @@ namespace spetindoProject
             {
                 connect.Close();
             }
-        }
 
-        protected void DropDownListTanaman_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            id_tanaman = DropDownListTanaman.SelectedValue;
-            string strconnect = ConfigurationManager.ConnectionStrings["Connection"].ConnectionString;
-            connect.ConnectionString = strconnect;
-            listHama.Items.Clear();
-
-            //list hama
-            string strhama = "select nama_hama from hama a, detail_hama b where a.id_hama=b.id_hama and b.id_tanaman = '" + id_tanaman + "'";
-            OracleCommand command1 = new OracleCommand(strhama, connect);
-            try
-            {
-                connect.Open();
-                reader = command1.ExecuteReader();
-                while (reader.Read())
-                {
-                    //listHama.DataSource = reader["nama_hama"].ToString();
-                    //listHama.DataBind();
-                    listHama.Items.Add(reader["nama_hama"].ToString());
-                }
-                reader.Close();
-            }
-            finally
-            {
-                connect.Close();
-            }
-
+            GridView1.Visible = true;
         }
 
         /* To reload gridview with sort and keyword key */
