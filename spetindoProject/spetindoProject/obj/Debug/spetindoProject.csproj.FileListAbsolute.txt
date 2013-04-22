@@ -19,3 +19,9 @@ D:\5109100156\SPETINDO\spetindo\spetindoProject\spetindoProject\bin\Oracle.DataA
 D:\5109100156\SPETINDO\spetindo\spetindoProject\spetindoProject\obj\Debug\ResolveAssemblyReference.cache
 D:\5109100156\SPETINDO\spetindo\spetindoProject\spetindoProject\obj\Debug\spetindoProject.dll
 D:\5109100156\SPETINDO\spetindo\spetindoProject\spetindoProject\obj\Debug\spetindoProject.pdb
+E:\5109100019\svn\spetindoProject\spetindoProject\bin\spetindoProject.dll
+E:\5109100019\svn\spetindoProject\spetindoProject\bin\spetindoProject.pdb
+E:\5109100019\svn\spetindoProject\spetindoProject\bin\Oracle.DataAccess.dll
+E:\5109100019\svn\spetindoProject\spetindoProject\obj\Debug\spetindoProject.csprojResolveAssemblyReference.cache
+E:\5109100019\svn\spetindoProject\spetindoProject\obj\Debug\spetindoProject.dll
+E:\5109100019\svn\spetindoProject\spetindoProject\obj\Debug\spetindoProject.pdb
