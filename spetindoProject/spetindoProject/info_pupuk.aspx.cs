@@ -23,6 +23,8 @@ namespace spetindoProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.Title = "Informasi Pupuk";
+
             string strconnect = ConfigurationManager.ConnectionStrings["Connection"].ConnectionString;
             connect.ConnectionString = strconnect;
             //ListProvinsi.Items.Clear();
