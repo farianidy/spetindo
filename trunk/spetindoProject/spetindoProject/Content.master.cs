@@ -7,16 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace spetindoProject
 {
-    public partial class index : System.Web.UI.Page
+    public partial class Content : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Page.Title = Page.Title + "Beranda";
-        }
 
-        public string LocationCheck()
-        {
-            return "Beranda";
         }
     }
 }

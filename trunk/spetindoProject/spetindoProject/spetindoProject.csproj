@@ -98,6 +98,8 @@
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="StyleSheet.css" />
+    <Content Include="tambah_admin.aspx" />
+    <Content Include="tentang_kami.aspx" />
     <Content Include="Testing.aspx" />
     <Content Include="ukur_suhu.aspx" />
     <Content Include="ukur_tinggi.aspx" />
@@ -130,6 +132,13 @@
     </Compile>
     <Compile Include="contain.aspx.designer.cs">
       <DependentUpon>contain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Content.master.cs">
+      <DependentUpon>Content.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content.master.designer.cs">
+      <DependentUpon>Content.master</DependentUpon>
     </Compile>
     <Compile Include="edit_hama.aspx.cs">
       <DependentUpon>edit_hama.aspx</DependentUpon>
@@ -245,6 +254,20 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="tambah_admin.aspx.cs">
+      <DependentUpon>tambah_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tambah_admin.aspx.designer.cs">
+      <DependentUpon>tambah_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tentang_kami.aspx.cs">
+      <DependentUpon>tentang_kami.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tentang_kami.aspx.designer.cs">
+      <DependentUpon>tentang_kami.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Testing.aspx.cs">
       <DependentUpon>Testing.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -273,6 +296,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
+    <Content Include="Content.master" />
     <None Include="font\GeosansLight.ttf" />
     <Content Include="Site.Master" />
   </ItemGroup>

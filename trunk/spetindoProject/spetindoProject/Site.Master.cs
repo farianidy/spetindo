@@ -13,6 +13,8 @@ namespace spetindoProject
         index Currentpage = null;
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.Title = "SPETINDO - ";
+
             Currentpage = this.Page as index;
             if (Currentpage != null)
             {
