@@ -142,7 +142,6 @@
     <Content Include="images\termometer_tanah.jpg" />
     <Content Include="images\transparent.png" />
     <Content Include="index.aspx" />
-    <Content Include="informasi.aspx" />
     <Content Include="informasi_hama.aspx" />
     <Content Include="informasi_harga_pasar.aspx" />
     <Content Include="informasi_permintaan_pasar.aspx" />
@@ -167,8 +166,6 @@
     <Content Include="images\itemkedelai.png" />
     <Content Include="images\itempadi.png" />
     <Content Include="images\step.png" />
-    <Content Include="info_pupuk.aspx" />
-    <Content Include="info_hama.aspx" />
     <Content Include="info_pempembudi.aspx" />
     <Content Include="kelolaadmin.aspx" />
     <Content Include="main page.aspx" />
@@ -267,13 +264,6 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="informasi.aspx.cs">
-      <DependentUpon>informasi.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="informasi.aspx.designer.cs">
-      <DependentUpon>informasi.aspx</DependentUpon>
-    </Compile>
     <Compile Include="informasi_hama.aspx.cs">
       <DependentUpon>informasi_hama.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -336,20 +326,6 @@
     </Compile>
     <Compile Include="info_hargapasar.aspx.designer.cs">
       <DependentUpon>info_hargapasar.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="info_pupuk.aspx.cs">
-      <DependentUpon>info_pupuk.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="info_pupuk.aspx.designer.cs">
-      <DependentUpon>info_pupuk.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="info_hama.aspx.cs">
-      <DependentUpon>info_hama.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="info_hama.aspx.designer.cs">
-      <DependentUpon>info_hama.aspx</DependentUpon>
     </Compile>
     <Compile Include="info_pempembudi.aspx.cs">
       <DependentUpon>info_pempembudi.aspx</DependentUpon>
@@ -485,7 +461,6 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <Content Include="Content.master" />
     <None Include="font\GeosansLight.ttf" />
     <Content Include="Site.Master" />
