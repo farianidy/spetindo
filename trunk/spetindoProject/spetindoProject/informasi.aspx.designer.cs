@@ -40,15 +40,6 @@ namespace spetindoProject {
         protected global::System.Web.UI.WebControls.Panel panelMenu;
         
         /// <summary>
-        /// LabelNama control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelNama;
-        
-        /// <summary>
         /// panelIsiUtama control.
         /// </summary>
         /// <remarks>

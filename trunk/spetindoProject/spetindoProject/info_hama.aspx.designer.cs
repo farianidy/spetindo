@@ -40,6 +40,15 @@ namespace spetindoProject {
         protected global::System.Web.UI.WebControls.Panel panelMenu;
         
         /// <summary>
+        /// panelTanaman control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelTanaman;
+        
+        /// <summary>
         /// DropDownListTanaman control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace spetindoProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownListTanaman;
+        
+        /// <summary>
+        /// panelHama control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelHama;
         
         /// <summary>
         /// listHama control.
@@ -65,51 +83,6 @@ namespace spetindoProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ButtonHama;
-        
-        /// <summary>
-        /// ImageButtonHama control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButtonHama;
-        
-        /// <summary>
-        /// LabelNamaPupuk control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelNamaPupuk;
-        
-        /// <summary>
-        /// LabelJenisPupuk control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelJenisPupuk;
-        
-        /// <summary>
-        /// LabelHarga control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelHarga;
-        
-        /// <summary>
-        /// LabelTakaran control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelTakaran;
         
         /// <summary>
         /// GridView1 control.

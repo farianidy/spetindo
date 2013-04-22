@@ -14,6 +14,10 @@ div, h1, h2, h3, h4, p, form, label, input, textarea, img, span{
 	margin:0; padding:0;
 }
 
+h1, h2, h3, h4{
+	font-weight:bold;
+}
+
 ul{
 	margin:0; 
 	padding:0; 
