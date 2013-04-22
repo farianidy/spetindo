@@ -28,7 +28,7 @@
 						<article class="col-2">
 							<h2></h2>
                             <ul class="list1">
-								<li><a href="informasi.aspx" class="comments_link">Jenis Tanah</a></li>
+								<li>Jenis Tanah <a href="informasi.aspx" class="comments_link"></li>
 								<li>Suhu</li>
 								<li>Ketinggian Tanah</li>
 								<li>Luas Lahan</li>
