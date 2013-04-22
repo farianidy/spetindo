@@ -85,7 +85,7 @@
                     <div class="head"> Rekomendasi Pencegahan Hama yang Kemungkinan Menyerang</div>
                     <div class="body_textarea">
                         <asp:Panel ID="panelTanaman" runat="server" Visible="true">
-                            Pilih tanaman yang akan ditanam:
+                            Pilih tanaman yang akan ditanam: 
                             <asp:DropDownList ID="DropDownListTanaman" runat="server" AutoPostBack="True" 
                                 onselectedindexchanged="DropDownListTanaman_SelectedIndexChanged">
                                 <asp:ListItem Value="TA001">Padi</asp:ListItem>
@@ -94,7 +94,7 @@
                             </asp:DropDownList>
                         </asp:Panel>
                         <asp:Panel ID="panelHama" runat="server" Visible="false">
-                            Pilih hama yang kemungkinan menyerang:
+                            Pilih hama yang kemungkinan menyerang: 
                             <asp:DropDownList ID="listHama" runat="server"></asp:DropDownList>
                         </asp:Panel>
                         <asp:Button ID="ButtonHama" runat="server" Text="Cek" onclick="ButtonHama_Click" />

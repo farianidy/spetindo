@@ -84,9 +84,7 @@
 				    <div class="head">Informasi Pengukuran</div>
                     <asp:Panel ID="panelIsiUtama" runat="server" Visible="true">
                         <div class="body_textarea">
-                            <div align="justify">
-                                <h3>Jenis Tanah</h3>
-                            </div>
+                            <h3>Jenis Tanah</h3>
                             <div align="justify">
                                 <h4>1. Tanah Aluvial</h4>
                                 <p>
