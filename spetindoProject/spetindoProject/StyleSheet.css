@@ -1,0 +1,576 @@
+﻿body{
+	margin:0;
+	color:#232323;
+	padding-top: 0px;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+	background-attachment: scroll;
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #FFFFFF;
+}
+div, h1, h2, h3, h4, p, form, label, input, textarea, img, span{
+	margin:0; padding:0;
+}
+
+ul{
+	margin:0; 
+	padding:0; 
+	list-style-type:none;
+	font-size:0;
+	line-height:0;
+}
+
+.spacer{
+	clear:both; 
+	font-size:0; 
+	line-height:0;
+}
+
+@font-face
+{
+    font-family:'GeosansLight';
+    src:url('font/GeosansLight.ttf') format('truetype');
+    font-weight:bold;
+    font-size:large;
+    font-style:normal;
+}
+
+/*------------------------------------------------topheader--------------------*/
+#topheader{
+	width:1004px;
+	height:146px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #dcd66e;
+	text-decoration: none;
+	padding: 0px;
+	float: none;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.logo {
+	background-image: url(images/logo.png);
+	background-repeat: no-repeat;
+	padding: 0px;
+	float: left;
+	height: 105px;
+	width: 350px;
+	margin-top: 30px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 130px;
+}
+
+/*------------------------------------------------header_strip-------------------*/
+#header_strip{
+	width:1055px;
+	height:142px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	font-family: Tahoma;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #dcd66e;
+	text-decoration: none;
+	padding: 0px;
+	float: none;
+	background-image: url(images/header.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/*------------------------------------------------body_area--------------------*/
+#body_area{
+	width:1004px;
+	height:500px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	font-family: GeosansLight;
+	font-size: 20px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	float: none;
+	padding-top: 52px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.left {
+	margin: 0px;
+	float: left;
+	height: 600px;
+	width: 200px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 30px;
+	overflow:hidden;
+}
+.comment_head {
+	font-size: 28px;
+	font-weight: normal;
+	color: white;
+	text-decoration: none;
+	margin: 0px;
+	float: left;
+	height: 25px;
+	height: 25px;
+	width: 185px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	background-color: #ff5900; 
+	background-repeat: no-repeat;
+}
+.comments_area {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	width: 190px;
+}
+.comments_link {
+	font-family: GeosansLight;
+	font-size: 18px;
+	font-weight: normal;
+	text-transform: none;
+	color: #007f16;
+	text-decoration: underline;
+}
+.comments_link:hover {
+	font-family: GeosansLight;
+	font-size: 18px;
+	font-weight: normal;
+	text-transform: none;
+	color: #ff5900;
+	text-decoration: underline;
+}	 
+.midarea {
+	margin: 0px;
+	float: left;
+	height: 600px;
+	width: 543px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 40px;
+}
+.head {
+	font-family: GeosansLight;
+	font-size: 45px;
+	font-weight: normal;
+	color: red;
+	text-decoration: none;
+	margin: 0px;
+	float: left;
+	width: 540px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 20px;
+	padding-left: 0px;
+}
+.body_textarea {
+	font-family: GeosansLight;
+	font-size: 20px;
+	font-weight: normal;
+	color:black ;
+	text-decoration: none;
+	margin: 0px;
+	float: left;
+	width: 500px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+}
+.right {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	height: 600px;
+	width: 170px;
+}
+.innerbanner {
+	color: #8a8a8a;
+	text-decoration: none;
+	background-image: url(images/tigatahap.png);
+	background-repeat: no-repeat;
+	margin: 0px;
+	float: left;
+	height: 184px;
+	width: 218px;
+	padding-top: 30px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.login_area {
+	font-family: GeosansLight;
+	margin: 0px;
+	float: left;
+	width: 250px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 15px;
+	padding-left: 0px;
+}
+.login_top {
+	background-image: url(images/login_1.png);
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	height: 25px;
+	width: 250px;
+}
+.login_bottom {
+	background-image: url('images/login_3.png');
+	background-repeat: no-repeat;
+	padding: 0px;
+	float: left;
+	height: 25px;
+	width: 250px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+.login_bodyarea {
+	margin: 0px;
+	float: left;
+	width: 250px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 6px;
+	background-attachment: scroll;
+	background-image: url(images/login_2.png);
+	background-repeat: repeat-y;
+}
+.right_head {
+	font-size: 16px;
+	font-weight: normal;
+	color: white;
+	text-decoration: none;
+	margin: 0px;
+	float: left;
+	height: 15px;
+	width: 185px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	background-color: #ff5900; 
+	background-repeat: no-repeat;
+}
+.right_textbox{
+	font-size: 14px;
+	font-weight: normal;
+	color: black;
+	text-decoration: none;
+	margin: 0px;
+	float: left;
+	height: 17px;
+	width: 186px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+}
+.right_text{
+	font-size: 15px;
+	font-weight: bold;
+	color:#003200 ;
+	text-decoration: none;
+	margin: 0px;
+	float: left;
+	height: 17px;
+	width: 131px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+
+}
+.login {
+	font-size: 10px;
+	font-weight: normal;
+	color: #070808;
+	text-decoration: none;
+	background-image: url(images/buttmasuk_hov.png);
+	background-repeat: no-repeat;
+	float: right;
+	height: 18px;
+	width: 52px;
+	margin-top: 0px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.login:hover {
+	font-size: 10px;
+	font-weight: normal;
+	color: #070808;
+	text-decoration: none;
+	background-image: url(images/buttmasuk.png);
+	background-repeat: no-repeat;
+	float: right;
+	height: 18px;
+	width: 52px;
+	margin-top: 0px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.daftar{
+	font-size: 10px;
+	font-weight: normal;
+	color: #070808;
+	text-decoration: none;
+	background-image: url(images/buttdaftar_hov.png);
+	background-repeat: no-repeat;
+	float: left;
+	height: 18px;
+	width: 52px;
+	margin-top: 0px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.daftar:hover {
+	font-size: 10px;
+	font-weight: normal;
+	color: #070808;
+	text-decoration: none;
+	background-image: url(images/buttdaftar.png);
+	background-repeat: no-repeat;
+	float: left;
+	height: 18px;
+	width: 52px;
+	margin-top: 0px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+
+#reg_area{
+	width:600px;
+	height:500px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	font-family: GeosansLight;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	float: none;
+	padding-top: 52px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.register{
+	font-family: GeosansLight;
+	font-size: 20px;
+	font-weight: normal;
+	color:black ;
+	text-decoration: none;
+	margin: 0px;
+	float: left;
+	width: 543px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+}
+
+.register_area {
+	font-family: GeosansLight;
+	margin: 0px;
+	float: left;
+	width: 600px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 15px;
+	padding-left: 0px;
+}
+.register_top {
+	background-image: url(images/register_1.png);
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	height: 44px;
+	width: 600px;
+}
+.register_bottom {
+	background-image: url(images/register_3.png);
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	height: 44px;
+	width: 600px;
+}
+.register_bodyarea {
+	margin: 0px;
+	float: left;
+	width: 600px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 6px;
+	background-attachment: scroll;
+	background-image: url(images/register_2.png);
+	background-repeat: repeat-y;
+}
+.register_head {
+	font-size: 25px;
+	font-weight: normal;
+	color: white;
+	text-decoration: none;
+	margin: 0px;
+	float: left;
+	height: 25px;
+	width: 588px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	background-color: #ff5900; 
+	background-repeat: no-repeat;
+}
+.register_textbox{
+	font-size: 18px;
+	font-weight: normal;
+	color: black;
+	text-decoration: none;
+	margin: 0px;
+	float: center;
+	height: 200px;
+	width: 400px;
+	padding-top: 3px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 130px;
+}
+.regarea {
+	margin: 0px;
+	float: none;
+	height: 800px;
+	width: 1000px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 40px;
+}
+
+/*------------------------------------------------logofotter--------------------*/
+#logofooter{
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	padding: 100px;
+	float: none;
+	color : black;
+}
+.logofoo {
+	background-image: url(images/logofooter.png);
+	background-repeat: no-repeat;
+	float: right;
+	height: 70px;
+	width: 390px;
+	padding-top: 20px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	margin: 0px;
+}
+
+/*------------------------------------------------fotter--------------------*/
+#fotter{
+	width:100%;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	font-family: "Trebuchet MS";
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #c5a873;
+	text-decoration: none;
+	padding: 0px;
+	float: left;
+	height: 50px;
+	background-color: #078600;
+	background-repeat: repeat-x;
+	background-position: top;
+	background-attachment: scroll;
+}
+
+.fotter_copyrights {
+	font-family: "Trebuchet MS";
+	font-size: 16px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: none;
+	margin: 0px;
+	float: left;
+	height: 10px;
+	width: 100%;
+	color: white;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 2px;
+	padding-left: 0px;
+}
