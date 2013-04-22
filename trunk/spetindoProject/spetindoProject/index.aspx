@@ -9,8 +9,8 @@
 			<li><img src="images/general/slide-title2.gif"></li>
 		</ul>
 		<ul class="pagination">
-			<li><a href="index.aspx" rel="0"><span>Beranda</span><small>Selengkapnya</small></a></li>
-			<li><a href="nasihat_modul.aspx" rel="1"><span>Nasihat</span><small>Selengkapnya</small></a></li>
+			<li><a href="#" rel="0"><span>Beranda</span><small>Selengkapnya</small></a></li>
+			<li><a href="#" rel="1"><span>Nasihat</span><small>Selengkapnya</small></a></li>
 			<li><a href="#" rel="2"><span>Budidaya</span><small>Selengkapnya</small></a></li>
 		    <li><a href="#" rel="3"><span>Profil Pasar</span><small>Selengkapnya</small></a></li>
 		</ul>

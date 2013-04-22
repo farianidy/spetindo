@@ -59,17 +59,17 @@
                                     <div id="menu">
                                         <ul class="menu">
                                             <li class = "current"><a href="index.aspx">Beranda</a></li>
-                                            <li><a href="info_pempembudi.aspx">Nasihat</a></li>
+                                            <li><a href="nasihat_modul.aspx">Nasihat</a></li>
 			                                <li ><a href="#">Budidaya</a>
                                                 <ul>
-                                                    <li><a href="info_pupuk.aspx"><span>Pemilihan Pupuk</span></a></li>        
-                                                    <li><a href="info_hama.aspx"><span>Penanganan Hama</span></a></li>        
+                                                    <li><a href="informasi_pupuk.aspx"><span>Pemilihan Pupuk</span></a></li>        
+                                                    <li><a href="informasi_hama.aspx"><span>Penanganan Hama</span></a></li>        
                                                 </ul>
 			                                </li>
                                             <li><a href="#">Profil pasar</a>
                                                 <ul>
-					                                <li><a href="info_hargapasar.aspx"><span>Harga Pasar</span></a></li>        
-					                                <li><a href="info_permintaanpasar.aspx"><span>Permintaan Pasar</span></a></li>        
+					                                <li><a href="informasi_harga_pasar.aspx"><span>Harga Pasar</span></a></li>        
+					                                <li><a href="informasi_permintaan_pasar.aspx"><span>Permintaan Pasar</span></a></li>        
                                                 </ul>
                                             </li>
                                             <li><a href="tentang_kami.aspx">Tentang kami</a></li>
@@ -77,7 +77,7 @@
                                     </div>
                                 </nav>
                                 <!-- nav -->
-						        <h1><a href="index.html"><span>SPET</span>INDO</a></h1>
+						        <h1><a href="index.aspx"><span>SPET</span>INDO</a></h1>
 					        </div>
 				        </div>
 			        </div>
@@ -107,7 +107,6 @@
     </footer>
     <!-- footer -->
 
-    <script type="text/javascript">    Cufon.now(); </script>
-
+    <script type="text/javascript">Cufon.now(); </script>
 </body>
 </html>

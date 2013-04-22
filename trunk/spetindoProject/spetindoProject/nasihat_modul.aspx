@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#"  MasterPageFile="~/Site.master"  AutoEventWireup="true" CodeBehind="nasihat_modul.aspx.cs" Inherits="spetindoProject.nasihat_modul" %>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentSlider" runat="server">
-				
     <div class="inside bot-indent">
 				<div id="slogan">
 					<div class="inside">
@@ -10,10 +9,6 @@
 					</div>
 				</div>
 				<h2 class="extra">Hosting Plans</h2>
-
-
-                
-				
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentTemplate" runat="server">
@@ -66,12 +61,8 @@
 					</div>
 				</div>
 			</div>
-
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentAsideTemplate" runat="server">
-</asp:Content>
-
-<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" Runat="Server">
 </asp:Content>
 
