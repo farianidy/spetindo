@@ -25,7 +25,7 @@ namespace spetindoProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Page.Title = Page.Title + "Informasi Hama";
+            Page.Title = "SPETINDO - Informasi Hama";
 
             //panelHama.Visible = false;
             //ButtonHama.Visible = false;

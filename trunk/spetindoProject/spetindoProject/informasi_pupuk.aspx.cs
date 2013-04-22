@@ -23,7 +23,7 @@ namespace spetindoProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Page.Title = Page.Title + "Pemilihan Pupuk";
+            Page.Title = "SPETINDO - Pemilihan Pupuk";
             
             string strconnect = ConfigurationManager.ConnectionStrings["Connection"].ConnectionString;
             connect.ConnectionString = strconnect;
