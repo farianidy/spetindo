@@ -11,7 +11,7 @@ namespace spetindoProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Page.Title = "Informasi Pembudidayaan";
         }
 
         protected void Button1_Click(object sender, EventArgs e)

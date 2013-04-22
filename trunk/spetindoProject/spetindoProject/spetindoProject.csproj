@@ -61,6 +61,7 @@
     <Content Include="edit_pupuk.aspx" />
     <Content Include="images\Barometer.jpg" />
     <Content Include="images\kertas.jpg" />
+    <Content Include="images\lihatrekom.png" />
     <Content Include="images\pulpen.jpg" />
     <Content Include="images\tanah.jpg" />
     <Content Include="images\tekanan_udara.jpeg" />

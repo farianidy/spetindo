@@ -11,6 +11,8 @@ namespace spetindoProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.Title = "Rekomendasi Pembudidayaan";
+
             Label1.Text = Session["dataPadi"].ToString();
             Label2.Text = Session["dataJagung"].ToString();
             Label3.Text = Session["dataKedelai"].ToString();
