@@ -83,16 +83,24 @@
 					<div class="body_textarea">
 						<div align="justify"><b>Bahan dan Alat</b></div>
                         <div align="justify">Bahan yang digunakan adalah tanah sebagai objek pengamatan dan kertas sebagai media pencatat hasil.</div>
-					    <div align="justify">Alat yang digunakan adalah Termometer tanah berselubung kayu sebagai alat untuk pengukuran suhu tanah, Termometer tanah bengkok sebagai alat untuk mengukur suhu tanah, dan pulpen sebagai alat untuk mencatat hasil pengamatan. </div>
+                        <asp:Image ID="ImageTanah" runat="server" Height="93px" 
+                            ImageUrl="~/images/tanah.jpg" Width="146px" />
+                            <asp:Image ID="ImageKertas" runat="server" Height="93px" 
+                            ImageUrl="~/images/kertas.jpg" Width="92px" />
+                        <div align="justify">Alat yang digunakan adalah Termometer tanah sebagai alat untuk pengukuran suhu tanah dan pulpen sebagai alat untuk mencatat hasil pengamatan. </div>
+                        <asp:Image ID="ImageTermometer" runat="server" Height="93px" 
+                            ImageUrl="~/images/termometer_tanah.jpg" Width="54px" />
+                             <asp:Image ID="ImagePulpen" runat="server" Height="93px" 
+                            ImageUrl="~/images/pulpen.jpg" Width="54px" />
                     </div>
 					<div class="body_textarea">
 						<div align="justify"><b>Prosedur Percobaan</b></div>
-                        <div align="justify">- Dilubangi tanah dengan ketentuan 0, 5, 10, 20, 30, dan 50.</div>
-					    <div align="justify">- Dimasukkan termometer ke dalam rongga tanah yang telah berlubang tersebut.</div>
-                        <div align="justify">- Selama 5 menit pada setiap lubang.</div>
-                        <div align="justify">- Diperiksa dan diamati skala temperatur.</div>
-					    <div align="justify">- Dicatat hasil pengamatan ke dalam buku data dalam bentuk tabel.</div>
-                        <div align="justify">- Digambar grafik hubungan suhu tanah dengan kedalaman tanah, suhu tanah dengan tanggal dan suhu tanah dengan suhu udara.</div>
+                        <div align="justify">- Tanah dilubangi dengan ketentuan 0, 5, 10, 20, 30, dan 50 cm.</div>
+					    <div align="justify">- Termometer dimasukkan ke dalam rongga tanah yang telah berlubang tersebut selama 5 menit pada setiap lubang.</div>
+                        <div align="justify">- Periksa dan amati skala temperatur pada termometer.</div>
+					    <div align="justify">- Catat hasil pengamatan ke dalam kertas, buatlah data dalam bentuk tabel.</div>
+                        <div align="justify">- Gambar grafik hubungan suhu tanah dengan kedalaman tanah dan suhu tanah dengan tanggal.</div>
+                        <div align="justify">- Hitunglah rata-rata suhu tanah.</div>
                     </div>	
                 </asp:Panel>
 			</div>

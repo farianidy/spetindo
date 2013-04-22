@@ -78,22 +78,51 @@
 			<div class="midarea">
             <div class="head"> Hasil Rekomendasi </div>
 			<div class="body_textarea">
-			  <div align="justify">Lahan anda diperkirakan akan menghasilkan tanaman dibawah ini dengan hasil panen sekian</div>
+			  <div align="justify">Berdasarkan perkiraan perhitungan di bawah ini lahan anda direkomendasikan untuk ditanami padi karena menghasilkan keuntungan yang paling besar</div>
 			</div>
 			<!--<div class="body_textarea">
 			  <div align="justify">
                 <p>SPETINDO adalah sebuah aplikasi Web-based Decision Support System (DSS) yang mampu memberikan solusi bagi petani untuk mendapat informasi pembudidayaan tanaman yang cocok serta prosedur pembudidayaannya.</p>
 			  </div>
 			</div>-->
-            <asp:Label ID="Label4" runat="server" Text="Hasil panen padi "></asp:Label>
+            <!--<asp:Label ID="Label4" runat="server" Text="Hasil panen padi "></asp:Label>
             <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></br>
             
             <asp:Label ID="Label5" runat="server" Text="Hasil panen jagung "></asp:Label>
             <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label></br>
 
             <asp:Label ID="Label6" runat="server" Text="Hasil panen kedelai "></asp:Label>
-            <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
-					
+            <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>-->
+                <table>
+                <tr>
+                <td>Jenis Tanaman</td>
+                <td>Perkiraan Hasil panen</td>
+                <td>Harga Pasar</td>
+                <td>Permintaan Pasar</td>
+                <td>Rekomendasi</td>
+                </tr>
+                <tr>
+                <td>Padi</td>
+                <td>452 kwintal</td>
+                <td>7000</td>
+                <td>1000</td>
+                <td>Hasil Penjualan 1000/452 x 7000 = 15.486,7256 </td>
+                </tr>
+                <tr>
+                <td>Jagung</td>
+                <td>700 kwintal</td>
+                <td>5500</td>
+                <td>500</td>
+                <td>Hasil Penjualan 500/700 x 5500 = 3.928,5714 </td>
+                </tr>
+                <tr>
+                <td>Kedelai</td>
+                <td>919 kwintal</td>
+                <td>8000</td>
+                <td>125</td>
+                <td>Hasil Penjualan 125/919 x 8000 = 1.088,13928</td>
+                </tr>
+                </table>		
 			</div>
 			<div class="right">
 			</div>
