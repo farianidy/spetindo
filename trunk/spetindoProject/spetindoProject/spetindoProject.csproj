@@ -93,6 +93,7 @@
     <Content Include="mod_konsultasi.aspx" />
     <Content Include="mod_modahli.aspx" />
     <Content Include="mod_pempembudi.aspx" />
+    <Content Include="nasihat_modul.aspx" />
     <Content Include="register.aspx" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
@@ -237,6 +238,13 @@
     </Compile>
     <Compile Include="mod_pempembudi.aspx.designer.cs">
       <DependentUpon>mod_pempembudi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="nasihat_modul.aspx.cs">
+      <DependentUpon>nasihat_modul.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="nasihat_modul.aspx.designer.cs">
+      <DependentUpon>nasihat_modul.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QSE.cs" />

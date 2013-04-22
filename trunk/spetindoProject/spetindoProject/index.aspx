@@ -1,5 +1,8 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="spetindoProject.index" %>
 
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentSlider" runat="server">
+</asp:Content>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentTemplate" runat="server">
 </asp:Content>
 
