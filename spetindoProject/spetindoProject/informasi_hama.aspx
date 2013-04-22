@@ -26,17 +26,17 @@
 					</ul>
 				</article>
                 <article class="col-3">
-                    <ul class="list2">
+                    <ul class="listt">
 					    <li>
                             <asp:DropDownList ID="DropDownListTanaman" runat="server" AutoPostBack="True" 
-                                onselectedindexchanged="DropDownListTanaman_SelectedIndexChanged">
+                                onselectedindexchanged="DropDownListTanaman_SelectedIndexChanged" Width="130px" Height="20px">
                                 <asp:ListItem Value="TA001">Padi</asp:ListItem>
                                 <asp:ListItem Value="TA002">Jagung</asp:ListItem>
                                 <asp:ListItem Value="TA003">Kedelai</asp:ListItem>
                             </asp:DropDownList>
                         </li>
                         <li>
-                            <asp:DropDownList ID="DropDownListHama" runat="server"></asp:DropDownList>
+                            <asp:DropDownList ID="DropDownListHama" runat="server" Width="130px" Height="20px"></asp:DropDownList>
                         </li>
                     </ul>
                     <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton1_Click"  CssClass="link2"

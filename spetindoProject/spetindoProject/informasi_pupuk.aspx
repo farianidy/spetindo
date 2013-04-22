@@ -25,9 +25,9 @@
 					</ul>
 				</article>
                 <article class="col-3">
-                    <ul class="list2">
+                    <ul class="listt">
 					    <li>
-                            <asp:DropDownList ID="DropDownListTanaman" runat="server">
+                            <asp:DropDownList ID="DropDownListTanaman" runat="server" Width="130px" Height="20px">
                                 <asp:ListItem Value="TA001">Padi</asp:ListItem>
                                 <asp:ListItem Value="TA002">Jagung</asp:ListItem>
                                 <asp:ListItem Value="TA003">Kedelai</asp:ListItem>
@@ -58,23 +58,23 @@
     <div class="inside1">
 	    <div class="wrap row-2">
             <form id="form2" runat="server">
-			    <article class="col-4">
+			    <article class="col-1">
 				    <h2>Cek Status Hara</h2>
                 </article>
-				<article class="col-5">
-                    <ul class="list3">
+				<article class="col-2">
+                    <ul class="list1">
 					    <li>Provinsi: </li>
                         <li>Kabupaten/Kota: </li>
 					</ul>
 				</article>
-                <article class="col-6">
-                    <ul class="list4>
+                <article class="col-3">
+                    <ul class="listt>
 					    <li>
                             <asp:DropDownList ID="ListProvinsi" runat="server" AutoPostBack="True" 
-                                onselectedindexchanged="ListProvinsi_SelectedIndexChanged"></asp:DropDownList>
+                                onselectedindexchanged="ListProvinsi_SelectedIndexChanged" Width="130px" Height="20px"></asp:DropDownList>
                         </li>
                         <li>
-                            <asp:DropDownList ID="ListKota" runat="server"></asp:DropDownList>
+                            <asp:DropDownList ID="ListKota" runat="server" Width="130px" Height="20px"></asp:DropDownList>
                         </li>
                     </ul>
                     <asp:ImageButton ID="ImageButton2" runat="server" onclick="ImageButton2_Click"  CssClass="link2"
