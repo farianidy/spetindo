@@ -18,7 +18,7 @@ namespace spetindoProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Page.Title = "Penambahan Admin";
         }
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)

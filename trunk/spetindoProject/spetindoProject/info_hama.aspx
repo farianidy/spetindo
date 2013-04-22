@@ -3,8 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
+<head id="Head1" runat="server">
     <link type="text/css" href="StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
@@ -98,7 +97,17 @@
                 <asp:Label ID="LabelJenisPupuk" runat="server" Text="Label"></asp:Label>
                 <asp:Label ID="LabelHarga" runat="server" Text="Label"></asp:Label>
                 <asp:Label ID="LabelTakaran" runat="server" Text="Label"></asp:Label>-->
-                <asp:GridView ID="GridView1" runat="server">
+                <asp:GridView ID="GridView1" runat="server" CellPadding="4" 
+                    EnableModelValidation="True" ForeColor="Black" GridLines="Horizontal" 
+                    EmptyDataTex="Data tidak tersedia." AllowPaging="true" PageSize="10" AllowSorting="true"
+                    DataKeyNames="" OnSorting="GridView1_Sorting" OnPageIndexChanging="GridView1_PageIndexChanging">
+                    <AlternatingRowStyle BackColor="White" />
+                    <EditRowStyle BackColor="#7C6F57" />
+                    <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#E3EAEB" />
+                    <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
                 </asp:GridView>
 
 				<!--<div class="head"> Selamat datang di SPETINDO </div>
