@@ -59,6 +59,7 @@
     <Content Include="contain.aspx" />
     <Content Include="edit_hama.aspx" />
     <Content Include="edit_pupuk.aspx" />
+    <Content Include="hasil_modul_nasihat.aspx" />
     <Content Include="images\Barometer.jpg" />
     <Content Include="images\kertas.jpg" />
     <Content Include="images\lihatrekom.png" />
@@ -68,6 +69,13 @@
     <Content Include="images\termometer_tanah.jpg" />
     <Content Include="index.aspx" />
     <Content Include="informasi.aspx" />
+    <Content Include="informasi_hama.aspx" />
+    <Content Include="informasi_harga_pasar.aspx" />
+    <Content Include="informasi_permintaan_pasar.aspx" />
+    <Content Include="informasi_pupuk.aspx" />
+    <Content Include="informasi_tanah.aspx" />
+    <Content Include="informasi_ukur_suhu.aspx" />
+    <Content Include="informasi_ukur_tinggi.aspx" />
     <Content Include="info_permintaanpasar.aspx" />
     <Content Include="info_hargapasar.aspx" />
     <Content Include="images\buttdaftar_hov.png" />
@@ -100,8 +108,12 @@
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="StyleSheet.css" />
     <Content Include="tambah_admin.aspx" />
+    <Content Include="tambah_hama.aspx" />
+    <Content Include="tambah_pupuk.aspx" />
     <Content Include="tentang_kami.aspx" />
     <Content Include="Testing.aspx" />
+    <Content Include="ubah_hama.aspx" />
+    <Content Include="ubah_pupuk.aspx" />
     <Content Include="ukur_suhu.aspx" />
     <Content Include="ukur_tinggi.aspx" />
     <Content Include="Web.config" />
@@ -155,6 +167,13 @@
     <Compile Include="edit_pupuk.aspx.designer.cs">
       <DependentUpon>edit_pupuk.aspx</DependentUpon>
     </Compile>
+    <Compile Include="hasil_modul_nasihat.aspx.cs">
+      <DependentUpon>hasil_modul_nasihat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hasil_modul_nasihat.aspx.designer.cs">
+      <DependentUpon>hasil_modul_nasihat.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -168,6 +187,55 @@
     </Compile>
     <Compile Include="informasi.aspx.designer.cs">
       <DependentUpon>informasi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informasi_hama.aspx.cs">
+      <DependentUpon>informasi_hama.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informasi_hama.aspx.designer.cs">
+      <DependentUpon>informasi_hama.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informasi_harga_pasar.aspx.cs">
+      <DependentUpon>informasi_harga_pasar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informasi_harga_pasar.aspx.designer.cs">
+      <DependentUpon>informasi_harga_pasar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informasi_permintaan_pasar.aspx.cs">
+      <DependentUpon>informasi_permintaan_pasar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informasi_permintaan_pasar.aspx.designer.cs">
+      <DependentUpon>informasi_permintaan_pasar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informasi_pupuk.aspx.cs">
+      <DependentUpon>informasi_pupuk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informasi_pupuk.aspx.designer.cs">
+      <DependentUpon>informasi_pupuk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informasi_tanah.aspx.cs">
+      <DependentUpon>informasi_tanah.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informasi_tanah.aspx.designer.cs">
+      <DependentUpon>informasi_tanah.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informasi_ukur_suhu.aspx.cs">
+      <DependentUpon>informasi_ukur_suhu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informasi_ukur_suhu.aspx.designer.cs">
+      <DependentUpon>informasi_ukur_suhu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="informasi_ukur_tinggi.aspx.cs">
+      <DependentUpon>informasi_ukur_tinggi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informasi_ukur_tinggi.aspx.designer.cs">
+      <DependentUpon>informasi_ukur_tinggi.aspx</DependentUpon>
     </Compile>
     <Compile Include="info_permintaanpasar.aspx.cs">
       <DependentUpon>info_permintaanpasar.aspx</DependentUpon>
@@ -269,6 +337,20 @@
     <Compile Include="tambah_admin.aspx.designer.cs">
       <DependentUpon>tambah_admin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="tambah_hama.aspx.cs">
+      <DependentUpon>tambah_hama.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tambah_hama.aspx.designer.cs">
+      <DependentUpon>tambah_hama.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tambah_pupuk.aspx.cs">
+      <DependentUpon>tambah_pupuk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tambah_pupuk.aspx.designer.cs">
+      <DependentUpon>tambah_pupuk.aspx</DependentUpon>
+    </Compile>
     <Compile Include="tentang_kami.aspx.cs">
       <DependentUpon>tentang_kami.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -282,6 +364,20 @@
     </Compile>
     <Compile Include="Testing.aspx.designer.cs">
       <DependentUpon>Testing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ubah_hama.aspx.cs">
+      <DependentUpon>ubah_hama.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ubah_hama.aspx.designer.cs">
+      <DependentUpon>ubah_hama.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ubah_pupuk.aspx.cs">
+      <DependentUpon>ubah_pupuk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ubah_pupuk.aspx.designer.cs">
+      <DependentUpon>ubah_pupuk.aspx</DependentUpon>
     </Compile>
     <Compile Include="ukur_suhu.aspx.cs">
       <DependentUpon>ukur_suhu.aspx</DependentUpon>

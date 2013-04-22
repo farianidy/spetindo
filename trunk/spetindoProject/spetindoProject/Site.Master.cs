@@ -18,7 +18,7 @@ namespace spetindoProject
             Currentpage = this.Page as index;
             if (Currentpage != null)
             {
-                labeltesting.Text = Currentpage.LocationCheck();
+                //labeltesting.Text = Currentpage.LocationCheck();
                 //this.HyperLink1.NavigateUrl = this.HyperLink1.NavigateUrl + "?" + Currentpage.CheckString();
             }
         } 
