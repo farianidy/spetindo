@@ -138,7 +138,7 @@
     <Content Include="images\menu\lava.png" />
     <Content Include="images\pulpen.jpg" />
     <Content Include="images\tanah.jpg" />
-    <Content Include="images\tekanan_udara.jpeg" />
+    <Content Include="images\tekanan_udara.jpg" />
     <Content Include="images\termometer_tanah.jpg" />
     <Content Include="images\transparent.png" />
     <Content Include="index.aspx" />
@@ -473,7 +473,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1043</DevelopmentServerPort>
+          <DevelopmentServerPort>5098</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
