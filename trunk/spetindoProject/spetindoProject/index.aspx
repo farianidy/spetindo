@@ -3,10 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentSlider" runat="server">
     <div id="faded">
 		<ul class="slides">
-			<li><img src="images/general/slide-title1.gif"></li>
-			<li><img src="images/general/slide-title4.gif"></li>
-			<li><img src="images/general/slide-title3.gif"></li>
-			<li><img src="images/general/slide-title2.gif"></li>
+			<li><img src="images/general/welcome.png"></li>
+			<li><img src="images/general/welcome2.png"></li>
+			<li><img src="images/general/welcome3.png"></li>
+			<li><img src="images/general/welcome4.png"></li>
 		</ul>
 		<ul class="pagination">
 			<li><a href="#" rel="0"><span>Beranda</span><small>Sekilas</small></a></li>
