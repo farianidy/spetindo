@@ -18,8 +18,6 @@ namespace spetindoProject
         public IList<IList<string>> aaData { get; set; }
     }*/
 
-    
-
     public partial class info_hargapasar : System.Web.UI.Page
     {
         string tanggal = "";

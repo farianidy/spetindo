@@ -69,7 +69,7 @@
                                             <li><a href="#">Profil pasar</a>
                                                 <ul>
 					                                <li><a href="informasi_harga_pasar.aspx"><span>Harga Pasar</span></a></li>        
-					                                <li><a href="informasi_permintaan_pasar.aspx"><span>Permintaan Pasar</span></a></li>        
+					                                <li><a href="informasi_permintaanpasar.aspx"><span>Permintaan Pasar</span></a></li>        
                                                 </ul>
                                             </li>
                                             <li><a href="tentang_kami.aspx">Tentang kami</a></li>
@@ -100,8 +100,6 @@
 	    <div class="container">
 		    <div class="inside">
                 Hak Cipta &copy; <b>Vincitore</b> 2013.<br />
-			    <a href="http://www.templatemonster.com" class="new_window">Website template</a> designed by TemplateMonster.com | 
-			    <a href="http://www.templates.com/product/3d-models/" class="new_window">3D Models</a> provided by Templates.com
 		    </div>
 	    </div>
     </footer>

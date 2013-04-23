@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Web.Script.Serialization;
 using System.Net;
 using System.IO;
+using spetindoProject;
 
 namespace spetindoProject
 {
@@ -33,6 +34,8 @@ namespace spetindoProject
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
         {
+            //Panel1.Visible = true;
+
             //Label1.Text = Calendar1.SelectedDate.ToShortDateString();
             //Label2.Text = Calendar1.SelectedDate.ToString("yyyy-MM-dd");
             tanggal = Calendar1.SelectedDate.ToString("yyyy-MM-dd");
@@ -45,12 +48,12 @@ namespace spetindoProject
             bbDatas = new List<bbData>();
             bbData temp;
 
-            WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
-            proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
+            //WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
+            //proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
 
 
             WebClient client = new WebClient();
-            client.Proxy = proxyObj;
+            //client.Proxy = proxyObj;
             var json = client.DownloadString(link);
 
             var jss = new JavaScriptSerializer();
