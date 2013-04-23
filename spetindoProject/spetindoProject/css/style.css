@@ -99,10 +99,10 @@ h5 {font-size:1em;line-height:1.667em;margin-bottom:10px}
 .link4:hover {color:#82b704}
 .link4 span {display:block;background:url(../images/general/link4-left.gif) no-repeat left top}
 .link4 span span {background:url(../images/general/link4-right.gif) no-repeat right top;padding:10px 22px}
-.line-ver1 {background-image:url(../images/general/line-ver1.gif);background-repeat:repeat-y;background-position:336px 0;width:100%}
-.line-ver2 {background-image:url(../images/general/line-ver1.gif);background-repeat:repeat-y;background-position:457px 0;width:100%}
-.line-ver3 {background-image:url(../images/general/line-ver1.gif);background-repeat:repeat-y;background-position:617px 0;width:100%}
-.line-ver4 {background-image:url(../images/general/line-ver1.gif);background-repeat:repeat-y;background-position:777px 0;width:100%}
+.line-ver1 {background-image:url(../images/general/line-ver1.gif);background-repeat:repeat-y;background-position:150px 0;width:100%}
+.line-ver2 {background-image:url(../images/general/line-ver1.gif);background-repeat:repeat-y;background-position:190px 0;width:100%}
+.line-ver3 {background-image:url(../images/general/line-ver1.gif);background-repeat:repeat-y;background-position:280px 0;width:100%}
+.line-ver4 {background-image:url(../images/general/line-ver1.gif);background-repeat:repeat-y;background-position:400px 0;width:100%}
 /* boxes */
 .header-box {width:100%;background:url(../images/general/header-box-tail.gif) repeat-x left top;position:relative;top:50px}
 .header-box .left {background:url(../images/general/header-box-left.gif) no-repeat left top}
