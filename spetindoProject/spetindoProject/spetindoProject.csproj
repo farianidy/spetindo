@@ -63,6 +63,10 @@
     <Content Include="css\style.css" />
     <Content Include="edit_hama.aspx" />
     <Content Include="edit_pupuk.aspx" />
+    <Content Include="gridview\grd_alt.png" />
+    <Content Include="gridview\grd_head.png" />
+    <Content Include="gridview\grd_pgr.png" />
+    <Content Include="gridview\style.css" />
     <Content Include="hasil_modul_nasihat.aspx" />
     <Content Include="images\Barometer.jpg" />
     <Content Include="images\button\data_selesai.jpg" />
