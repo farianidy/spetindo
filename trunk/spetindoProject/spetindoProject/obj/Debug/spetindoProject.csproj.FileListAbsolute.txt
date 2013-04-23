@@ -1,0 +1,6 @@
+E:\5109100019\svn new\spetindoProject\spetindoProject\obj\Debug\spetindoProject.csprojResolveAssemblyReference.cache
+E:\5109100019\svn new\spetindoProject\spetindoProject\bin\spetindoProject.dll
+E:\5109100019\svn new\spetindoProject\spetindoProject\bin\spetindoProject.pdb
+E:\5109100019\svn new\spetindoProject\spetindoProject\bin\Oracle.DataAccess.dll
+E:\5109100019\svn new\spetindoProject\spetindoProject\obj\Debug\spetindoProject.dll
+E:\5109100019\svn new\spetindoProject\spetindoProject\obj\Debug\spetindoProject.pdb
