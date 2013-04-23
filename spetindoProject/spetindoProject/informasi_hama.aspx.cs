@@ -77,9 +77,9 @@ namespace spetindoProject
             {
                 connect.Open();
                 reader = command.ExecuteReader();
+
                 GridView1.DataSource = reader;
                 GridView1.DataBind();
-
 
                 reader.Close();
             }
