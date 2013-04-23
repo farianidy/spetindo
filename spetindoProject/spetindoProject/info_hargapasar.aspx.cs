@@ -18,16 +18,7 @@ namespace spetindoProject
         public IList<IList<string>> aaData { get; set; }
     }*/
 
-    public class bbData
-    {
-        //price
-        public string kabupaten { get; set; }
-        public string beras_medium { get; set; }
-        public string beras_premium { get; set; }
-        public string jagung_pipilan_kering { get; set; }
-        public string kedelai_lokal_biji_kering { get; set; }
-        public string kedelai_impor { get; set; }
-    }
+    
 
     public partial class info_hargapasar : System.Web.UI.Page
     {
