@@ -4,8 +4,10 @@
     <div class="inside bot-indent">
 	    <div id="slogan">
 		    <div class="inside">
-		        <h2><span>SPET</span>INDO</h2>
-				<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+		        <h2><span>SPETINDO</span></h2>
+		        <p>
+                    Sebuah aplikasi Web-based Decision Support System (DSS) yang mampu memberikan solusi bagi petani untuk mendapat informasi pembudidayaan tanaman yang cocok serta prosedur pembudidayaannya.
+                </p>
 			</div>
 		</div>
     </div>
