@@ -31,6 +31,7 @@
 							<p class="p0">H = ketinggian dari permukaan laut (meter)</p>
                             <p class="p0">P = tekanan udara (cm Hg) *Hasil perhitungan menggunakan Barometer*</p>						    
                         </article>
+                        </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentAsideTemplate" runat="server">
 </asp:Content>

@@ -134,6 +134,7 @@
     <Content Include="images\general\tail-top2.gif" />
     <Content Include="images\general\tail-top3.gif" />
     <Content Include="images\general\thumb-sprite.png" />
+    <Content Include="images\harga pasar cr.png" />
     <Content Include="images\kertas.jpg" />
     <Content Include="images\lihatrekom.png" />
     <Content Include="images\menu\item-pointer-mover.gif" />
@@ -144,10 +145,10 @@
     <Content Include="images\tanah.jpg" />
     <Content Include="images\tekanan_udara.jpg" />
     <Content Include="images\termometer_tanah.jpg" />
-    <Content Include="images\transparent.png" />
     <Content Include="index.aspx" />
     <Content Include="informasi_hama.aspx" />
     <Content Include="informasi_harga_pasar.aspx" />
+    <Content Include="informasi_permintaanpasar.aspx" />
     <Content Include="informasi_permintaan_pasar.aspx" />
     <Content Include="informasi_pupuk.aspx" />
     <Content Include="informasi_tanah.aspx" />
@@ -240,6 +241,7 @@
     <Compile Include="Content.master.designer.cs">
       <DependentUpon>Content.master</DependentUpon>
     </Compile>
+    <Compile Include="Demand.cs" />
     <Compile Include="edit_hama.aspx.cs">
       <DependentUpon>edit_hama.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -282,6 +284,13 @@
     <Compile Include="informasi_harga_pasar.aspx.designer.cs">
       <DependentUpon>informasi_harga_pasar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="informasi_permintaanpasar.aspx.cs">
+      <DependentUpon>informasi_permintaanpasar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="informasi_permintaanpasar.aspx.designer.cs">
+      <DependentUpon>informasi_permintaanpasar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="informasi_permintaan_pasar.aspx.cs">
       <DependentUpon>informasi_permintaan_pasar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -319,7 +328,6 @@
     </Compile>
     <Compile Include="info_permintaanpasar.aspx.cs">
       <DependentUpon>info_permintaanpasar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="info_permintaanpasar.aspx.designer.cs">
       <DependentUpon>info_permintaanpasar.aspx</DependentUpon>

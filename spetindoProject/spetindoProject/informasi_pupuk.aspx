@@ -40,16 +40,8 @@
                         ImageUrl="~/images/button/button_lihat_hasil.png" />
                 </article>
                 <div class="clear"></div>
-                <asp:GridView ID="GridView1" runat="server" CellPadding="4" 
-                    EnableModelValidation="True" ForeColor="Black" GridLines="None"
+                <asp:GridView ID="GridView1" runat="server" CssClass="mGrid" PagerStyle-CssClass="pgr" GridLines="None"
                     EmptyDataText="Data tidak tersedia." >
-                    <AlternatingRowStyle BackColor="White" />
-                    <EditRowStyle BackColor="#7C6F57" />
-                    <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle BackColor="#E3EAEB" />
-                    <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
                 </asp:GridView>
 		    </div>
 	    </div>
@@ -81,27 +73,13 @@
                 <div class="clear"></div>
                 <asp:Panel ID="PanelHara" Visible=false runat="server">
                     <h2>Status Unsur Hara P</h2>
-                    <asp:GridView ID="GridViewHaraP" runat="server" CellPadding="4" 
-                        EnableModelValidation="True" ForeColor="#333333" GridLines="None" EmptyDataText="Data tidak tersedia.">
-                        <AlternatingRowStyle BackColor="White" />
-                        <EditRowStyle BackColor="#7C6F57" />
-                        <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                        <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                        <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-                        <RowStyle BackColor="#E3EAEB" />
-                        <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                    <asp:GridView ID="GridViewHaraP" runat="server" CssClass="mGrid" PagerStyle-CssClass="pgr"
+                        GridLines="None" EmptyDataText="Data tidak tersedia.">
                     </asp:GridView>
 
                     <h2>Status Unsur Hara K</h2>
-                    <asp:GridView ID="GridViewHaraK" runat="server" CellPadding="4" 
-                        EnableModelValidation="True" ForeColor="#333333" GridLines="None" EmptyDataText="Data tidak tersedia.">
-                        <AlternatingRowStyle BackColor="White" />
-                        <EditRowStyle BackColor="#7C6F57" />
-                        <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                        <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                        <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-                        <RowStyle BackColor="#E3EAEB" />
-                        <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                    <asp:GridView ID="GridViewHaraK" runat="server" CssClass="mGrid" PagerStyle-CssClass="pgr" 
+                        GridLines="None" EmptyDataText="Data tidak tersedia.">
                     </asp:GridView>
                 </asp:Panel>
 		    </div>
