@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="spetindoProject.admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="css/layout.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="css/menu.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="gridview/style.css" type="text/css" media="all"/>
+    <script type="text/javascript" src="Scripts/menu.js"></script>
+    <script type="text/javascript" src="Scripts/jquery_menu.js"></script>
+    <script type="text/javascript" src="Scripts/maxheight.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="Scripts/cufon-yui.js"></script>
+    <script type="text/javascript" src="Scripts/cufon-replace.js"></script>
+    <script type="text/javascript" src="Scripts/Myriad_Pro_300.font.js"></script>
+    <script type="text/javascript" src="Scripts/Myriad_Pro_400.font.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.faded.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.jqtransform.js"></script>
+    <script type="text/javascript" src="Scripts/script.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#faded").faded({
+                speed: 500,
+                crossfade: true,
+                autoplay: 10000,
+                autopagination: false
+            });
+
+            $('#domain-form').jqTransform({ imgPath: 'jqtransformplugin/img/' });
+        });
+    </script>
+</head>
+
+<body id="page1" onLoad="new ElementMaxHeight();>
+    <div class="tail-top">
+        <!-- header -->
+	        <header>
+		        <div class="container">
+        	        <form action="" id="login-form">
+				        <fieldset>
+					        <span class="text">
+						        <input type="text" value="Username" onFocus="if(this.value=='Username'){this.value=''}" onBlur="if(this.value==''){this.value='Username'}">
+					        </span>
+					        <span class="text">
+						        <input type="password" value="Password" onFocus="if(this.value=='Password'){this.value=''}" onBlur="if(this.value==''){this.value='Password'}">
+					        </span>
+					        <a href="#" class="login" onClick="document.getElementById('login-form').submit()"><span><span>Masuk</span></span></a>
+				        </fieldset>
+			        </form>
+        
+			        <div class="header-box">
+				        <div class="left">
+					        <div class="right">
+                    	        <!-- navigation -->
+                                <nav>
+                                    <div id="menu">
+                                        <ul class="menu">
+                                            <li class = "current"><a href="index.aspx">Beranda</a></li>
+			                                <li ><a href="#">Tambah</a>
+                                                <ul>
+                                                    <li><a href="tambah_admin.aspx"><span>Tambah Admin</span></a></li>        
+                                                    <li><a href="tambah_hama.aspx"><span>Tambah Hama</span></a></li> 
+                                                    <li><a href="tambah_pupuk.aspx"><span>Tambah Pupuk</span></a></li>       
+                                                </ul>
+			                                </li>
+                                            <li><a href="#">Edit</a>
+                                                <ul>
+					                                <li><a href="ubah_hama.aspx"><span>Edit Hama</span></a></li>        
+					                                <li><a href="ubah_pupuk.aspx"><span>Edit Pupuk</span></a></li>        
+                                                </ul>
+                                            </li>
+                                            <li><a href="tentang_kami.aspx">Tentang kami</a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                                <!-- nav -->
+						        <h1><a href="index.aspx"><span>SPET</span>INDO</a></h1>
+					        </div>
+				        </div>
+			        </div>
+		        </div>
+	        </header>
+
+        <!-- content -->
+	    <section id="content">
+		    <div class="container">
+                <asp:ContentPlaceHolder ID="ContentSlider" runat="server" />
+                <asp:ContentPlaceHolder ID="ContentTemplate" runat="server" />
+		    </div>
+	    </section>
+    </div>
+
+    <asp:ContentPlaceHolder ID="ContentAsideTemplate" runat="server" />
+
+    <!-- footer -->
+    <footer>
+	    <div class="container">
+		    <div class="inside">
+                Hak Cipta &copy; <b>Vincitore</b> 2013.<br />
+		    </div>
+	    </div>
+    </footer>
+    <!-- footer -->
+
+    <script type="text/javascript">        Cufon.now(); </script>
+</body>
+</html>
