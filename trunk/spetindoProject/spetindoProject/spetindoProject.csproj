@@ -70,6 +70,7 @@
     <Content Include="hasil_modul_nasihat.aspx" />
     <Content Include="images\Barometer.jpg" />
     <Content Include="images\button\data_selesai.jpg" />
+    <Content Include="images\button\login.JPG" />
     <Content Include="images\general\1page-img.jpg" />
     <Content Include="images\general\2page-img.jpg" />
     <Content Include="images\general\4page-img.jpg" />
@@ -226,6 +227,13 @@
     </Compile>
     <Compile Include="add_hama.aspx.designer.cs">
       <DependentUpon>add_hama.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
     </Compile>
     <Compile Include="contain.aspx.cs">
       <DependentUpon>contain.aspx</DependentUpon>
@@ -474,6 +482,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content.master" />
+    <Content Include="admin.Master" />
     <None Include="font\GeosansLight.ttf" />
     <Content Include="Site.Master" />
   </ItemGroup>

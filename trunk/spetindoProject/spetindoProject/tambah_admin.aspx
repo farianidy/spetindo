@@ -1,12 +1,14 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="tambah_admin.aspx.cs" Inherits="spetindoProject.tambah_admin" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/admin.Master" AutoEventWireup="true" CodeBehind="tambah_admin.aspx.cs" Inherits="spetindoProject.tambah_admin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentSlider" runat="server">
     <div class="inside bot-indent">
 	    <div id="slogan">
 		    <div class="inside">
-		        <h2><span>Your Domain Name</span> Helps the World  to Find You</h2>
-				<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
-			</div>
+		        <h2><span>SPETINDO</span></h2>
+		        <p>
+                    Sebuah aplikasi Web-based Decision Support System (DSS) yang mampu memberikan solusi bagi petani untuk mendapat informasi pembudidayaan tanaman yang cocok serta prosedur pembudidayaannya.
+                </p>
+           </div>
 		</div>
     </div>
 	<h2 class="extra">Penambahan Admin</h2>
