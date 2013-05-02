@@ -264,6 +264,7 @@
     <Compile Include="edit_pupuk.aspx.designer.cs">
       <DependentUpon>edit_pupuk.aspx</DependentUpon>
     </Compile>
+    <Compile Include="forecast.cs" />
     <Compile Include="hasil_modul_nasihat.aspx.cs">
       <DependentUpon>hasil_modul_nasihat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
