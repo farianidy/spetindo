@@ -36,25 +36,25 @@
 													    <article class="col-2 indent">
 														    <h4 class="aligncenter">Hasil Panen</h4>
 														    <ul class="info-list1 alt">
-															    <li>452 kwintal</li>
-															    <li>700 kwintal</li>
-															    <li>919 kwintal </li>
+															    <li><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></li>
+															    <li><asp:Label ID="Label2" runat="server" Text="Label"></asp:Label></li>
+															    <li><asp:Label ID="Label3" runat="server" Text="Label"></asp:Label></li>
 														    </ul>
 													    </article>
 													    <article class="col-3 indent">
 														    <h4 class="aligncenter">Harga Pasar</h4>
 														    <ul class="info-list1 alt">
-															    <li>7000</li>
-															    <li>5500</li>
-															    <li>8000</li>
+															    <li><asp:Label ID="LabelHargaPadi" runat="server" Text="Label"></asp:Label></li>
+															    <li><asp:Label ID="LabelHargaJagung" runat="server" Text="Label"></asp:Label></li>
+															    <li><asp:Label ID="LabelHargaKedelai" runat="server" Text="Label"></asp:Label></li>
 														    </ul>
 													    </article>
 													    <article class="col-4 indent">
 														    <h4 class="aligncenter">Permintaan Pasar</h4>
 														    <ul class="info-list1 alt">
-															    <li>1000</li>
-															    <li>500</li>
-															    <li>125</li>
+															    <li><asp:Label ID="LabelPerPadi" runat="server" Text="Label"></asp:Label></li>
+															    <li><asp:Label ID="LabelPerJagung" runat="server" Text="Label"></asp:Label></li>
+															    <li><asp:Label ID="LabelPerKedelai" runat="server" Text="Label"></asp:Label></li>
 														    </ul>
 													    </article>
 													    <article class="col-5 indent">
