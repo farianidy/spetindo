@@ -84,6 +84,27 @@
                 </asp:Panel>
 		    </div>
 	    </div>
+        <div class="inside1">
+	        <div class="wrap row-2">
+			    <article class="col-1">
+				    <h2>Ukur Status Hara</h2>
+                </article>
+				<article class="col-2">
+                    <ul class="list1">
+					    <li><a href="status_N.aspx" class="comments_link">Cara Penetapan Status N</a></li>
+                        <li><a href="status_P.aspx" class="comments_link">Cara Penetapan Hara P</a></li>
+                        <li><a href="status_K.aspx" class="comments_link">Cara Penetapan Hara K</a></li>
+					</ul>
+				</article>
+                <article class="col-3">
+                    <ul class="listt">
+					    <li><a href="rekom_N.aspx" class="comments_link">Rekomendasi Pepupukan Status N</a></li>
+                        <li><a href="rekom_P.aspx" class="comments_link">Rekomendasi Pepupukan Hara P</a></li>
+                        <li><a href="rekom_K.aspx" class="comments_link">Rekomendasi Pepupukan Hara K</a></li>
+                    </ul>
+                </article>
+		    </div>
+	    </div>
     </form>
 </asp:Content>
 

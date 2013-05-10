@@ -60,9 +60,9 @@
 													    <article class="col-5 indent">
 														    <h4 class="aligncenter">Rekomendasi</h4>
 														    <ul class="info-list1 alt">
-															    <li>1000/452 x 7000 = 15.486,7256 </li>
-															    <li>500/700 x 5500 = 3.928,5714</li>
-															    <li>125/919 x 8000 = 1.088,13928</li>
+															    <li><asp:Label ID="LabelRekomPadi" runat="server" Text="Label"></asp:Label></li>
+															    <li><asp:Label ID="LabelRekomJagung" runat="server" Text="Label"></asp:Label></li>
+															    <li><asp:Label ID="LabelRekomKedelai" runat="server" Text="Label"></asp:Label></li>
 														    </ul>
 													    </article>
 													    <div class="clear"></div>
