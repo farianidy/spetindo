@@ -143,6 +143,21 @@
     <Content Include="images\menu\lava.gif" />
     <Content Include="images\menu\lava.png" />
     <Content Include="images\pulpen.jpg" />
+    <Content Include="images\status hara\k1.JPG" />
+    <Content Include="images\status hara\k2.JPG" />
+    <Content Include="images\status hara\k3.JPG" />
+    <Content Include="images\status hara\k4.JPG" />
+    <Content Include="images\status hara\n1.JPG" />
+    <Content Include="images\status hara\n2.JPG" />
+    <Content Include="images\status hara\n3.JPG" />
+    <Content Include="images\status hara\n4.JPG" />
+    <Content Include="images\status hara\p1.JPG" />
+    <Content Include="images\status hara\p2.JPG" />
+    <Content Include="images\status hara\p3.JPG" />
+    <Content Include="images\status hara\p4.JPG" />
+    <Content Include="images\status hara\tabelK.JPG" />
+    <Content Include="images\status hara\tabelN.JPG" />
+    <Content Include="images\status hara\tabelP.JPG" />
     <Content Include="images\tanah.jpg" />
     <Content Include="images\tekanan_udara.jpg" />
     <Content Include="images\termometer_tanah.jpg" />
@@ -180,6 +195,9 @@
     <Content Include="mod_pempembudi.aspx" />
     <Content Include="nasihat_modul.aspx" />
     <Content Include="register.aspx" />
+    <Content Include="rekom_K.aspx" />
+    <Content Include="rekom_N.aspx" />
+    <Content Include="rekom_P.aspx" />
     <Content Include="Scripts\cufon-replace.js" />
     <Content Include="Scripts\cufon-yui.js" />
     <Content Include="Scripts\html5.js" />
@@ -195,6 +213,9 @@
     <Content Include="Scripts\Myriad_Pro_400.font.js" />
     <Content Include="Scripts\Myriad_Pro_600.font.js" />
     <Content Include="Scripts\script.js" />
+    <Content Include="status_K.aspx" />
+    <Content Include="status_N.aspx" />
+    <Content Include="status_P.aspx" />
     <Content Include="StyleSheet.css" />
     <Content Include="tambah_admin.aspx" />
     <Content Include="tambah_hama.aspx" />
@@ -406,12 +427,54 @@
     <Compile Include="register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="rekom_K.aspx.cs">
+      <DependentUpon>rekom_K.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rekom_K.aspx.designer.cs">
+      <DependentUpon>rekom_K.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rekom_N.aspx.cs">
+      <DependentUpon>rekom_N.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rekom_N.aspx.designer.cs">
+      <DependentUpon>rekom_N.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rekom_P.aspx.cs">
+      <DependentUpon>rekom_P.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rekom_P.aspx.designer.cs">
+      <DependentUpon>rekom_P.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="status_K.aspx.cs">
+      <DependentUpon>status_K.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="status_K.aspx.designer.cs">
+      <DependentUpon>status_K.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="status_N.aspx.cs">
+      <DependentUpon>status_N.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="status_N.aspx.designer.cs">
+      <DependentUpon>status_N.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="status_P.aspx.cs">
+      <DependentUpon>status_P.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="status_P.aspx.designer.cs">
+      <DependentUpon>status_P.aspx</DependentUpon>
     </Compile>
     <Compile Include="tambah_admin.aspx.cs">
       <DependentUpon>tambah_admin.aspx</DependentUpon>

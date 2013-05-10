@@ -10,8 +10,9 @@ namespace spetindoProject
     {
         public double[, ,] matrix = new double[100, 63, 17];
         public double[, ,] states = new double[100, 63, 17];
+        public double[,] tes = new double[1000000, 17];
         public double[,] Bt = new double[100, 63];
-        public char[] predict = new char[63];
+        public char[] predict = new char[66];
         public double[] rule = new double[1000000];
         public int[] temp_t = new int[1000000];
         public int[] temp_kolom = new int[1000000];
@@ -22,18 +23,21 @@ namespace spetindoProject
         public double[] Jmeasure = new double[63];
         public double[] Fitness = new double[63];
         double[] answer = new double[17];
+        double[] tempanswer = new double[17];
+        double[] jacc = new double[1000000];
+        double[] koeff = new double[1000000];
 
         public int banyakBaris = 17;
         public int banyakKolom = 63;
         public int banyakSilang = 2;
-        public double N, Npu, Nt, gbest = 1, temp_gbest = 0.5;
+        public double N, Npu, Nt, gbest = 1, temp_gbest = 0.5, hitungsama = 0;
         Random random = new Random();
-        public int t = 0;
+        public int t = 0, index = 65, ab = 0, sama = 0, flag = 0;
         public string hasil;
 
         public void inisialisasi()
         {
-            // membaca prediction
+            // membaca dataset
             XDocument doc = XDocument.Load("DS_Spetindo.xml");
 
             var produksi = doc.Descendants("Produksi");
@@ -41,51 +45,27 @@ namespace spetindoProject
             int n = 0;
             foreach (var Produksi in produksi)
             {
-                //Console.WriteLine(Produksi.Value);
+                //memasukkan nilai di xml ke array predict
                 predict[n] = Produksi.Value[0];
                 hitung_c[n] = 0;
                 n++;
             }
 
-            //ngerint predic
-            /*for (int i = 0; i < 63; i++)
-            {
-                Console.WriteLine(predict[i]);
-            }*/
-
-            //mengisi array condition
-
+            
             for (int x = 0; x <= t; x++)
             {
                 for (int kolom = 0; kolom < banyakKolom; kolom++)
                 {
                     for (int baris = 0; baris < banyakBaris; baris++)
                     {
-                        //for (int silang = 0; silang < banyakSilang; silang++)
-                        //{
-                        //Console.Write("Posisi [{0},{1}] = ", baris, kolom);
                         matrix[t, kolom, baris] = 45;
-                        //}
                     }
                 }
             }
-            //Console.WriteLine();
-            //menampilkan array condition
-            /*for (int x = 0; x <= t; x++)
-            {
-                for (int kolom = 0; kolom < banyakKolom; kolom++)
-                {
-                    for (int baris = 0; baris < banyakBaris; baris++)
-                    {
-                        
-                            Console.WriteLine("Qt adalah [{0},{1},{2}] = {3}", t, kolom, baris, matrix[t, kolom, baris]);
-                        
-                    }
-                }
-            }*/
 
         }
 
+        //merubah Qt menjadi Pt
         public void makept()
         {
             int j = 0, randomNumber;
@@ -110,10 +90,9 @@ namespace spetindoProject
                 j = j + 1;
             }
 
-            //Console.WriteLine();
 
-            //menampilkan array
-            /*for (int i = 0; i <= t; i++)
+            //menampilkan array Pt
+            for (int i = 0; i <= t; i++)
             {
                 for (int kolom = 0; kolom < banyakKolom; kolom++)
                 {
@@ -124,7 +103,7 @@ namespace spetindoProject
 
                     }
                 }
-            }*/
+            }
 
         }
 
@@ -140,7 +119,6 @@ namespace spetindoProject
                     randomNumber = random.Next(0, 2);
                     if (randomNumber > (Math.Cos(matrix[t - 1, j, i]) * Math.Cos(matrix[t - 1, j, i])))
                     {
-                        //Console.WriteLine(Math.Cos(matrix[t, j, i]));
                         states[t, j, i] = 1;
                     }
                     else
@@ -153,24 +131,9 @@ namespace spetindoProject
                 j = j + 1;
             }
 
-            Console.WriteLine();
-
-            //menampilkan array
-            /*for (int i = 0; i < t; i++)
-            {
-                for (int kolom = 0; kolom < banyakKolom; kolom++)
-                {
-                    for (int baris = 0; baris < banyakBaris; baris++)
-                    {
-
-                        Console.WriteLine("Pt adalah [{0},{1},{2}] = {3}",t, kolom, baris, states[t, kolom, baris]);
-
-                    }
-                }
-            }*/
-
         }
 
+        //membuat fitness function
         public void fitness()
         {
             //menghitung |c|
@@ -268,8 +231,6 @@ namespace spetindoProject
                     }
                     if (predict[i].Equals(predict[j]))
                     {
-                        //temp_p[j] = temp_p[i];
-                        //count_cp++;
                         if (sama == 1)
                             sama = sama + 1;
                     }
@@ -285,7 +246,7 @@ namespace spetindoProject
             //menghitung N
             N = banyakKolom;
 
-            //menghitung Jm
+
             //menghitung b
             double[] b = new double[63];
             for (int i = 0; i < banyakKolom; i++)
@@ -315,28 +276,9 @@ namespace spetindoProject
                 Fitness[i] = ((w1 * Jmeasure[i]) + (w2 * (Npu / Nt))) / (w1 + w2);
             }
 
-
-            //coba ngeprint
-            /*for (int cc = 0; cc < 63; cc++)
-            {
-                for (int dd = 0; dd < banyakBaris; dd++)
-                {
-                    Console.Write("{0} ", states[t,cc, dd]);
-                }
-                Console.WriteLine(" = {0}", hitung_c[temp_c[cc]]);
-                //Console.WriteLine("predict = {0}", predict[cc]);
-                //Console.WriteLine("hitung_p = {0}", hitung_p[temp_p[cc]]);
-                //Console.WriteLine("hitung_cp = {0}", hitung_cp[temp_cp[cc]]);
-                //Console.WriteLine("{0} / {1} = {2}", hitung_p[cc], N, Math.Round(a[cc],6));
-                Console.WriteLine(hitung_p[temp_p[cc]] + " / " + N + " = " + a[cc]);
-                Console.WriteLine("{0} / {1} = {2}", hitung_cp[temp_p[cc]], hitung_c[temp_p[cc]], b[cc]);
-                Console.WriteLine("Jm = {0} / {1} * ( {2} * {3}) = {4}", hitung_c[temp_p[cc]], N, b[cc], Math.Log10(b[cc] / a[cc]), Jmeasure[cc]);
-                Console.WriteLine(Fitness[cc]);
-            }*/
-
-
         }
 
+        //membuat Bt -> isi fitness function
         public void makebt()
         {
             for (int i = 0; i < banyakKolom; i++)
@@ -344,10 +286,6 @@ namespace spetindoProject
                 Bt[t, i] = Fitness[i];
             }
 
-            /*for (int i = 0; i < banyakKolom; i++)
-            {
-                Console.WriteLine("Bt {0} , {1} = {2}",t, i, Bt[t, i]);
-            }*/
         }
 
         public double GetRandomNumber(double minimum, double maximum)
@@ -362,6 +300,7 @@ namespace spetindoProject
             Array.Sort<T[]>(data, (x, y) => comparer.Compare(x[col], y[bar]));
         }
 
+        //menghitung PSO == merubah matrix (Vt)
         public void PSO()
         {
             //Random random = new Random();
@@ -381,8 +320,6 @@ namespace spetindoProject
                     if (pbest > gbest)
                     {
                         gbest = pbest;
-                        //temp_gbest = gbest;
-                        //Console.WriteLine("gbest {0}", gbest);
                     }
                 }
 
@@ -390,9 +327,6 @@ namespace spetindoProject
                 {
                     teta = matrix[t - 1, kolom, baris];
 
-
-                    //Console.Write("Posisi [{0},{1}] = ", baris, kolom);
-                    //rand = random.Next(0, 2);
                     rand = GetRandomNumber(0, 1);
                     //Console.WriteLine(rand);
                     Vt_akhir = alf * ((w * Vt_awal) + (c1 * rand * (pbest - teta)) + (c2 * rand * (gbest - teta)));
@@ -401,17 +335,6 @@ namespace spetindoProject
 
                 }
             }
-
-            //menampilkan array
-            /*for (int kolom = 0; kolom < banyakKolom; kolom++)
-            {
-                for (int baris = 0; baris < banyakBaris; baris++)
-                {
-
-                    Console.WriteLine("Q[{0},{1},{2}] = {3}", t, kolom, baris, matrix[t,kolom,baris]);
-
-                }
-            }*/
 
         }
 
@@ -432,43 +355,11 @@ namespace spetindoProject
             }
         }
 
-        public void input()
+        
+        //fungsi cek output yg sama persis
+        public void cek()
         {
-
-            /*for (int x = 0; x <= t; x++)
-          {
-              for (int kolom = 0; kolom < banyakKolom; kolom++)
-              {
-            for (int baris = 0; baris < banyakBaris; baris++)
-            {
-
-                Console.WriteLine("Qt adalah [{0},{1},{2}] = {3}", t, 20, baris, matrix[t, 20, baris]);
-                Console.WriteLine("Qt adalah [{0},{1},{2}] = {3}", t, 10, baris, matrix[t, 10, baris]);
-            }
-              /*}
-          }*/
-
-            Console.WriteLine("===============================================");
-            Console.WriteLine("please enter the array index you wish to get the value of it");
-
-            for (int i = 0; i < answer.Length; i++)
-            {
-                answer[i] = Double.Parse(Console.ReadLine());
-                //Console.WriteLine("{0}: {1} ", i, answer[i]);
-            }
-        }
-
-
-        //output padi
-        public string outputPadi()
-        {
-            //set data padi
-            answer[0] = 1;
-
-            //sorting Bt
-            //Sort<double>(Bt, banyakKolom,banyakBaris);
-
-            //memasukkan Bt ke rule
+            //memasukkan Bt ke rule (biar gak ada yg double)
             int no = 0;
             for (int z = 0; z < t; z++)
             {
@@ -495,116 +386,224 @@ namespace spetindoProject
                 }
             }
 
-            //sort rule
+            //sort rule dr tinggi ke rendah
             Array.Sort(rule);
             Array.Reverse(rule);
-            /*for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine("rule {0} = {1}, t = {2}, kolom = {3}, predict = {4}", i, rule[i], temp_t[i], temp_kolom[i],predict[temp_kolom[i]]);
-            }*/
 
-            //ambil 10 rule
+            //ambil 10 rule dimasukkan ke rules
             for (int i = 0; i < 10; i++)
             {
                 rules[i] = rule[i];
             }
 
-            /*for (int i = 0; i < 10; i++)
+
+            sama = 1;
+            flag = 1;
+            index = 65;
+
+            //memasukkan state yg mempunyai nilai rules ke tes
+
+
+            for (int l = 0; l < 10; l++)
             {
-                Console.WriteLine("rules {0} = {1}", i, rules[i]);
-            }*/
-
-
-            //mengecek kesamaan di rules
-            int sama = 1, flag = 1, index = 0;
-
-            char a = 'a', b = 'b', c = 'c', d = 'd', e = 'e', f = 'f', g = 'g', h = 'h';
-            /*int tt, kolom;
-
-            for (int i = 0; i < 5; i++)
-            {
-                tt = temp_t[i];
-                kolom=temp_kolom[i];
-
-                for (int k = 0; k < banyakBaris; k++)
-                    {
-                        if (states[tt, kolom, k] != answer[k])
-                        {
-                            sama = 0;
-                            break;
-                        }
-                    }
-                    if (sama == 1)
-                    {
-                        Console.WriteLine("Predict {0} : {1} ",kolom, predict[kolom]);
-                        flag = 0;
-                        break;
-                    }
-
-                    if (flag == 0)
-                        break;
-            }*/
-
-            for (int j = 0; j <= t; j++)
-            {
-                for (int i = 0; i < banyakKolom; i++)
+                for (int j = 0; j <= t; j++)
                 {
-                    sama = 1;
-                    for (int k = 0; k < banyakBaris; k++)
+                    for (int i = 0; i < banyakKolom; i++)
                     {
-                        if (states[j, i, k] != answer[k])
+                        if (rules[l] == Bt[j, i])
                         {
-                            sama = 0;
-                            break;
+                            for (int m = 0; m < banyakBaris; m++)
+                            {
+                                tes[ab, m] = states[j, i, m];
+                            }
+                            ab++;
                         }
                     }
-                    if (sama == 1)
+                }
+            }
+
+            //mengecek states yg sama dengan inputan
+            for (int i = 0; i < ab; i++)
+            {
+
+                sama = 1;
+                for (int k = 0; k < banyakBaris; k++)
+                {
+                    if (tes[i, k] != tempanswer[k])
                     {
-                        //Console.WriteLine("Predict : {0} ", predict[i]);
-                        index = i;
-                        flag = 0;
+                        sama = 0;
                         break;
                     }
                 }
-                if (flag == 0)
+                if (sama == 1)
+                {
+                    index = i;
+                    flag = 0;
                     break;
+                }
             }
+
+        }
+
+        //cari nilai jaccard
+        public void jaccard()
+        {
+            //count yg sama &hitung jaccard
+            for (int i = 0; i < ab; i++)
+            {
+
+                hitungsama = 0;
+                for (int k = 0; k < banyakBaris; k++)
+                {
+                    if (tes[i, k] == tempanswer[k])
+                    {
+                        hitungsama++;
+                        //break;
+                    }
+                }
+                double n = banyakBaris;
+                jacc[i] = hitungsama / n;
+                koeff[i] = jacc[i];
+            }
+
+            //sort jacc dr tinggi ke rendah
+            Array.Sort(jacc);
+            Array.Reverse(jacc);
+
+        }
+
+        //fungsi cek output dgn nilai jaccard
+        public void cekJaccard()
+        {
+            //mengecek states yg sama dengan inputan + nilai jaccard tertinggi
+            for (int i = 0; i < ab; i++)
+            {
+                for (int j = 0; j < ab; j++)
+                {
+                    if (koeff[j] == jacc[i])
+                    {
+                        index = j % 63;
+                    }
+
+                }
+            }
+        }
+
+        public void print()
+        {
+            //for (int i = 0; i < ab; i++)
+            Console.WriteLine(jacc[1]);
+            Console.WriteLine(koeff[index]);
+
+        }
+        //output padi
+        public string outputPadi()
+        {
+            //set data padi
+            tempanswer[0] = 1;
+            tempanswer[1] = 0;
+            tempanswer[2] = 0;
+            for (int i = 3; i < banyakBaris; i++)
+            {
+                tempanswer[i] = answer[i];
+            }
+
+            cek();
+
+            char a = 'a', b = 'b', c = 'c', d = 'd', e = 'e', f = 'f', g = 'g', h = 'h';
+
+
+            //Console.WriteLine(index);
 
             if (predict[index].Equals(a))
             {
-                hasil = "0 - 452 kwintal";
+                //hasil = "0 - 452 kwintal";
+                hasil = "226";
             }
             else if (predict[index].Equals(b))
             {
-                hasil = "453 - 46179,5714285714 kwintal";
+                //hasil = "453 - 46179,5714285714 kwintal";
+                hasil = "23586";
             }
             else if (predict[index].Equals(c))
             {
-                hasil = "46180 - 91907,1428571429 kwintal";
+                //hasil = "46180 - 91907,1428571429 kwintal";
+                hasil = "69043";
             }
             else if (predict[index].Equals(d))
             {
-                hasil = "91908 - 137634,714285714 kwintal";
+                //hasil = "91908 - 137634,714285714 kwintal";
+                hasil = "114771";
             }
             else if (predict[index].Equals(e))
             {
-                hasil = "137635 - 183362,285714286 kwintal";
+                //hasil = "137635 - 183362,285714286 kwintal";
+                hasil = "160498";
             }
             else if (predict[index].Equals(f))
             {
-                hasil = "183363 - 229089,857142857 kwintal";
+                //hasil = "183363 - 229089,857142857 kwintal";
+                hasil = "206226";
             }
             else if (predict[index].Equals(g))
             {
-                hasil = "229090 - 274817,428571429 kwintal";
+                //hasil = "229090 - 274817,428571429 kwintal";
+                hasil = "251953";
             }
             else if (predict[index].Equals(h))
             {
-                hasil = "274817,428571429 - More kwintal";
+                //hasil = "274817,428571429 - More kwintal";
+                hasil = "274817";
             }
-            else
+            else if (index == 65)
             {
-                hasil = "Keputusan tidak ditemukan";
+                //hasil = "Keputusan tidak ditemukan";
+                jaccard();
+                cekJaccard();
+
+                //Console.WriteLine(index);
+                a = 'a'; b = 'b'; c = 'c'; d = 'd'; e = 'e'; f = 'f'; g = 'g'; h = 'h';
+                //Console.WriteLine(predict[index]);
+                if (predict[index].Equals(a))
+                {
+                    //hasil = "0 - 452 kwintal";
+                    hasil = "226";
+                }
+                else if (predict[index].Equals(b))
+                {
+                    //hasil = "453 - 46179,5714285714 kwintal";
+                    hasil = "23586";
+                }
+                else if (predict[index].Equals(c))
+                {
+                    //hasil = "46180 - 91907,1428571429 kwintal";
+                    hasil = "69043";
+                }
+                else if (predict[index].Equals(d))
+                {
+                    //hasil = "91908 - 137634,714285714 kwintal";
+                    hasil = "114771";
+                }
+                else if (predict[index].Equals(e))
+                {
+                    //hasil = "137635 - 183362,285714286 kwintal";
+                    hasil = "160498";
+                }
+                else if (predict[index].Equals(f))
+                {
+                    //hasil = "183363 - 229089,857142857 kwintal";
+                    hasil = "206226";
+                }
+                else if (predict[index].Equals(g))
+                {
+                    //hasil = "229090 - 274817,428571429 kwintal";
+                    hasil = "251953";
+                }
+                else if (predict[index].Equals(h))
+                {
+                    //hasil = "274817,428571429 - More kwintal";
+                    hasil = "274817";
+                }
             }
 
             return (hasil);
@@ -615,148 +614,110 @@ namespace spetindoProject
         public string outputJagung()
         {
             //set data jagung
-            answer[1] = 1;
-
-            //sorting Bt
-            //Sort<double>(Bt, banyakKolom,banyakBaris);
-
-            //memasukkan Bt ke rule
-            int no = 0;
-            for (int z = 0; z < t; z++)
+            tempanswer[0] = 0;
+            tempanswer[1] = 1;
+            tempanswer[2] = 0;
+            for (int i = 3; i < banyakBaris; i++)
             {
-                for (int i = 0; i < banyakKolom; i++)
-                {
-                    rule[no] = Bt[z, i];
-                    //Console.WriteLine("rule {0} = {1}", i, rule[no]);
-                    temp_kolom[no] = i;
-                    temp_t[no] = z;
-
-                    if (no > 0)
-                    {
-                        for (int cek = 0; cek < no; cek++)
-                        {
-                            if (rule[no] == rule[cek])
-                            {
-                                no--;
-                                break;
-                            }
-                        }
-                    }
-
-                    no++;
-                }
+                tempanswer[i] = answer[i];
             }
 
-            //sort rule
-            Array.Sort(rule);
-            Array.Reverse(rule);
-            /*for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine("rule {0} = {1}, t = {2}, kolom = {3}, predict = {4}", i, rule[i], temp_t[i], temp_kolom[i],predict[temp_kolom[i]]);
-            }*/
-
-            //ambil 10 rule
-            for (int i = 0; i < 10; i++)
-            {
-                rules[i] = rule[i];
-            }
-
-            /*for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine("rules {0} = {1}", i, rules[i]);
-            }*/
-
-
-            //mengecek kesamaan di rules
-            int sama = 1, flag = 1, index = 0;
+            cek();
 
             char a = 'a', b = 'b', c = 'c', d = 'd', e = 'e', f = 'f', g = 'g', h = 'h';
-            /*int tt, kolom;
 
-            for (int i = 0; i < 5; i++)
-            {
-                tt = temp_t[i];
-                kolom=temp_kolom[i];
 
-                for (int k = 0; k < banyakBaris; k++)
-                    {
-                        if (states[tt, kolom, k] != answer[k])
-                        {
-                            sama = 0;
-                            break;
-                        }
-                    }
-                    if (sama == 1)
-                    {
-                        Console.WriteLine("Predict {0} : {1} ",kolom, predict[kolom]);
-                        flag = 0;
-                        break;
-                    }
-
-                    if (flag == 0)
-                        break;
-            }*/
-
-            for (int j = 0; j <= t; j++)
-            {
-                for (int i = 0; i < banyakKolom; i++)
-                {
-                    sama = 1;
-                    for (int k = 0; k < banyakBaris; k++)
-                    {
-                        if (states[j, i, k] != answer[k])
-                        {
-                            sama = 0;
-                            break;
-                        }
-                    }
-                    if (sama == 1)
-                    {
-                        //Console.WriteLine("Predict : {0} ", predict[i]);
-                        index = i;
-                        flag = 0;
-                        break;
-                    }
-                }
-                if (flag == 0)
-                    break;
-            }
+            //Console.WriteLine(index);
 
             if (predict[index].Equals(a))
             {
-                hasil = "0 - 452 kwintal";
+                //hasil = "0 - 452 kwintal";
+                hasil = "226";
             }
             else if (predict[index].Equals(b))
             {
-                hasil = "453 - 46179,5714285714 kwintal";
+                //hasil = "453 - 46179,5714285714 kwintal";
+                hasil = "23586";
             }
             else if (predict[index].Equals(c))
             {
-                hasil = "46180 - 91907,1428571429 kwintal";
+                //hasil = "46180 - 91907,1428571429 kwintal";
+                hasil = "69043";
             }
             else if (predict[index].Equals(d))
             {
-                hasil = "91908 - 137634,714285714 kwintal";
+                //hasil = "91908 - 137634,714285714 kwintal";
+                hasil = "114771";
             }
             else if (predict[index].Equals(e))
             {
-                hasil = "137635 - 183362,285714286 kwintal";
+                //hasil = "137635 - 183362,285714286 kwintal";
+                hasil = "160498";
             }
             else if (predict[index].Equals(f))
             {
-                hasil = "183363 - 229089,857142857 kwintal";
+                //hasil = "183363 - 229089,857142857 kwintal";
+                hasil = "206226";
             }
             else if (predict[index].Equals(g))
             {
-                hasil = "229090 - 274817,428571429 kwintal";
+                //hasil = "229090 - 274817,428571429 kwintal";
+                hasil = "251953";
             }
             else if (predict[index].Equals(h))
             {
-                hasil = "274817,428571429 - More kwintal";
+                //hasil = "274817,428571429 - More kwintal";
+                hasil = "274817";
             }
-            else
+            else if (index == 65)
             {
-                hasil = "Keputusan tidak ditemukan";
+                //hasil = "Keputusan tidak ditemukan";
+                jaccard();
+                cekJaccard();
+
+                //Console.WriteLine(index);
+                a = 'a'; b = 'b'; c = 'c'; d = 'd'; e = 'e'; f = 'f'; g = 'g'; h = 'h';
+                //Console.WriteLine(predict[index]);
+                if (predict[index].Equals(a))
+                {
+                    //hasil = "0 - 452 kwintal";
+                    hasil = "226";
+                }
+                else if (predict[index].Equals(b))
+                {
+                    //hasil = "453 - 46179,5714285714 kwintal";
+                    hasil = "23586";
+                }
+                else if (predict[index].Equals(c))
+                {
+                    //hasil = "46180 - 91907,1428571429 kwintal";
+                    hasil = "69043";
+                }
+                else if (predict[index].Equals(d))
+                {
+                    //hasil = "91908 - 137634,714285714 kwintal";
+                    hasil = "114771";
+                }
+                else if (predict[index].Equals(e))
+                {
+                    //hasil = "137635 - 183362,285714286 kwintal";
+                    hasil = "160498";
+                }
+                else if (predict[index].Equals(f))
+                {
+                    //hasil = "183363 - 229089,857142857 kwintal";
+                    hasil = "206226";
+                }
+                else if (predict[index].Equals(g))
+                {
+                    //hasil = "229090 - 274817,428571429 kwintal";
+                    hasil = "251953";
+                }
+                else if (predict[index].Equals(h))
+                {
+                    //hasil = "274817,428571429 - More kwintal";
+                    hasil = "274817";
+                }
             }
 
             return (hasil);
@@ -768,148 +729,110 @@ namespace spetindoProject
         {
 
             //set data kedelai
-            answer[2] = 1;
-
-            //sorting Bt
-            //Sort<double>(Bt, banyakKolom,banyakBaris);
-
-            //memasukkan Bt ke rule
-            int no = 0;
-            for (int z = 0; z < t; z++)
+            tempanswer[0] = 0;
+            tempanswer[1] = 0;
+            tempanswer[2] = 1;
+            for (int i = 3; i < banyakBaris; i++)
             {
-                for (int i = 0; i < banyakKolom; i++)
-                {
-                    rule[no] = Bt[z, i];
-                    //Console.WriteLine("rule {0} = {1}", i, rule[no]);
-                    temp_kolom[no] = i;
-                    temp_t[no] = z;
-
-                    if (no > 0)
-                    {
-                        for (int cek = 0; cek < no; cek++)
-                        {
-                            if (rule[no] == rule[cek])
-                            {
-                                no--;
-                                break;
-                            }
-                        }
-                    }
-
-                    no++;
-                }
+                tempanswer[i] = answer[i];
             }
 
-            //sort rule
-            Array.Sort(rule);
-            Array.Reverse(rule);
-            /*for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine("rule {0} = {1}, t = {2}, kolom = {3}, predict = {4}", i, rule[i], temp_t[i], temp_kolom[i],predict[temp_kolom[i]]);
-            }*/
-
-            //ambil 10 rule
-            for (int i = 0; i < 10; i++)
-            {
-                rules[i] = rule[i];
-            }
-
-            /*for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine("rules {0} = {1}", i, rules[i]);
-            }*/
-
-
-            //mengecek kesamaan di rules
-            int sama = 1, flag = 1, index = 0;
+            cek();
 
             char a = 'a', b = 'b', c = 'c', d = 'd', e = 'e', f = 'f', g = 'g', h = 'h';
-            /*int tt, kolom;
 
-            for (int i = 0; i < 5; i++)
-            {
-                tt = temp_t[i];
-                kolom=temp_kolom[i];
 
-                for (int k = 0; k < banyakBaris; k++)
-                    {
-                        if (states[tt, kolom, k] != answer[k])
-                        {
-                            sama = 0;
-                            break;
-                        }
-                    }
-                    if (sama == 1)
-                    {
-                        Console.WriteLine("Predict {0} : {1} ",kolom, predict[kolom]);
-                        flag = 0;
-                        break;
-                    }
-
-                    if (flag == 0)
-                        break;
-            }*/
-
-            for (int j = 0; j <= t; j++)
-            {
-                for (int i = 0; i < banyakKolom; i++)
-                {
-                    sama = 1;
-                    for (int k = 0; k < banyakBaris; k++)
-                    {
-                        if (states[j, i, k] != answer[k])
-                        {
-                            sama = 0;
-                            break;
-                        }
-                    }
-                    if (sama == 1)
-                    {
-                        //Console.WriteLine("Predict : {0} ", predict[i]);
-                        index = i;
-                        flag = 0;
-                        break;
-                    }
-                }
-                if (flag == 0)
-                    break;
-            }
+            //Console.WriteLine(index);
 
             if (predict[index].Equals(a))
             {
-                hasil = "0 - 452 kwintal";
+                //hasil = "0 - 452 kwintal";
+                hasil = "226";
             }
             else if (predict[index].Equals(b))
             {
-                hasil = "453 - 46179,5714285714 kwintal";
+                //hasil = "453 - 46179,5714285714 kwintal";
+                hasil = "23586";
             }
             else if (predict[index].Equals(c))
             {
-                hasil = "46180 - 91907,1428571429 kwintal";
+                //hasil = "46180 - 91907,1428571429 kwintal";
+                hasil = "69043";
             }
             else if (predict[index].Equals(d))
             {
-                hasil = "91908 - 137634,714285714 kwintal";
+                //hasil = "91908 - 137634,714285714 kwintal";
+                hasil = "114771";
             }
             else if (predict[index].Equals(e))
             {
-                hasil = "137635 - 183362,285714286 kwintal";
+                //hasil = "137635 - 183362,285714286 kwintal";
+                hasil = "160498";
             }
             else if (predict[index].Equals(f))
             {
-                hasil = "183363 - 229089,857142857 kwintal";
+                //hasil = "183363 - 229089,857142857 kwintal";
+                hasil = "206226";
             }
             else if (predict[index].Equals(g))
             {
-                hasil = "229090 - 274817,428571429 kwintal";
+                //hasil = "229090 - 274817,428571429 kwintal";
+                hasil = "251953";
             }
             else if (predict[index].Equals(h))
             {
-                hasil = "274817,428571429 - More kwintal";
+                //hasil = "274817,428571429 - More kwintal";
+                hasil = "274817";
             }
-            else
+            else if (index == 65)
             {
-                hasil = "Keputusan tidak ditemukan";
+                //hasil = "Keputusan tidak ditemukan";
+                jaccard();
+                cekJaccard();
+
+                //Console.WriteLine(index);
+                a = 'a'; b = 'b'; c = 'c'; d = 'd'; e = 'e'; f = 'f'; g = 'g'; h = 'h';
+                //Console.WriteLine(predict[index]);
+                if (predict[index].Equals(a))
+                {
+                    //hasil = "0 - 452 kwintal";
+                    hasil = "226";
+                }
+                else if (predict[index].Equals(b))
+                {
+                    //hasil = "453 - 46179,5714285714 kwintal";
+                    hasil = "23586";
+                }
+                else if (predict[index].Equals(c))
+                {
+                    //hasil = "46180 - 91907,1428571429 kwintal";
+                    hasil = "69043";
+                }
+                else if (predict[index].Equals(d))
+                {
+                    //hasil = "91908 - 137634,714285714 kwintal";
+                    hasil = "114771";
+                }
+                else if (predict[index].Equals(e))
+                {
+                    //hasil = "137635 - 183362,285714286 kwintal";
+                    hasil = "160498";
+                }
+                else if (predict[index].Equals(f))
+                {
+                    //hasil = "183363 - 229089,857142857 kwintal";
+                    hasil = "206226";
+                }
+                else if (predict[index].Equals(g))
+                {
+                    //hasil = "229090 - 274817,428571429 kwintal";
+                    hasil = "251953";
+                }
+                else if (predict[index].Equals(h))
+                {
+                    //hasil = "274817,428571429 - More kwintal";
+                    hasil = "274817";
+                }
             }
 
             return (hasil);
