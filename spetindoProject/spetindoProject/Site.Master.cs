@@ -31,6 +31,38 @@ namespace spetindoProject
             }
         }
 
+        /*protected void ImageButtonLogin_Click(object sender, ImageClickEventArgs e)
+        {
+            OracleConnection connect = new OracleConnection();
+            OracleDataReader reader;
+            string strconnect = ConfigurationManager.ConnectionStrings["Connection"].ConnectionString;
+            connect.ConnectionString = strconnect;
+
+            string strquery = "select nama_admin, password_admin from admin where nama_admin='" + textboxLoginId.Text + "' and password_admin='" + textboxLoginPass.Text + "'";
+            OracleCommand command = new OracleCommand(strquery, connect);
+            try
+            {
+                connect.Open();
+                reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    Response.Redirect("index_admin.aspx");
+                }
+                else
+                {
+                    Response.Write("<script language=JavaScript>alert('Sorry,your username or password may be Invalid.Please enter Vaild Datas')</script>");
+                }
+
+
+                reader.Close();
+            }
+            finally
+            {
+                connect.Close();
+            }
+
+        }*/
+
         public virtual string LocationCheck()
         {
             return "";
