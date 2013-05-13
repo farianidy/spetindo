@@ -149,7 +149,7 @@ namespace spetindoProject
         {
             Session.Abandon();
             Session.Clear();
-            Response.Redirect("~/main page.aspx");
+            Response.Redirect("~/index.aspx");
         }
     }
 }

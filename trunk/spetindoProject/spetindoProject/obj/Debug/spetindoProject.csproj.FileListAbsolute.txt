@@ -5,7 +5,7 @@ E:\5109100019\svn new\spetindoProject\spetindoProject\bin\Oracle.DataAccess.dll
 E:\5109100019\svn new\spetindoProject\spetindoProject\obj\Debug\spetindoProject.dll
 E:\5109100019\svn new\spetindoProject\spetindoProject\obj\Debug\spetindoProject.pdb
 E:\ayu\Lomba\IT Contest ITS Expo 2013\svn v 3\spetindoProject\spetindoProject\obj\Debug\ResolveAssemblyReference.cache
-E:\ayu\Lomba\IT Contest ITS Expo 2013\svn v 3\spetindoProject\spetindoProject\obj\Debug\spetindoProject.dll
-E:\ayu\Lomba\IT Contest ITS Expo 2013\svn v 3\spetindoProject\spetindoProject\obj\Debug\spetindoProject.pdb
 E:\ayu\Lomba\IT Contest ITS Expo 2013\svn v 3\spetindoProject\spetindoProject\bin\spetindoProject.dll
 E:\ayu\Lomba\IT Contest ITS Expo 2013\svn v 3\spetindoProject\spetindoProject\bin\spetindoProject.pdb
+E:\ayu\Lomba\IT Contest ITS Expo 2013\svn v 3\spetindoProject\spetindoProject\obj\Debug\spetindoProject.dll
+E:\ayu\Lomba\IT Contest ITS Expo 2013\svn v 3\spetindoProject\spetindoProject\obj\Debug\spetindoProject.pdb

@@ -39,15 +39,15 @@
         <!-- header -->
 	        <header>
 		        <div class="container">
-        	        <form action="" id="login-form">
+        	        <form action=" " id="login-form">
 				        <fieldset>
 					        <span class="text">
 						        <input type="text" value="Username" onFocus="if(this.value=='Username'){this.value=''}" onBlur="if(this.value==''){this.value='Username'}">
-					        </span>
+                                </span>
 					        <span class="text">
 						        <input type="password" value="Password" onFocus="if(this.value=='Password'){this.value=''}" onBlur="if(this.value==''){this.value='Password'}">
-					        </span>
-					        <a href="#" class="login" onClick="document.getElementById('login-form').submit()"><span><span>Masuk</span></span></a>
+                            </span>
+					        <a href="index_admin.aspx" class="login" onClick="document.getElementById('login-form').submit()"><span><span>Masuk</span></span></a>
 				        </fieldset>
 			        </form>
         
@@ -81,7 +81,7 @@
 					        </div>
 				        </div>
 			        </div>
-		        </div>
+    </div>
 	        </header>
 
         <!-- content -->

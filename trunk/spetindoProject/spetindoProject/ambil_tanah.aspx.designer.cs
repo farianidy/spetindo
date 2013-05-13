@@ -10,114 +10,123 @@
 namespace spetindoProject {
     
     
-    public partial class tambah_pupuk {
+    public partial class ambil_tanah {
         
         /// <summary>
-        /// form1 control.
+        /// Imagekom3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Image Imagekom3;
         
         /// <summary>
-        /// ImageButton2 control.
+        /// Imagekoma control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton2;
+        protected global::System.Web.UI.WebControls.Image Imagekoma;
         
         /// <summary>
-        /// listProvinsi control.
+        /// Imagekomb control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList listProvinsi;
+        protected global::System.Web.UI.WebControls.Image Imagekomb;
         
         /// <summary>
-        /// listKota control.
+        /// Imagekomc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList listKota;
+        protected global::System.Web.UI.WebControls.Image Imagekomc;
         
         /// <summary>
-        /// LabelIDKota control.
+        /// Imagekomd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelIDKota;
+        protected global::System.Web.UI.WebControls.Image Imagekomd;
         
         /// <summary>
-        /// listStatus control.
+        /// Imagekom4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList listStatus;
+        protected global::System.Web.UI.WebControls.Image Imagekom4;
         
         /// <summary>
-        /// LabelIDStatus control.
+        /// Imagekom5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelIDStatus;
+        protected global::System.Web.UI.WebControls.Image Imagekom5;
         
         /// <summary>
-        /// listPupuk control.
+        /// Imagekom6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList listPupuk;
+        protected global::System.Web.UI.WebControls.Image Imagekom6;
         
         /// <summary>
-        /// LabelIDPupuk control.
+        /// Imagekom7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelIDPupuk;
+        protected global::System.Web.UI.WebControls.Image Imagekom7;
         
         /// <summary>
-        /// TextBoxLuLa control.
+        /// Imagekom8 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxLuLa;
+        protected global::System.Web.UI.WebControls.Image Imagekom8;
         
         /// <summary>
-        /// TextBoxKebPupuk control.
+        /// Imagekom9 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxKebPupuk;
+        protected global::System.Web.UI.WebControls.Image Imagekom9;
         
         /// <summary>
-        /// ImageButtonTambah control.
+        /// Imagekom10 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButtonTambah;
+        protected global::System.Web.UI.WebControls.Image Imagekom10;
+        
+        /// <summary>
+        /// Imagekom11 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Imagekom11;
     }
 }

@@ -56,6 +56,7 @@
   <ItemGroup>
     <Content Include="add_admin.aspx" />
     <Content Include="add_hama.aspx" />
+    <Content Include="ambil_tanah.aspx" />
     <Content Include="contain.aspx" />
     <Content Include="css\layout.css" />
     <Content Include="css\menu.css" />
@@ -147,6 +148,21 @@
     <Content Include="images\status hara\k2.JPG" />
     <Content Include="images\status hara\k3.JPG" />
     <Content Include="images\status hara\k4.JPG" />
+    <Content Include="images\status hara\kom1.JPG" />
+    <Content Include="images\status hara\kom10.JPG" />
+    <Content Include="images\status hara\kom11.JPG" />
+    <Content Include="images\status hara\kom2.JPG" />
+    <Content Include="images\status hara\kom3.JPG" />
+    <Content Include="images\status hara\kom4.JPG" />
+    <Content Include="images\status hara\kom5.JPG" />
+    <Content Include="images\status hara\kom6.JPG" />
+    <Content Include="images\status hara\kom7.JPG" />
+    <Content Include="images\status hara\kom8.JPG" />
+    <Content Include="images\status hara\kom9.JPG" />
+    <Content Include="images\status hara\kom_a.JPG" />
+    <Content Include="images\status hara\kom_b.JPG" />
+    <Content Include="images\status hara\kom_c.JPG" />
+    <Content Include="images\status hara\kom_d.JPG" />
     <Content Include="images\status hara\n1.JPG" />
     <Content Include="images\status hara\n2.JPG" />
     <Content Include="images\status hara\n3.JPG" />
@@ -162,6 +178,7 @@
     <Content Include="images\tekanan_udara.jpg" />
     <Content Include="images\termometer_tanah.jpg" />
     <Content Include="index.aspx" />
+    <Content Include="index_admin.aspx" />
     <Content Include="informasi_hama.aspx" />
     <Content Include="informasi_harga_pasar.aspx" />
     <Content Include="informasi_permintaanpasar.aspx" />
@@ -189,6 +206,7 @@
     <Content Include="images\step.png" />
     <Content Include="info_pempembudi.aspx" />
     <Content Include="kelolaadmin.aspx" />
+    <Content Include="komponen.aspx" />
     <Content Include="main page.aspx" />
     <Content Include="mod_konsultasi.aspx" />
     <Content Include="mod_modahli.aspx" />
@@ -219,6 +237,8 @@
     <Content Include="StyleSheet.css" />
     <Content Include="tambah_admin.aspx" />
     <Content Include="tambah_hama.aspx" />
+    <Content Include="tambah_kota.aspx" />
+    <Content Include="tambah_prov.aspx" />
     <Content Include="tambah_pupuk.aspx" />
     <Content Include="tentang_kami.aspx" />
     <Content Include="Testing.aspx" />
@@ -256,6 +276,13 @@
     <Compile Include="admin.Master.designer.cs">
       <DependentUpon>admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="ambil_tanah.aspx.cs">
+      <DependentUpon>ambil_tanah.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ambil_tanah.aspx.designer.cs">
+      <DependentUpon>ambil_tanah.aspx</DependentUpon>
+    </Compile>
     <Compile Include="contain.aspx.cs">
       <DependentUpon>contain.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -286,6 +313,7 @@
       <DependentUpon>edit_pupuk.aspx</DependentUpon>
     </Compile>
     <Compile Include="forecast.cs" />
+    <Compile Include="form.cs" />
     <Compile Include="hasil_modul_nasihat.aspx.cs">
       <DependentUpon>hasil_modul_nasihat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -299,6 +327,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index_admin.aspx.cs">
+      <DependentUpon>index_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index_admin.aspx.designer.cs">
+      <DependentUpon>index_admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="informasi_hama.aspx.cs">
       <DependentUpon>informasi_hama.aspx</DependentUpon>
@@ -382,6 +417,13 @@
     </Compile>
     <Compile Include="kelolaadmin.aspx.designer.cs">
       <DependentUpon>kelolaadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="komponen.aspx.cs">
+      <DependentUpon>komponen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="komponen.aspx.designer.cs">
+      <DependentUpon>komponen.aspx</DependentUpon>
     </Compile>
     <Compile Include="main page.aspx.cs">
       <DependentUpon>main page.aspx</DependentUpon>
@@ -489,6 +531,20 @@
     </Compile>
     <Compile Include="tambah_hama.aspx.designer.cs">
       <DependentUpon>tambah_hama.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tambah_kota.aspx.cs">
+      <DependentUpon>tambah_kota.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tambah_kota.aspx.designer.cs">
+      <DependentUpon>tambah_kota.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tambah_prov.aspx.cs">
+      <DependentUpon>tambah_prov.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tambah_prov.aspx.designer.cs">
+      <DependentUpon>tambah_prov.aspx</DependentUpon>
     </Compile>
     <Compile Include="tambah_pupuk.aspx.cs">
       <DependentUpon>tambah_pupuk.aspx</DependentUpon>

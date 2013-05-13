@@ -91,6 +91,7 @@
                 </article>
 				<article class="col-2">
                     <ul class="list1">
+                        <li><a href="komponen.aspx" class="comments_link">Komponen Perangkat Uji Tanah Sawah</a></li>
 					    <li><a href="status_N.aspx" class="comments_link">Cara Penetapan Status N</a></li>
                         <li><a href="status_P.aspx" class="comments_link">Cara Penetapan Hara P</a></li>
                         <li><a href="status_K.aspx" class="comments_link">Cara Penetapan Hara K</a></li>
@@ -98,6 +99,7 @@
 				</article>
                 <article class="col-3">
                     <ul class="listt">
+                        <li><a href="ambil_tanah.aspx" class="comments_link">Cara Pengambilan Contoh Tanah</a></li>
 					    <li><a href="rekom_N.aspx" class="comments_link">Rekomendasi Pepupukan Status N</a></li>
                         <li><a href="rekom_P.aspx" class="comments_link">Rekomendasi Pepupukan Hara P</a></li>
                         <li><a href="rekom_K.aspx" class="comments_link">Rekomendasi Pepupukan Hara K</a></li>

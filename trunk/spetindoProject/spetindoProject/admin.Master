@@ -39,7 +39,7 @@
         <!-- header -->
 	        <header>
 		        <div class="container">
-        	        <form action="" id="login-form">
+        	        <!--<form action="" id="login-form">
 				        <fieldset>
 					        <span class="text">
 						        <input type="text" value="Username" onFocus="if(this.value=='Username'){this.value=''}" onBlur="if(this.value==''){this.value='Username'}">
@@ -49,7 +49,7 @@
 					        </span>
 					        <a href="#" class="login" onClick="document.getElementById('login-form').submit()"><span><span>Masuk</span></span></a>
 				        </fieldset>
-			        </form>
+			        </form>-->
         
 			        <div class="header-box">
 				        <div class="left">
@@ -58,7 +58,7 @@
                                 <nav>
                                     <div id="menu">
                                         <ul class="menu">
-                                            <li class = "current"><a href="index.aspx">Beranda</a></li>
+                                            <li class = "current"><a href="index_admin.aspx">Beranda</a></li>
 			                                <li ><a href="#">Tambah</a>
                                                 <ul>
                                                     <li><a href="tambah_admin.aspx"><span>Tambah Admin</span></a></li>        
