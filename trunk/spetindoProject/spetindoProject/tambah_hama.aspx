@@ -19,17 +19,24 @@
 	    <div class="wrap row-2">
             <form id="form1" runat="server">
                 <asp:ImageButton ID="ImageButton2" runat="server" onclick="ImageButton2_Click"  CssClass="link2"
-                    ImageUrl="~/images/button/button_logout.png" />
-
+                    ImageUrl="~/images/button/keluar.png" />
+                
 			    <article class="col-1">
-				    <h2>Data Hama Baru</h2>
+                <h2>Lihat Request Hama</h2>
+                <asp:Button ID="ButtonHama" runat="server" Text="Cek" 
+                    onclick="ButtonHama_Click"/></br></br>
+
+                    <asp:GridView ID="GridView1" runat="server">
+                </asp:GridView>
+
+				    <!--<h2>Data Hama Baru</h2>-->
                 </article>
 				<article class="col-2">
                     <ul class="list1">
 					    <li>Tanaman yang diserang: </li>
                         <li>Nama Hama: </li>
                         <li>Cara Pencegahan: </li>
-                        <li>ID Hama: </li>
+                        <!--<li>ID Hama: </li>-->
 					</ul>
 				</article>
                 <article class="col-3">
@@ -48,11 +55,13 @@
                             <asp:TextBox ID="TextBoxPencegahan" runat="server"></asp:TextBox>
                         </li>
                         <li>
-                            <asp:Label ID="LabelIDHama" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="LabelIDHama" runat="server" Text="" Enabled="false"></asp:Label>
                         </li>
                     </ul>
                     <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton1_Click"  CssClass="link2"
                         ImageUrl="~/images/button/button_tambah.png" />
+                    <asp:ImageButton ID="ImageButton3" runat="server" onclick="ImageButtonReq_Click"  CssClass="link2"
+                        ImageUrl="~/images/button/data_selesai.jpg" />
                 </article>
             </form>
             <div class="clear"></div>

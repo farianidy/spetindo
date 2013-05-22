@@ -19,37 +19,34 @@
         <div class="inside1">
 	        <div class="wrap row-2">
 			    <article class="col-1">
-				    <h2>Rekomendasi Pemupukan</h2>
+				    <h2>Cara Mengukur Status Hara</h2>
                 </article>
 				<article class="col-2">
                     <ul class="list1">
-					    <li>Tanaman: </li>
+                        <li><a href="komponen.aspx" class="comments_link">Komponen Perangkat Uji Tanah Sawah</a></li>
+                        <li><a href="ambil_tanah.aspx" class="comments_link">Cara Pengambilan Contoh Tanah</a></li>
+					    <!--<li><a href="status_N.aspx" class="comments_link">Cara Penetapan Status N</a></li>
+                        <li><a href="status_P.aspx" class="comments_link">Cara Penetapan Hara P</a></li>
+                        <li><a href="status_K.aspx" class="comments_link">Cara Penetapan Hara K</a></li>-->
 					</ul>
 				</article>
                 <article class="col-3">
                     <ul class="listt">
-					    <li>
-                            <asp:DropDownList ID="DropDownListTanaman" runat="server" Width="130px" Height="20px">
-                                <asp:ListItem Value="TA001">Padi</asp:ListItem>
-                                <asp:ListItem Value="TA002">Jagung</asp:ListItem>
-                                <asp:ListItem Value="TA003">Kedelai</asp:ListItem>
-                            </asp:DropDownList>
-                        </li>
+                        <!--<li><a href="ambil_tanah.aspx" class="comments_link">Cara Pengambilan Contoh Tanah</a></li>
+					    <li><a href="rekom_N.aspx" class="comments_link">Rekomendasi Pepupukan Status N</a></li>
+                        <li><a href="rekom_P.aspx" class="comments_link">Rekomendasi Pepupukan Hara P</a></li>
+                        <li><a href="rekom_K.aspx" class="comments_link">Rekomendasi Pepupukan Hara K</a></li>-->
+                        <li><a href="status_N.aspx" class="comments_link">Cara Penetapan Status N</a></li>
+                        <li><a href="status_P.aspx" class="comments_link">Cara Penetapan Hara P</a></li>
+                        <li><a href="status_K.aspx" class="comments_link">Cara Penetapan Hara K</a></li>
                     </ul>
-                    <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton1_Click"  CssClass="link2"
-                        ImageUrl="~/images/button/button_lihat_hasil.png" />
                 </article>
-                <div class="clear"></div>
-                <asp:GridView ID="GridView1" runat="server" CssClass="mGrid" PagerStyle-CssClass="pgr" GridLines="None"
-                    EmptyDataText="Data tidak tersedia." >
-                </asp:GridView>
 		    </div>
 	    </div>
-
         <div class="inside1">
 	        <div class="wrap row-2">
 			    <article class="col-1">
-				    <h2>Cek Status Hara</h2>
+				    <h2>Status Hara Berdasarkan Wilayah (Peta Status Hara)</h2>
                 </article>
 				<article class="col-2">
                     <ul class="list1">
@@ -72,12 +69,12 @@
                 </article>
                 <div class="clear"></div>
                 <asp:Panel ID="PanelHara" Visible=false runat="server">
-                    <h2>Status Unsur Hara P</h2>
+                    <h2>Status Unsur Hara P, Luas Lahan Sawah (Ha), Kebutuhan Pupuk SP36 dengan satuan Ton (dalam 1 musim taman) </h2>
                     <asp:GridView ID="GridViewHaraP" runat="server" CssClass="mGrid" PagerStyle-CssClass="pgr"
                         GridLines="None" EmptyDataText="Data tidak tersedia.">
                     </asp:GridView>
 
-                    <h2>Status Unsur Hara K</h2>
+                    <h2>Status Unsur Hara K, Luas Lahan Sawah (Ha), Kebutuhan Pupuk KCl dengan satuan Ton (dalam 1 musim taman) </h2>
                     <asp:GridView ID="GridViewHaraK" runat="server" CssClass="mGrid" PagerStyle-CssClass="pgr" 
                         GridLines="None" EmptyDataText="Data tidak tersedia.">
                     </asp:GridView>
@@ -87,26 +84,63 @@
         <div class="inside1">
 	        <div class="wrap row-2">
 			    <article class="col-1">
-				    <h2>Ukur Status Hara</h2>
+				    <h2>Rekomendasi Pemupukan Berdasarkan Tanaman</h2>
                 </article>
 				<article class="col-2">
                     <ul class="list1">
-                        <li><a href="komponen.aspx" class="comments_link">Komponen Perangkat Uji Tanah Sawah</a></li>
-					    <li><a href="status_N.aspx" class="comments_link">Cara Penetapan Status N</a></li>
-                        <li><a href="status_P.aspx" class="comments_link">Cara Penetapan Hara P</a></li>
-                        <li><a href="status_K.aspx" class="comments_link">Cara Penetapan Hara K</a></li>
+					    <li>Tanaman: </li>
+                        <li>Luas Lahan: </li>
+                        <li>Status Hara N : </li>
+                        <li>Status Hara P : </li>
+                        <li>Status Hara K : </li>
 					</ul>
 				</article>
                 <article class="col-3">
                     <ul class="listt">
-                        <li><a href="ambil_tanah.aspx" class="comments_link">Cara Pengambilan Contoh Tanah</a></li>
-					    <li><a href="rekom_N.aspx" class="comments_link">Rekomendasi Pepupukan Status N</a></li>
-                        <li><a href="rekom_P.aspx" class="comments_link">Rekomendasi Pepupukan Hara P</a></li>
-                        <li><a href="rekom_K.aspx" class="comments_link">Rekomendasi Pepupukan Hara K</a></li>
+					    <li>
+                            <asp:DropDownList ID="DropDownListTanaman" runat="server" Width="130px" Height="20px">
+                                <asp:ListItem Value="TA001">Padi</asp:ListItem>
+                                <asp:ListItem Value="TA002">Jagung</asp:ListItem>
+                                <asp:ListItem Value="TA003">Kedelai</asp:ListItem>
+                            </asp:DropDownList>
+                        </li>
+                        <li>
+                            <asp:TextBox ID="TextBoxLuas" runat="server"></asp:TextBox>
+                        </li>
+                        <li>
+                            <asp:DropDownList ID="DropDownListStatusN" runat="server" Width="130px" Height="20px">
+                                <asp:ListItem Value="ST001">Rendah</asp:ListItem>
+                                <asp:ListItem Value="ST002">Sedang</asp:ListItem>
+                                <asp:ListItem Value="ST003">Tinggi</asp:ListItem>
+                            </asp:DropDownList>
+                        </li>
+                        <li>
+                            <asp:DropDownList ID="DropDownListStatusP" runat="server" Width="130px" Height="20px">
+                                <asp:ListItem Value="ST001">Rendah</asp:ListItem>
+                                <asp:ListItem Value="ST002">Sedang</asp:ListItem>
+                                <asp:ListItem Value="ST003">Tinggi</asp:ListItem>
+                            </asp:DropDownList>
+                        </li>
+                        <li>
+                            <asp:DropDownList ID="DropDownListStatusK" runat="server" Width="130px" Height="20px">
+                                <asp:ListItem Value="ST001">Rendah</asp:ListItem>
+                                <asp:ListItem Value="ST002">Sedang</asp:ListItem>
+                                <asp:ListItem Value="ST003">Tinggi</asp:ListItem>
+                            </asp:DropDownList>
+                        </li>
                     </ul>
+                    <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton1_Click"  CssClass="link2"
+                        ImageUrl="~/images/button/button_lihat_hasil.png" />
                 </article>
+                <div class="clear"></div>
+                <!--<asp:GridView ID="GridView1" runat="server" CssClass="mGrid" PagerStyle-CssClass="pgr" GridLines="None"
+                    EmptyDataText="Data tidak tersedia." >
+                </asp:GridView>-->Diberi Pupuk KCL dengan takaran
+                <asp:Label ID="LabelK" runat="server" Text="0"></asp:Label> Kg, Pupuk SP36 dengan takaran
+                <asp:Label ID="LabelP" runat="server" Text="0"></asp:Label> Kg, Pupuk Urea dengan takaran
+                <asp:Label ID="LabelN" runat="server" Text="0"></asp:Label> Kg
 		    </div>
-	    </div>
+	    </div>  
     </form>
 </asp:Content>
 

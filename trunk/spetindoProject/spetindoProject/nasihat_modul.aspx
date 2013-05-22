@@ -49,14 +49,14 @@
                         </asp:DropDownList></li>
                     <li></li>
 				    <li><asp:DropDownList ID="DropDownLuas" runat="server" Width="130px" Height="20px">
-                            <asp:ListItem Value="9">0-30 Ha</asp:ListItem>
-                            <asp:ListItem Value="10">31-918 Ha</asp:ListItem>
-                            <asp:ListItem Value="11">919-1806 Ha</asp:ListItem>
-                            <asp:ListItem Value="12">1807-2694 Ha</asp:ListItem>
-                            <asp:ListItem Value="13">2695-3582 Ha</asp:ListItem>
-                            <asp:ListItem Value="14">3583-4470 Ha</asp:ListItem>
-                            <asp:ListItem Value="15">4471-5358 Ha</asp:ListItem>
-                            <asp:ListItem Value="16">5359-More Ha</asp:ListItem>
+                            <asp:ListItem Value="9">0-30 Hektar</asp:ListItem>
+                            <asp:ListItem Value="10">31-918 Hektar</asp:ListItem>
+                            <asp:ListItem Value="11">919-1806 Hektar</asp:ListItem>
+                            <asp:ListItem Value="12">1807-2694 Hektar</asp:ListItem>
+                            <asp:ListItem Value="13">2695-3582 Hektar</asp:ListItem>
+                            <asp:ListItem Value="14">3583-4470 Hektar</asp:ListItem>
+                            <asp:ListItem Value="15">4471-5358 Hektar</asp:ListItem>
+                            <asp:ListItem Value="16">5359-More Hektar</asp:ListItem>
                         </asp:DropDownList></li>
 			    </ul>
                 <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton1_Click"  CssClass="link2"

@@ -10,7 +10,7 @@ namespace spetindoProject
         public double[,] harga = new double[3,1000000];
         public int k, i = 0, batas = 12, n = 0;
         double avrg;
-        public double[] output = new double[100000];
+        public int[] output = new int[100000];
 
 
         public double ramalPadi()
@@ -25,7 +25,7 @@ namespace spetindoProject
 
                 avrg = sum / 12;
                 harga[0,i + 1] = avrg;
-                output[n] = avrg;
+                output[n] = Convert.ToInt32(avrg);
                 n++;
                 batas++;
                 i = n;
@@ -47,7 +47,7 @@ namespace spetindoProject
 
                 avrg = sum / 12;
                 harga[1, i + 1] = avrg;
-                output[n] = avrg;
+                output[n] = Convert.ToInt32(avrg);
                 n++;
                 batas++;
                 i = n;
@@ -69,7 +69,7 @@ namespace spetindoProject
 
                 avrg = sum / 12;
                 harga[2, i + 1] = avrg;
-                output[n] = avrg;
+                output[n] = Convert.ToInt32(avrg);
                 n++;
                 batas++;
                 i = n;

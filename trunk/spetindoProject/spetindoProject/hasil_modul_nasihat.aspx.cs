@@ -39,6 +39,13 @@ namespace spetindoProject
             LabelRekomJagung.Text = rekomJagung.ToString();
             LabelRekomKedelai.Text = rekomKedelai.ToString();
 
+            if (rekomPadi > rekomJagung && rekomPadi > rekomKedelai)
+                LabelTanamanRekom.Text = "Padi";
+            else if (rekomJagung > rekomPadi && rekomJagung > rekomKedelai)
+                LabelTanamanRekom.Text = "Jagung";
+            else if (rekomKedelai > rekomJagung && rekomKedelai > rekomPadi)
+                LabelTanamanRekom.Text = "Kedelai";
+
             
         }
         public void cekHarga()
@@ -146,12 +153,12 @@ namespace spetindoProject
             aaDatas = new List<aaData>();
             aaData temp;
 
-            //WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
-            //proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
+            WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
+            proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
 
 
             WebClient client = new WebClient();
-            //client.Proxy = proxyObj;
+            client.Proxy = proxyObj;
             var json = client.DownloadString("http://pip.kementan.org/index.php/datatables/demand_mingguan_kab?sEcho=4&iColumns=8&sColumns=&iDisplayStart=0&iDisplayLength=10&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=Jagung&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&_=1365404831516");
 
             var jss = new JavaScriptSerializer();
@@ -177,12 +184,12 @@ namespace spetindoProject
             aaDatas = new List<aaData>();
             aaData temp;
 
-            //WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
-            //proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
+            WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
+            proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
 
 
             WebClient client = new WebClient();
-            //client.Proxy = proxyObj;
+            client.Proxy = proxyObj;
             var json = client.DownloadString("http://pip.kementan.org/index.php/datatables/demand_mingguan_kab?sEcho=3&iColumns=8&sColumns=&iDisplayStart=0&iDisplayLength=10&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=Kedelai&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&_=1365403060851");
 
             var jss = new JavaScriptSerializer();
@@ -209,12 +216,12 @@ namespace spetindoProject
             aaDatas = new List<aaData>();
             aaData temp;
 
-            //WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
-            //proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
+            WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
+            proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
 
 
             WebClient client = new WebClient();
-            //client.Proxy = proxyObj;
+            client.Proxy = proxyObj;
             var json = client.DownloadString("http://pip.kementan.org/index.php/datatables/demand_mingguan_kab?sEcho=3&iColumns=8&sColumns=&iDisplayStart=0&iDisplayLength=10&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=Beras+Medium+Grosir&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&_=1365406779830");
 
             var jss = new JavaScriptSerializer();

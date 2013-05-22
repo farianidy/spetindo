@@ -39,6 +39,7 @@
                         </li>
                         <li>
                             <asp:DropDownList ID="DropDownListHama" runat="server" Width="130px" Height="20px"></asp:DropDownList>
+                            <br /><a href="request_hama.aspx" class="comments_link">Request Hama</a>
                         </li>
                     </ul>
                     <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton1_Click"  CssClass="link2"
