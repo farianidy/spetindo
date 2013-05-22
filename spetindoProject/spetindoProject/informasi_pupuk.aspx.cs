@@ -85,33 +85,79 @@ namespace spetindoProject
             string id_tanaman = "";
 
             id_tanaman = DropDownListTanaman.Text;
-
-            OracleConnection connect = new OracleConnection();
-            OracleDataReader reader;
-
             string strconnect = ConfigurationManager.ConnectionStrings["Connection"].ConnectionString;
+            
+            OracleConnection connect = new OracleConnection();
             connect.ConnectionString = strconnect;
-            string strquery = "select nama_pupuk, harga_pupuk, takaran, nama_jenis_pupuk from tanaman a, detail_pupuk b, pupuk c, jenis_pupuk d where a.id_tanaman='" + id_tanaman + "'and a.id_tanaman= b.id_tanaman and b.id_pupuk= c.id_pupuk and c.id_jenis_pupuk= d.id_jenis_pupuk";
-            OracleCommand command = new OracleCommand(strquery, connect);
-
-            try
+            
+            //view pupuk KCL
+            OracleDataReader reader;
+            string strquery = "select takaran from detail_pupuk where id_pupuk='PU005' and id_status='" + DropDownListStatusK.SelectedValue + "' and id_tanaman='" + DropDownListTanaman.SelectedValue + "'";
+            OracleCommand cmd = new OracleCommand(strquery, connect);
+                
+            string ukuranK="";
+            
+            connect.Open();
+            reader = cmd.ExecuteReader();
+            if (reader.Read())
             {
+                ukuranK = (string)reader["takaran"];
+            }
+
+            int hasilK;
+            hasilK = Convert.ToInt32(ukuranK) * Convert.ToInt32(TextBoxLuas.Text);
+
+            LabelK.Text = hasilK.ToString();
+            reader.Close();
+            connect.Close();
+
+            //view pupuk SP36
+            OracleDataReader reader2;
+            string strquery2 = "select takaran from detail_pupuk where id_pupuk='PU003' and id_status='" + DropDownListStatusK.SelectedValue + "' and id_tanaman='" + DropDownListTanaman.SelectedValue + "'";
+            OracleCommand cmd2 = new OracleCommand(strquery2, connect);
+
+            string ukuranP = "";
+
+            connect.Open();
+            reader2 = cmd2.ExecuteReader();
+            if (reader2.Read())
+            {
+                ukuranP = (string)reader2["takaran"];
+            }
+
+            int hasilP;
+            hasilP = Convert.ToInt32(ukuranP) * Convert.ToInt32(TextBoxLuas.Text);
+
+            LabelP.Text = hasilP.ToString();
+            reader.Close();
+            connect.Close();
+
+            string kedelai="TA003";
+
+            if (DropDownListTanaman.SelectedValue.Equals(kedelai))
+            {
+                //view pupuk urea
+                OracleDataReader reader3;
+                string strquery3 = "select takaran from detail_pupuk where id_pupuk='PU002' and id_status='" + DropDownListStatusK.SelectedValue + "' and id_tanaman='" + DropDownListTanaman.SelectedValue + "'";
+                OracleCommand cmd3 = new OracleCommand(strquery3, connect);
+
+                string ukuranN = "";
+
                 connect.Open();
-                reader = command.ExecuteReader();
+                reader3 = cmd3.ExecuteReader();
+                if (reader3.Read())
+                {
+                    ukuranN = (string)reader3["takaran"];
+                }
 
-                GridView1.DataSource = reader;
-                GridView1.DataBind();
+                int hasilN;
+                hasilN = Convert.ToInt32(ukuranN) * Convert.ToInt32(TextBoxLuas.Text);
 
+                LabelN.Text = hasilN.ToString();
                 reader.Close();
-            }
-            catch (NullReferenceException z)
-            {
-                z.ToString();
-            }
-            finally
-            {
                 connect.Close();
             }
+           
         }
 
         /* To reload gridview with sort and keyword key */

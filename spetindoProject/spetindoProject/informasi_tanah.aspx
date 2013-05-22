@@ -21,10 +21,13 @@
 			    <h2>Tanah Aluvial</h2>
             </article>
             <p>
-                Tanah Aluvial disebut juga tanah endapan karena terbentukdari endapan lumpur yang 
-                terbawa air hujan ke dataran rendah. Tanah ini bersifat subur karena terbentuk dari 
-                kikisan tanah humus.
-            </p>
+                Tanah Aluvial tanah hasil erosi yang diendapkan di daerah-daerah dataran rendah. 
+                Tanah aluvial bercirikan warnanya kelabu dan bersifat subur.
+                Tanah Aluvial berwarna kelabu sampai kecoklat-coklatan. 
+                Tekstur tanahnya liat atau liat berpasir, mempunyai konsistensi keras waktu kering dan teguh pada waktu lembab.
+            </p> 
+            <asp:Image ID="Aluvial" runat="server" Height="93px" 
+                            ImageUrl="~/images/aluvial.jpg" Width="146px" />
 		</div>
         <div class="wrap row-1">
 		    <article class="col-1">
@@ -33,9 +36,13 @@
             <p>
                 Tanah litosol merupakan jenis tanah berbatu-batu dengan lapisan tanah yang tidak 
                 begitu tebal. Bahannya berasal dari jenis batuan beku yang belum mengalami proses 
-                pelapukan secara sempurna. Jenis tanah ini banyak ditemukan di lereng gunung dan 
+                pelapukan secara sempurna sehingga butirannya besar. 
+                Ciri-ciri tanah ini yaitu miskin unsur hara dan mineralnya masih terikat pada butiran yang besar.
+                Jenis tanah ini banyak ditemukan di lereng gunung dan 
                 pegunungan di seluruh Indonesia.
             </p>
+            <asp:Image ID="Image1" runat="server" Height="93px" 
+                            ImageUrl="~/images/litosol.jpg" Width="146px" />
             <div class="clear"></div>
 		</div>
 	</div>

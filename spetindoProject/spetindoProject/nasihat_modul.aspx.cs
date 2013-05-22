@@ -44,12 +44,12 @@ namespace spetindoProject
                 bbDatas = new List<bbData>();
                 bbData temp;
 
-                //WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
-                //proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
+                WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
+                proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
 
 
                 WebClient client = new WebClient();
-                //client.Proxy = proxyObj;
+                client.Proxy = proxyObj;
                 var json = client.DownloadString(link);
 
                 var jss = new JavaScriptSerializer();

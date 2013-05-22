@@ -26,10 +26,19 @@
                             ImageUrl="~/images/pulpen.jpg" Width="54px" />
                             <h2><b>Prosedur Percobaan</b></h2>
 							<p class="p0">- Ukur Tekanan udara di sekitar lahan menggunakan barometer.</p>
-							<p class="p0"><b>Rumus Perhitungan Ketinggian Tanah</b></p>
+							<!--<p class="p0"><b>Rumus Perhitungan Ketinggian Tanah</b></p>
                             <p class="p0">H = (76 - P)100</p>
 							<p class="p0">H = ketinggian dari permukaan laut (meter)</p>
-                            <p class="p0">P = tekanan udara (cm Hg) *Hasil perhitungan menggunakan Barometer*</p>						    
+                            <p class="p0">P = tekanan udara (cm Hg) *Hasil perhitungan menggunakan Barometer*</p>
+                            <p class="p0">Jika hasil perhitungan H > 700 maka Dataran Tinggi</p>
+                            <p class="p0">Jika hasil perhitungan H <= 700 maka Dataran Tinggi</p>-->
+                            <form id="form1" runat="server">
+                            <p class="p0"><b>Masukkan Jumlah Tekanan Udara</b></p>
+                            <asp:TextBox ID="TextBoxTekanan" runat="server"></asp:TextBox>
+                            <asp:Button ID="ButtonHitung" runat="server" 
+        Text="Hitung Ketinggian Tanah" onclick="ButtonHitung_Click"></asp:Button>
+                            <p class="p0"><b>Lahan anda memiliki ketinggian <asp:Label ID="LabelTinggi" runat="server" Text=""></asp:Label> meter dpl sehingga tergolong <asp:Label ID="LabelDataran" runat="server" Text=""></asp:Label></b></p>			    
+                            </form>
                         </article>
                         </div>
 </asp:Content>

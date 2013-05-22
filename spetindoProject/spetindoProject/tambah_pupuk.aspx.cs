@@ -195,7 +195,7 @@ namespace spetindoProject
         {
             Session.Abandon();
             Session.Clear();
-            Response.Redirect("~/index_admin.aspx");
+            Response.Redirect("~/index.aspx");
         }
     }
 }

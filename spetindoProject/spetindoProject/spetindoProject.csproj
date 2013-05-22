@@ -69,9 +69,13 @@
     <Content Include="gridview\grd_pgr.png" />
     <Content Include="gridview\style.css" />
     <Content Include="hasil_modul_nasihat.aspx" />
+    <Content Include="images\aluvial.JPG" />
     <Content Include="images\Barometer.jpg" />
+    <Content Include="images\button\button_logout.png" />
     <Content Include="images\button\data_selesai.jpg" />
+    <Content Include="images\button\keluar.png" />
     <Content Include="images\button\login.JPG" />
+    <Content Include="images\button\ubah.png" />
     <Content Include="images\general\1page-img.jpg" />
     <Content Include="images\general\2page-img.jpg" />
     <Content Include="images\general\4page-img.jpg" />
@@ -137,8 +141,10 @@
     <Content Include="images\general\tail-top3.gif" />
     <Content Include="images\general\thumb-sprite.png" />
     <Content Include="images\harga pasar cr.png" />
+    <Content Include="images\keluar.png" />
     <Content Include="images\kertas.jpg" />
     <Content Include="images\lihatrekom.png" />
+    <Content Include="images\litosol.JPG" />
     <Content Include="images\menu\item-pointer-mover.gif" />
     <Content Include="images\menu\item-pointer.gif" />
     <Content Include="images\menu\lava.gif" />
@@ -216,6 +222,7 @@
     <Content Include="rekom_K.aspx" />
     <Content Include="rekom_N.aspx" />
     <Content Include="rekom_P.aspx" />
+    <Content Include="request_hama.aspx" />
     <Content Include="Scripts\cufon-replace.js" />
     <Content Include="Scripts\cufon-yui.js" />
     <Content Include="Scripts\html5.js" />
@@ -489,6 +496,13 @@
     </Compile>
     <Compile Include="rekom_P.aspx.designer.cs">
       <DependentUpon>rekom_P.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="request_hama.aspx.cs">
+      <DependentUpon>request_hama.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="request_hama.aspx.designer.cs">
+      <DependentUpon>request_hama.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

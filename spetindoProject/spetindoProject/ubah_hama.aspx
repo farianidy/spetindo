@@ -17,7 +17,7 @@
 	    <div class="wrap row-2">
             <form id="form1" runat="server">
                 <asp:ImageButton ID="ImageButton2" runat="server" onclick="ImageButton2_Click"  CssClass="link2"
-                    ImageUrl="~/images/button/button_logout.png" />
+                    ImageUrl="~/images/button/keluar.png" />
 
 			    <article class="col-1">
 				    <h2>Ubah Data Hama</h2>
@@ -45,8 +45,8 @@
                             <td><asp:TextBox ID="TextBoxPencegahan" runat="server"></asp:TextBox></td>
                         </li>
                     </ul>
-                    <asp:ImageButton ID="ImageButton1" runat="server" 
-                                        ImageUrl="~/images/buttmasuk.png" onclick="ImageButton1_Click" /></div>
+                    <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton1_Click"  CssClass="link2"
+                        ImageUrl="~/images/button/ubah.png" />
                 </article>
             </form>
             <div class="clear"></div>
