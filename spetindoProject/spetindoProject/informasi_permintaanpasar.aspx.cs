@@ -26,7 +26,7 @@ namespace spetindoProject
             aaData temp;
 
             WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
-           proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
+            proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
 
             WebClient client = new WebClient();
             client.Proxy = proxyObj;

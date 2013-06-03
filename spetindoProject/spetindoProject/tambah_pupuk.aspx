@@ -17,8 +17,7 @@
     <div class="inside1">
 	    <div class="wrap row-2">
             <form id="form1" runat="server">
-                <asp:ImageButton ID="ImageButton2" runat="server" onclick="ImageButton2_Click"  CssClass="link2"
-                    ImageUrl="~/images/button/keluar.png" />
+                
 
 			    <article class="col-1">
 				    <h2>Data Ukuran Baru</h2>
@@ -65,8 +64,8 @@
                     </ul>
                     <asp:ImageButton ID="ImageButtonTambah" runat="server" onclick="ImageButtonTambah_Click"  CssClass="link2"
                         ImageUrl="~/images/button/button_tambah.png" />
-                    <!--<asp:ImageButton ID="ImageButton2" runat="server" onclick="ImageButton2_Click"  CssClass="link2"
-                    ImageUrl="~/images/button/keluar.png" />-->
+                        <asp:ImageButton ID="ImageButton2" runat="server" onclick="ImageButton2_Click"  CssClass="link2"
+                    ImageUrl="~/images/button/keluar_2.png" />
                 </article>
             </form>
             <div class="clear"></div>

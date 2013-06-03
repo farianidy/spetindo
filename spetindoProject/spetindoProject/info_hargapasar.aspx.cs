@@ -51,11 +51,12 @@ namespace spetindoProject
             {
                 temp = new bbData();
                 temp.kabupaten = i[1];
-                temp.beras_medium = i[2];
-                temp.beras_premium = i[3];
-                temp.jagung_pipilan_kering = i[4];
-                temp.kedelai_lokal_biji_kering = i[5];
-                temp.kedelai_impor = i[6];
+                temp.gabah_kering_panen = i[2];
+                temp.gabah_kering_giling = i[3];
+                temp.beras_medium = i[4];
+                temp.beras_premium = i[5];
+                temp.jagung_pipilan_kering = i[6];
+                temp.kedelai_lokal_biji_kering = i[7];
                 bbDatas.Add(temp);
             }
 

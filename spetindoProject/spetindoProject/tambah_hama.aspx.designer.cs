@@ -31,13 +31,13 @@ namespace spetindoProject {
         protected global::System.Web.UI.WebControls.ImageButton ImageButton2;
         
         /// <summary>
-        /// ButtonHama control.
+        /// ButtonHama2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonHama;
+        protected global::System.Web.UI.WebControls.ImageButton ButtonHama2;
         
         /// <summary>
         /// GridView1 control.

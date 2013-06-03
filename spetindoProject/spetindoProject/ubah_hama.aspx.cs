@@ -23,6 +23,7 @@ namespace spetindoProject
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.Title = "SPETINDO - Ubah Hama";
             string strconnect = ConfigurationManager.ConnectionStrings["Connection"].ConnectionString;
             connect.ConnectionString = strconnect;
             //listHama.Items.Clear();

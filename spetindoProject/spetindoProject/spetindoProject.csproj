@@ -74,8 +74,16 @@
     <Content Include="images\button\button_logout.png" />
     <Content Include="images\button\data_selesai.jpg" />
     <Content Include="images\button\keluar.png" />
+    <Content Include="images\button\keluar_2.png" />
+    <Content Include="images\button\kembali.png" />
+    <Content Include="images\button\kembali_2.png" />
+    <Content Include="images\button\lihat data.png" />
     <Content Include="images\button\login.JPG" />
+    <Content Include="images\button\tambah baru.png" />
+    <Content Include="images\button\tambah request.png" />
+    <Content Include="images\button\tambah.png" />
     <Content Include="images\button\ubah.png" />
+    <Content Include="images\button\ubah_2.png" />
     <Content Include="images\general\1page-img.jpg" />
     <Content Include="images\general\2page-img.jpg" />
     <Content Include="images\general\4page-img.jpg" />

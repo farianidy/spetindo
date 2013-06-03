@@ -13,5 +13,10 @@ namespace spetindoProject
         {
 
         }
+
+        protected void ImageButtonKembali_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/nasihat_modul.aspx");
+        }
     }
 }

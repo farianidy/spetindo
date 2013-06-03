@@ -16,17 +16,25 @@
 <div class="inside1">
 	    <div class="wrap row-2">
             <form id="form1" runat="server">
-                <asp:ImageButton ID="ImageButton2" runat="server" onclick="ImageButton2_Click"  CssClass="link2"
-                    ImageUrl="~/images/button/keluar.png" />
+                
 
 			    <article class="col-1">
 				    <h2>Ubah Data Hama</h2>
                     <asp:DropDownList ID="listHama" runat="server">
                     </asp:DropDownList></br></br>
-                <asp:Button ID="ButtonHama" runat="server" Text="Cek" 
-                    onclick="ButtonHama_Click"/></br></br>
+                <asp:ImageButton ID="ButtonHama2" runat="server" onclick="ButtonHama_Click" ImageUrl="~/images/button/lihat data.png"></asp:ImageButton></br></br>
 
-                    <asp:GridView ID="GridView1" runat="server">
+                    
+                <asp:GridView ID="GridView1" runat="server" CellPadding="4" 
+                    EnableModelValidation="True" ForeColor="#333333" GridLines="None" 
+                    EmptyDataText="Data tidak tersedia.">
+                    <AlternatingRowStyle BackColor="White" />
+                    <EditRowStyle BackColor="#7C6F57" />
+                    <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#E3EAEB" />
+                    <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
                 </asp:GridView>
                 </br>
                 </article>
@@ -46,7 +54,9 @@
                         </li>
                     </ul>
                     <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton1_Click"  CssClass="link2"
-                        ImageUrl="~/images/button/ubah.png" />
+                        ImageUrl="~/images/button/ubah_2.png" />
+                        <asp:ImageButton ID="ImageButton2" runat="server" onclick="ImageButton2_Click"  CssClass="link2"
+                    ImageUrl="~/images/button/keluar_2.png" />
                 </article>
             </form>
             <div class="clear"></div>

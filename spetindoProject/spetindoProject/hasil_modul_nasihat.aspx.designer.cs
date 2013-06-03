@@ -76,31 +76,31 @@ namespace spetindoProject {
         protected global::System.Web.UI.WebControls.Label LabelHargaKedelai;
         
         /// <summary>
-        /// LabelPerPadi control.
+        /// LabelPengPadi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelPerPadi;
+        protected global::System.Web.UI.WebControls.Label LabelPengPadi;
         
         /// <summary>
-        /// LabelPerJagung control.
+        /// LabelPengJagung control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelPerJagung;
+        protected global::System.Web.UI.WebControls.Label LabelPengJagung;
         
         /// <summary>
-        /// LabelPerKedelai control.
+        /// LabelPengKedelai control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelPerKedelai;
+        protected global::System.Web.UI.WebControls.Label LabelPengKedelai;
         
         /// <summary>
         /// LabelRekomPadi control.

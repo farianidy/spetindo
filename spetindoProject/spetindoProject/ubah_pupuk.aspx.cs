@@ -232,6 +232,45 @@ namespace spetindoProject
 
         protected void ImageButtonUbah_Click(object sender, ImageClickEventArgs e)
         {
+            try
+            {
+                string idpupuk = "";
+                //view id pupuk
+                OracleDataReader reader;
+                string strquery = "select id_pupuk from pupuk where nama_pupuk = '" + DroplistPupuk.Text + "'";
+                OracleCommand cmd = new OracleCommand(strquery, connect);
+                //OracleDataReader read = connect.ExecuteReader(strquery);
+                connect.Open();
+                reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    idpupuk = (string)reader["id_pupuk"];
+                }
+                reader.Close();
+                connect.Close();
+
+                //update pupuk
+                OracleCommand com = new OracleCommand();
+                com.Connection = connect;
+                com.CommandText = "update pupuk set harga_pupuk = :harga where id_pupuk = :id_pupuk";
+                com.Parameters.Add(":harga", TextBoxHarga.Text);
+                com.Parameters.Add(":id_pupuk", idpupuk);
+
+                connect.Open();
+                com.ExecuteNonQuery();
+                com.Cancel();
+                connect.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("Exception Occured:   " + ex);
+            }
+            finally
+            {
+                //Response.Write("Hama Berhasil ditambah");
+            }
         }
 
         protected void ImageButton2_Click(object sender, ImageClickEventArgs e)

@@ -64,7 +64,7 @@
                         </li>
                     </ul>
                     <asp:ImageButton ID="ImageButtonTambah" runat="server" onclick="ImageButtonTambah_Click"  CssClass="link2"
-                        ImageUrl="~/images/button/ubah.png" />
+                        ImageUrl="~/images/button/ubah_2.png" />
                 </article>
             
             <div class="clear"></div>
@@ -93,9 +93,9 @@
                         </li>
                     </ul>
                     <asp:ImageButton ID="ImageButtonUbah" runat="server" onclick="ImageButtonUbah_Click"  CssClass="link2"
-                        ImageUrl="~/images/button/ubah.png" />
+                        ImageUrl="~/images/button/ubah_2.png" />
                     <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton2_Click"  CssClass="link2"
-                    ImageUrl="~/images/button/keluar.png" />
+                    ImageUrl="~/images/button/keluar_2.png" />
                 </article>
             <div class="clear"></div>
 		</div>

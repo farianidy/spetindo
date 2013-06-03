@@ -26,8 +26,19 @@
                 <ul class="list1">
 				    <li>Jenis Tanah <br /><a href="informasi_tanah.aspx" class="comments_link">Cara Penentuan</a></li>
 				    <li>Suhu <br /> <a href="informasi_ukur_suhu.aspx" class="comments_link">Cara Ukur Suhu</a></li>
-				    <li>Ketinggian Tanah <br /> <a href="informasi_ukur_tinggi.aspx" class="comments_link">Cara Ukur Tinggi</a></li>
-				    <li>Luas Lahan</li>
+				    </br>
+                    <li>Ketinggian Tanah <br /> <a href="informasi_ukur_tinggi.aspx" class="comments_link">Cara Ukur Tinggi</a></li>
+				    </br>
+                    <li>Luas Lahan</li>
+                    </br>
+                    <li>Hitung Pengeluaran</li>
+                    <li>Biaya Sewa Tanah</li>
+                    </br>
+                    <li>Biaya Tenaga Pekerja</li>
+                    </br>
+                    <li>Biaya Pupuk<br /> <a href="informasi_pupuk.aspx" class="comments_link">Hitung Biaya Pupuk</a></li>
+                    </br>
+                    <li>Luas Lahan yang Tepat</li>
 			    </ul>
 		    </article>
             <article class="col-3">
@@ -58,6 +69,16 @@
                             <asp:ListItem Value="15">4471-5358 Hektar</asp:ListItem>
                             <asp:ListItem Value="16">5359-More Hektar</asp:ListItem>
                         </asp:DropDownList></li>
+                    <li></li>
+                    <li><asp:TextBox ID="TextBoxSewaTanah" runat="server"></asp:TextBox></li>
+                    <li></li>
+                    <li><asp:TextBox ID="TextBoxTenagaKerja" runat="server"></asp:TextBox></li>
+                    <li></li>
+                    <li><asp:TextBox ID="TextBoxBiayaPupuk" runat="server"></asp:TextBox></li>
+                    <li></li>
+                    <li><asp:TextBox ID="TextBoxLuasLahan" runat="server"></asp:TextBox></li>
+                    <li></li>
+
 			    </ul>
                 <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton1_Click"  CssClass="link2"
                     ImageUrl="~/images/button/data_selesai.jpg" />

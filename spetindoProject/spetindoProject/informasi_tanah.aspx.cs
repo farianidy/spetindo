@@ -13,5 +13,10 @@ namespace spetindoProject
         {
             Page.Title = "SPETINDO - Informasi Tanah";
         }
+
+        protected void ImageButtonKembali_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/nasihat_modul.aspx");
+        }
     }
 }

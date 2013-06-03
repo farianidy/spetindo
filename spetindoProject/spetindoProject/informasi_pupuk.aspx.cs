@@ -103,9 +103,25 @@ namespace spetindoProject
             {
                 ukuranK = (string)reader["takaran"];
             }
+            reader.Close();
+            connect.Close();
 
-            int hasilK;
+            //view harga KCL
+            OracleDataReader readerHarga;
+            string strqueryHarga = "select harga_pupuk from pupuk where id_pupuk='PU005'";
+            OracleCommand cmdHarga = new OracleCommand(strqueryHarga, connect);
+
+            string hargaK="";
+            connect.Open();
+            readerHarga = cmdHarga.ExecuteReader();
+            if (readerHarga.Read())
+            {
+                hargaK = (String)readerHarga["harga_pupuk"];
+            }
+
+            int hasilK,totharK;
             hasilK = Convert.ToInt32(ukuranK) * Convert.ToInt32(TextBoxLuas.Text);
+            totharK = Convert.ToInt32(hargaK) * hasilK;
 
             LabelK.Text = hasilK.ToString();
             reader.Close();
@@ -125,10 +141,28 @@ namespace spetindoProject
                 ukuranP = (string)reader2["takaran"];
             }
 
-            int hasilP;
+            //view harga SP36
+            OracleDataReader reader2Harga;
+            string strquery2Harga = "select harga_pupuk from pupuk where id_pupuk='PU003'";
+            OracleCommand cmd2Harga = new OracleCommand(strquery2Harga, connect);
+
+            string hargaP = "";
+            reader2Harga = cmd2Harga.ExecuteReader();
+            if (reader2Harga.Read())
+            {
+                hargaP = (string)reader2Harga["harga_pupuk"];
+            }
+
+            int hasilP,totharP;
+            int TotalHarga; 
             hasilP = Convert.ToInt32(ukuranP) * Convert.ToInt32(TextBoxLuas.Text);
+            totharP = Convert.ToInt32(hargaP) * hasilP;
+            TotalHarga = totharK + totharP;
+            LabelTotHar.Text = TotalHarga.ToString();
 
             LabelP.Text = hasilP.ToString();
+            HargaK.Text = totharK.ToString();
+            HargaP.Text = totharP.ToString();
             reader.Close();
             connect.Close();
 
@@ -150,10 +184,29 @@ namespace spetindoProject
                     ukuranN = (string)reader3["takaran"];
                 }
 
-                int hasilN;
+                //view harga urea
+                OracleDataReader reader3Harga;
+                string strquery3Harga = "select harga_pupuk from pupuk where id_pupuk='PU002'";
+                OracleCommand cmd3Harga = new OracleCommand(strquery3Harga, connect);
+
+                string hargaN = "";
+                reader3Harga = cmd3Harga.ExecuteReader();
+                if (reader3Harga.Read())
+                {
+                    hargaN = (string)reader3Harga["harga_pupuk"];
+                }
+
+                int hasilN,totharN;
                 hasilN = Convert.ToInt32(ukuranN) * Convert.ToInt32(TextBoxLuas.Text);
+                totharN = Convert.ToInt32(hargaN) * hasilN;
+                TotalHarga = totharK + totharN + totharP;
 
                 LabelN.Text = hasilN.ToString();
+                HargaK.Text = totharK.ToString();
+                HargaN.Text = totharN.ToString();
+                HargaP.Text = totharP.ToString();
+                LabelTotHar.Text = TotalHarga.ToString();
+
                 reader.Close();
                 connect.Close();
             }
