@@ -26,5 +26,10 @@ namespace spetindoProject
 
             LabelTinggi.Text = h.ToString();
         }
+
+        protected void ImageButtonKembali_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/nasihat_modul.aspx");
+        }
     }
 }

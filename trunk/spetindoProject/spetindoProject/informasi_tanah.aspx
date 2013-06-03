@@ -16,9 +16,11 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentTemplate" runat="server">
     <div class="inside1">
+    <form id="form1" runat="server">
 	    <div class="wrap row-1">
+        
 		    <article class="col-1">
-			    <h2>Tanah Aluvial</h2>
+			    <h2>Tanah Aluvial</h2> 
             </article>
             <p>
                 Tanah Aluvial tanah hasil erosi yang diendapkan di daerah-daerah dataran rendah. 
@@ -26,7 +28,7 @@
                 Tanah Aluvial berwarna kelabu sampai kecoklat-coklatan. 
                 Tekstur tanahnya liat atau liat berpasir, mempunyai konsistensi keras waktu kering dan teguh pada waktu lembab.
             </p> 
-            <asp:Image ID="Aluvial" runat="server" Height="93px" 
+                <asp:Image ID="Aluvial" runat="server" Height="93px" 
                             ImageUrl="~/images/aluvial.jpg" Width="146px" />
 		</div>
         <div class="wrap row-1">
@@ -45,7 +47,10 @@
                             ImageUrl="~/images/litosol.jpg" Width="146px" />
             <div class="clear"></div>
 		</div>
-	</div>
+            </br>
+        <asp:ImageButton ID="ImageButtonKembali" runat="server" onclick="ImageButtonKembali_Click" ImageUrl="~/images/button/kembali.png" />
+	</form>
+    </div>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentAsideTemplate" runat="server">

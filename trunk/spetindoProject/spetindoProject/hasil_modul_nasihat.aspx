@@ -50,16 +50,16 @@
 															    <li><asp:Label ID="LabelHargaKedelai" runat="server" Text="Label"></asp:Label></li>
 														    </ul>
 													    </article>
-													    <article class="col-4 indent">
-														    <h4 class="aligncenter">Permintaan Pasar</h4>
+                                                        <article class="col-4 indent">
+														    <h4 class="aligncenter">Total Pengeluaran</h4>
 														    <ul class="info-list1 alt">
-															    <li><asp:Label ID="LabelPerPadi" runat="server" Text="Label">Kg</asp:Label></li>
-															    <li><asp:Label ID="LabelPerJagung" runat="server" Text="Label">Kg</asp:Label></li>
-															    <li><asp:Label ID="LabelPerKedelai" runat="server" Text="Label">Kg</asp:Label></li>
+															    <li><asp:Label ID="LabelPengPadi" runat="server" Text="Label">Rp</asp:Label></li>
+															    <li><asp:Label ID="LabelPengJagung" runat="server" Text="Label">Rp</asp:Label></li>
+															    <li><asp:Label ID="LabelPengKedelai" runat="server" Text="Label">Rp</asp:Label></li>
 														    </ul>
 													    </article>
 													    <article class="col-5 indent">
-														    <h4 class="aligncenter">Nilai Rekomendasi</h4>
+														    <h4 class="aligncenter">Total Keuntungan</h4>
 														    <ul class="info-list1 alt">
 															    <li><asp:Label ID="LabelRekomPadi" runat="server" Text="Label"></asp:Label></li>
 															    <li><asp:Label ID="LabelRekomJagung" runat="server" Text="Label"></asp:Label></li>

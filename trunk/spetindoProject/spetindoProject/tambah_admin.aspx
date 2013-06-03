@@ -42,7 +42,7 @@
                     <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton1_Click"  CssClass="link2"
                         ImageUrl="~/images/button/button_tambah.png" />
                     <asp:ImageButton ID="ImageButton3" runat="server" onclick="ImageButton2_Click"  CssClass="link2"
-                    ImageUrl="~/images/button/keluar.png" />
+                    ImageUrl="~/images/button/keluar_2.png" />
                 </article>
             </form>
             <div class="clear"></div>

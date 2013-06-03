@@ -11,6 +11,7 @@
     </div>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentTemplate" runat="server">
+<form id="form1" runat="server">
 					    <article class="col-2">
 							<h2><b>Bahan dan Alat</b></h2>
 							<!--<div class="img-box"><img src="images/tanah.jpg Height="93px" Width="146px">Lnventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem eaque ipsa quae sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.</div>-->
@@ -31,8 +32,9 @@
 							<p class="p0">- Catat hasil pengamatan ke dalam kertas, buatlah data dalam bentuk tabel.</p>
                             <p class="p0">- Gambar grafik hubungan suhu tanah dengan kedalaman tanah dan suhu tanah dengan tanggal.</p>
 							<p class="p0">- Hitunglah rata-rata suhu tanah.</p>
-						    
+						    <asp:ImageButton ID="ImageButtonKembali" runat="server" onclick="ImageButtonKembali_Click" ImageUrl="~/images/button/kembali.png" />
                         </article>
+                        </form>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentAsideTemplate" runat="server">
 </asp:Content>

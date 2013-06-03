@@ -107,6 +107,10 @@ namespace spetindoProject
             Session.Clear();
             Response.Redirect("~/index_admin.aspx");
         }
+        protected void ImageButtonKembali_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("~/tambah_pupuk.aspx");
+        }
 
     }
 }

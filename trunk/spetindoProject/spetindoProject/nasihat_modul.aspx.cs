@@ -4,10 +4,13 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.Script.Serialization;
-using System.Net;
-using System.IO;
-using spetindoProject;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web.Security;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using Oracle.DataAccess.Client;
 
 namespace spetindoProject
 {
@@ -16,13 +19,14 @@ namespace spetindoProject
     public partial class nasihat_modul : System.Web.UI.Page
     {
         public double[,] harga = new double[3, 1000000];
+        public int totalhargabibitpadi, totalhargabibitjagung, totalhargabibitkedelai,totalpadi,totaljagung,totalkedelai;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             Page.Title = "Informasi Pembudidayaan";
         }
 
-        public void inputHarga()
+        /*public void inputHarga()
         {
             
             string[] bulan = new string[1000000];
@@ -44,12 +48,12 @@ namespace spetindoProject
                 bbDatas = new List<bbData>();
                 bbData temp;
 
-                WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
-                proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
+                //WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
+                //proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
 
 
                 WebClient client = new WebClient();
-                client.Proxy = proxyObj;
+                //client.Proxy = proxyObj;
                 var json = client.DownloadString(link);
 
                 var jss = new JavaScriptSerializer();
@@ -74,7 +78,98 @@ namespace spetindoProject
                 harga[2, k] = double.Parse(temp.kedelai_lokal_biji_kering);
             }
 
+        }*/
+
+        public int HitungPengPadi()
+        {
+            string strconnect = ConfigurationManager.ConnectionStrings["Connection"].ConnectionString;
+
+            OracleConnection connect = new OracleConnection();
+            connect.ConnectionString = strconnect;
+
+            //view harga bibit padi
+            OracleDataReader reader;
+            string strquery = "select harga_bibit from tanaman where id_tanaman='TA001'";
+            OracleCommand cmd = new OracleCommand(strquery, connect);
+
+            string bibitPadi = "";
+
+            connect.Open();
+            reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                bibitPadi = (string)reader["harga_bibit"];
+            }
+            reader.Close();
+            connect.Close();
+
+            //totalhargabibitpadi
+            totalhargabibitpadi = Convert.ToInt32(bibitPadi) * Convert.ToInt32(TextBoxLuasLahan.Text) * 20;
+            //totalpengeluaranpadi
+            totalpadi = totalhargabibitpadi + Convert.ToInt32(TextBoxSewaTanah.Text) + Convert.ToInt32(TextBoxTenagaKerja.Text) + Convert.ToInt32(TextBoxBiayaPupuk.Text);
+            return (totalpadi);
         }
+
+        public int HitungPengJagung()
+        {
+            string strconnect = ConfigurationManager.ConnectionStrings["Connection"].ConnectionString;
+
+            OracleConnection connect = new OracleConnection();
+            connect.ConnectionString = strconnect;
+
+            //view harga bibit padi
+            OracleDataReader reader;
+            string strquery = "select harga_bibit from tanaman where id_tanaman='TA002'";
+            OracleCommand cmd = new OracleCommand(strquery, connect);
+
+            string bibit = "";
+
+            connect.Open();
+            reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                bibit = (string)reader["harga_bibit"];
+            }
+            reader.Close();
+            connect.Close();
+
+            //totalhargabibitpadi
+            totalhargabibitjagung = Convert.ToInt32(bibit) * Convert.ToInt32(TextBoxLuasLahan.Text) * 20;
+            //totalpengeluaranpadi
+            totaljagung = totalhargabibitjagung + Convert.ToInt32(TextBoxSewaTanah.Text) + Convert.ToInt32(TextBoxTenagaKerja.Text) + Convert.ToInt32(TextBoxBiayaPupuk.Text);
+            return (totaljagung);
+        }
+
+        public int HitungPengKedelai()
+        {
+            string strconnect = ConfigurationManager.ConnectionStrings["Connection"].ConnectionString;
+
+            OracleConnection connect = new OracleConnection();
+            connect.ConnectionString = strconnect;
+
+            //view harga bibit padi
+            OracleDataReader reader;
+            string strquery = "select harga_bibit from tanaman where id_tanaman='TA003'";
+            OracleCommand cmd = new OracleCommand(strquery, connect);
+
+            string bibit = "";
+
+            connect.Open();
+            reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                bibit = (string)reader["harga_bibit"];
+            }
+            reader.Close();
+            connect.Close();
+
+            //totalhargabibitpadi
+            totalhargabibitkedelai = Convert.ToInt32(bibit) * Convert.ToInt32(TextBoxLuasLahan.Text) * 20;
+            //totalpengeluaranpadi
+            totalkedelai = totalhargabibitkedelai + Convert.ToInt32(TextBoxSewaTanah.Text) + Convert.ToInt32(TextBoxTenagaKerja.Text) + Convert.ToInt32(TextBoxBiayaPupuk.Text);
+            return (totalkedelai);
+        }
+
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
         {
@@ -104,7 +199,7 @@ namespace spetindoProject
             itu.makebt();
             itu.algo();
             //itu.input();
-            inputHarga();
+            /*inputHarga();
             forecast ini = new forecast();
             //ini.input();
             //Console.WriteLine(ini.ramal());
@@ -114,8 +209,10 @@ namespace spetindoProject
             //LabelCekHarga.Text = x.ToString();
             Session["ramalPadi"] = ini.ramalPadi();
             Session["ramalJagung"] = ini.ramalJagung();
-            Session["ramalKedelai"] = ini.ramalKedelai();
-
+            Session["ramalKedelai"] = ini.ramalKedelai();*/
+            Session["PengeluaranPadi"] = HitungPengPadi();
+            Session["PengeluaranJagung"] = HitungPengJagung();
+            Session["PengeluaranKedelai"] = HitungPengKedelai();
             Session["dataPadi"] = itu.outputPadi();
             Session["dataJagung"] = itu.outputJagung();
             Session["dataKedelai"] = itu.outputKedelai();

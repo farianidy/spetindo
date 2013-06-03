@@ -20,20 +20,25 @@ namespace spetindoProject
             Label1.Text = Session["dataPadi"].ToString();
             Label2.Text = Session["dataJagung"].ToString();
             Label3.Text = Session["dataKedelai"].ToString();
-            LabelHargaPadi.Text = Session["ramalPadi"].ToString();
+            /*LabelHargaPadi.Text = Session["ramalPadi"].ToString();
             LabelHargaJagung.Text = Session["ramalJagung"].ToString();
-            LabelHargaKedelai.Text = Session["ramalKedelai"].ToString();
-
+            LabelHargaKedelai.Text = Session["ramalKedelai"].ToString();*/
+            hargaPasar();
             //cekHarga();
-            demandberas();
+            /*demandberas();
             demandjagung();
-            demandkedelai();
+            demandkedelai();*/
 
-            //hitung rekomendasi
+            //hitung pengeluaran
+            LabelPengPadi.Text = Session["PengeluaranPadi"].ToString();
+            LabelPengJagung.Text = Session["PengeluaranJagung"].ToString();
+            LabelPengKedelai.Text = Session["PengeluaranKedelai"].ToString();
+
+            //hitung laba
             double rekomPadi, rekomJagung, rekomKedelai;
-            rekomPadi = Double.Parse(LabelPerPadi.Text) / Double.Parse(Label1.Text) * Double.Parse(LabelHargaPadi.Text);
-            rekomJagung = Double.Parse(LabelPerJagung.Text) / Double.Parse(Label2.Text) * Double.Parse(LabelHargaJagung.Text);
-            rekomKedelai = Double.Parse(LabelPerKedelai.Text) / Double.Parse(Label3.Text) * Double.Parse(LabelHargaKedelai.Text);
+            rekomPadi = Double.Parse(Label1.Text) * Double.Parse(LabelHargaPadi.Text) - Double.Parse(LabelPengPadi.Text);
+            rekomJagung = Double.Parse(Label2.Text) * Double.Parse(LabelHargaJagung.Text) - Double.Parse(LabelPengJagung.Text);
+            rekomKedelai = Double.Parse(Label3.Text) * Double.Parse(LabelHargaKedelai.Text) - Double.Parse(LabelPengKedelai.Text);
 
             LabelRekomPadi.Text = rekomPadi.ToString();
             LabelRekomJagung.Text = rekomJagung.ToString();
@@ -47,8 +52,10 @@ namespace spetindoProject
                 LabelTanamanRekom.Text = "Kedelai";
 
             
+
+            
         }
-        public void cekHarga()
+        /*public void cekHarga()
         {
             double[,] harga = new double[3, 1000000];
             string[] bulan = new string[1000000];
@@ -70,12 +77,12 @@ namespace spetindoProject
                 bbDatas = new List<bbData>();
                 bbData temp;
 
-                WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
-                proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
+                //WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
+                //proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
 
 
                 WebClient client = new WebClient();
-                client.Proxy = proxyObj;
+                //client.Proxy = proxyObj;
                 var json = client.DownloadString(link);
 
                 var jss = new JavaScriptSerializer();
@@ -101,9 +108,9 @@ namespace spetindoProject
             }
             LabelHargaJagung.Text = Convert.ToString(harga[0, 0]);
             LabelHargaKedelai.Text = Convert.ToString(harga[0, 1]); 
-        }
+        }*/
 
-        /*public void hargaPasar()
+        public void hargaPasar()
         {
             string tanggal = "";
 
@@ -134,18 +141,19 @@ namespace spetindoProject
             {
 
                 temp.kabupaten = i[1];
-                temp.beras_medium = i[2];
-                temp.beras_premium = i[3];
-                temp.jagung_pipilan_kering = i[4];
-                temp.kedelai_lokal_biji_kering = i[5];
-                temp.kedelai_impor = i[6];
+                temp.gabah_kering_panen = i[2];
+                temp.gabah_kering_giling = i[3];
+                temp.beras_medium = i[4];
+                temp.beras_premium = i[5];
+                temp.jagung_pipilan_kering = i[6];
+                temp.kedelai_lokal_biji_kering = i[7];
                 bbDatas.Add(temp);
             }
             //LabelHargaPadi = new Label();
-            LabelHargaPadi.Text = temp.beras_medium;
+            LabelHargaPadi.Text = temp.gabah_kering_giling;
             LabelHargaJagung.Text = temp.jagung_pipilan_kering;
             LabelHargaKedelai.Text = temp.kedelai_lokal_biji_kering;
-        }*/
+        }
 
         public void demandjagung()
         {
@@ -153,12 +161,12 @@ namespace spetindoProject
             aaDatas = new List<aaData>();
             aaData temp;
 
-            WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
-            proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
+            //WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
+            //proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
 
 
             WebClient client = new WebClient();
-            client.Proxy = proxyObj;
+            //client.Proxy = proxyObj;
             var json = client.DownloadString("http://pip.kementan.org/index.php/datatables/demand_mingguan_kab?sEcho=4&iColumns=8&sColumns=&iDisplayStart=0&iDisplayLength=10&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=Jagung&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&_=1365404831516");
 
             var jss = new JavaScriptSerializer();
@@ -175,7 +183,7 @@ namespace spetindoProject
                 aaDatas.Add(temp);
             }
 
-            LabelPerJagung.Text = temp.jumlah;
+            //LabelPerJagung.Text = temp.jumlah;
         }
 
         public void demandkedelai()
@@ -184,12 +192,12 @@ namespace spetindoProject
             aaDatas = new List<aaData>();
             aaData temp;
 
-            WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
-            proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
+            //WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
+            //proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
 
 
             WebClient client = new WebClient();
-            client.Proxy = proxyObj;
+            //client.Proxy = proxyObj;
             var json = client.DownloadString("http://pip.kementan.org/index.php/datatables/demand_mingguan_kab?sEcho=3&iColumns=8&sColumns=&iDisplayStart=0&iDisplayLength=10&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=Kedelai&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&_=1365403060851");
 
             var jss = new JavaScriptSerializer();
@@ -206,7 +214,7 @@ namespace spetindoProject
                 aaDatas.Add(temp);
             }
 
-            LabelPerKedelai.Text = temp.jumlah;
+            //LabelPerKedelai.Text = temp.jumlah;
 
         }
 
@@ -216,12 +224,12 @@ namespace spetindoProject
             aaDatas = new List<aaData>();
             aaData temp;
 
-            WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
-            proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
+            //WebProxy proxyObj = new WebProxy("http://proxy.its.ac.id:8080");
+            //proxyObj.Credentials = new NetworkCredential("seta12@mhs.if.its.ac.id", "cerberus");
 
 
             WebClient client = new WebClient();
-            client.Proxy = proxyObj;
+            //client.Proxy = proxyObj;
             var json = client.DownloadString("http://pip.kementan.org/index.php/datatables/demand_mingguan_kab?sEcho=3&iColumns=8&sColumns=&iDisplayStart=0&iDisplayLength=10&sSearch=&bRegex=false&sSearch_0=&bRegex_0=false&bSearchable_0=true&sSearch_1=&bRegex_1=false&bSearchable_1=true&sSearch_2=&bRegex_2=false&bSearchable_2=true&sSearch_3=Beras+Medium+Grosir&bRegex_3=false&bSearchable_3=true&sSearch_4=&bRegex_4=false&bSearchable_4=true&sSearch_5=&bRegex_5=false&bSearchable_5=true&sSearch_6=&bRegex_6=false&bSearchable_6=true&sSearch_7=&bRegex_7=false&bSearchable_7=true&iSortingCols=1&iSortCol_0=0&sSortDir_0=asc&bSortable_0=true&bSortable_1=true&bSortable_2=true&bSortable_3=true&bSortable_4=true&bSortable_5=true&bSortable_6=true&bSortable_7=true&_=1365406779830");
 
             var jss = new JavaScriptSerializer();
@@ -238,7 +246,7 @@ namespace spetindoProject
                 aaDatas.Add(temp);
             }
 
-            LabelPerPadi.Text = temp.jumlah;
+            //LabelPerPadi.Text = temp.jumlah;
         }
 
         

@@ -13,6 +13,15 @@ namespace spetindoProject {
     public partial class informasi_ukur_tinggi {
         
         /// <summary>
+        /// form1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
         /// ImageTekanan control.
         /// </summary>
         /// <remarks>
@@ -49,15 +58,6 @@ namespace spetindoProject {
         protected global::System.Web.UI.WebControls.Image ImagePulpen;
         
         /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
         /// TextBoxTekanan control.
         /// </summary>
         /// <remarks>
@@ -92,5 +92,14 @@ namespace spetindoProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelDataran;
+        
+        /// <summary>
+        /// ImageButtonKembali control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImageButtonKembali;
     }
 }

@@ -138,7 +138,11 @@
                 </asp:GridView>-->Diberi Pupuk KCL dengan takaran
                 <asp:Label ID="LabelK" runat="server" Text="0"></asp:Label> Kg, Pupuk SP36 dengan takaran
                 <asp:Label ID="LabelP" runat="server" Text="0"></asp:Label> Kg, Pupuk Urea dengan takaran
-                <asp:Label ID="LabelN" runat="server" Text="0"></asp:Label> Kg
+                <asp:Label ID="LabelN" runat="server" Text="0"></asp:Label> Kg, Total harga pengeluaran pupuk
+                <asp:Label ID="HargaK" runat="server" Text="0"></asp:Label> +
+                <asp:Label ID="HargaP" runat="server" Text="0"></asp:Label> +
+                <asp:Label ID="HargaN" runat="server" Text="0"></asp:Label> =
+                <asp:Label ID="LabelTotHar" runat="server" Text="0"></asp:Label> Rupiah
 		    </div>
 	    </div>  
     </form>
