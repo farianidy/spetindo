@@ -52,6 +52,11 @@
                         <li>
                             <td><asp:TextBox ID="TextBoxPencegahan" runat="server"></asp:TextBox></td>
                         </li>
+                        <li>
+                            <asp:Panel ID="PanelPengumuman" Visible=false runat="server">
+                            <asp:Label ID="Label1" runat="server" Text="Data Hama Berhasil Dirubah"></asp:Label>
+                            </asp:Panel>
+                        </li>
                     </ul>
                     <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton1_Click"  CssClass="link2"
                         ImageUrl="~/images/button/ubah_2.png" />

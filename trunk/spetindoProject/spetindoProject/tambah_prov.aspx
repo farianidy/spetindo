@@ -31,6 +31,11 @@
                         <li>
                             <asp:TextBox ID="TextBoxNamProv" runat="server"></asp:TextBox>
                         </li>
+                        <li>
+                            <asp:Panel ID="PanelPengumuman" Visible=false runat="server">
+                            <asp:Label ID="Label1" runat="server" Text="Data Provinsi Berhasil Ditambahkan"></asp:Label>
+                            </asp:Panel>
+                        </li>
                     </ul>
                     <asp:ImageButton ID="ImageButtonTambah" runat="server" onclick="ImageButtonTambah_Click"  CssClass="link2"
                         ImageUrl="~/images/button/button_tambah.png" />

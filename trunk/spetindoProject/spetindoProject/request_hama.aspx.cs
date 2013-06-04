@@ -75,7 +75,15 @@ namespace spetindoProject
             finally
             {
                 //Response.Write("Hama Berhasil ditambah");
+                //<script language='javascript'>alert( "Hama Berhasil Di Request" );
+                ClientScript.RegisterStartupScript(typeof(Page), "test", "<script>alert('Hama Berhasil Di Request');return false;</script>");
+                PanelPengumuman.Visible = true;
             }
+        }
+
+        protected void ImageButtonKembali_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("~/informasi_hama.aspx");
         }
 
     }

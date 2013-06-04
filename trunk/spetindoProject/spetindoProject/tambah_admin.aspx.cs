@@ -47,6 +47,7 @@ namespace spetindoProject
             finally
             {
                 //Response.Write("Hama Berhasil ditambah");
+                PanelPengumuman.Visible = true;
             }
         }
 
