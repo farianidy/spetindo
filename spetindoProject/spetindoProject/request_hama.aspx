@@ -37,9 +37,16 @@
                         <li>
                             <asp:TextBox ID="TextBoxReqHama" runat="server"></asp:TextBox>
                         </li>
+                        <li>
+                            <asp:Panel ID="PanelPengumuman" Visible=false runat="server">
+                            <asp:Label ID="Label1" runat="server" Text="Data Hama Berhasil Direquest"></asp:Label>
+                            </asp:Panel>
+                        </li>
                     </ul>
                     <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton1_Click"  CssClass="link2"
                         ImageUrl="~/images/button/button_tambah.png" />
+                        <asp:ImageButton ID="ImageButtonKembali" runat="server" onclick="ImageButtonKembali_Click"  CssClass="link2"
+                        ImageUrl="~/images/button/kembali_2.png" />
                 </article>
 		    </div>
 	    </div>

@@ -31,10 +31,15 @@
                         <li>
                             <asp:DropDownList ID="listProvinsi" runat="server">
                             </asp:DropDownList>
-                            <asp:Label ID="LabelIDProvinsi" runat="server" Text="" Enabled="false"></asp:Label>
+                            <asp:Label ID="LabelIDProvinsi" runat="server" Text="" Enabled="false" Visible="false"></asp:Label>
                         </li>
                         <li>
                             <asp:TextBox ID="TextBoxNamKota" runat="server"></asp:TextBox>
+                        </li>
+                        <li>
+                            <asp:Panel ID="PanelPengumuman" Visible=false runat="server">
+                            <asp:Label ID="Label1" runat="server" Text="Data Kota Berhasil Ditambahkan"></asp:Label>
+                            </asp:Panel>
                         </li>
                     </ul>
                     <asp:ImageButton ID="ImageButtonTambah" runat="server" onclick="ImageButtonTambah_Click"  CssClass="link2"

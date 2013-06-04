@@ -31,6 +31,24 @@ namespace spetindoProject {
         protected global::System.Web.UI.WebControls.TextBox TextBoxNamProv;
         
         /// <summary>
+        /// PanelPengumuman control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PanelPengumuman;
+        
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
         /// ImageButtonTambah control.
         /// </summary>
         /// <remarks>

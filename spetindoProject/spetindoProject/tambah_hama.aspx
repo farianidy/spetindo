@@ -65,6 +65,11 @@
                         <li>
                             <asp:Label ID="LabelIDHama" runat="server" Text="" Enabled="false"></asp:Label>
                         </li>
+                        <li>
+                            <asp:Panel ID="PanelPengumuman" Visible=false runat="server">
+                            <asp:Label ID="Label1" runat="server" Text="Data Hama Berhasil Ditambahkan"></asp:Label>
+                            </asp:Panel>
+                        </li>
                     </ul>
                     <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton1_Click"  CssClass="link2"
                         ImageUrl="~/images/button/tambah baru.png" />

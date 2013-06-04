@@ -42,25 +42,30 @@
                         <li>
                             <asp:DropDownList ID="listKota" runat="server">
                             </asp:DropDownList>
-                            <asp:Label ID="LabelIDKota" runat="server" Text="" Enabled="false"></asp:Label>
+                            <asp:Label ID="LabelIDKota" runat="server" Text="" Enabled="false" Visible=false></asp:Label>
                         </li>
                         <li>
                             <asp:DropDownList ID="listStatus" runat="server">
                             </asp:DropDownList>
-                            <asp:Label ID="LabelIDStatus" runat="server" Text="" Enabled="false"></asp:Label>
+                            <asp:Label ID="LabelIDStatus" runat="server" Text="" Enabled="false" Visible=false></asp:Label>
                         </li>
                         <li>
                             <asp:DropDownList ID="listPupuk" runat="server">
                                 <asp:ListItem Value="PU003">SP36</asp:ListItem>
                                 <asp:ListItem Value="PU005">KCL</asp:ListItem>
                             </asp:DropDownList>
-                            <asp:Label ID="LabelIDPupuk" runat="server" Text="" Enabled="false"></asp:Label>
+                            <asp:Label ID="LabelIDPupuk" runat="server" Text="" Enabled="false" Visible=false></asp:Label>
                         </li>
                         <li>
                             <asp:TextBox ID="TextBoxLuLa" runat="server"></asp:TextBox>
                         </li>
                         <li>
                             <asp:TextBox ID="TextBoxKebPupuk" runat="server"></asp:TextBox>
+                        </li>
+                        <li>
+                            <asp:Panel ID="PanelPengumuman" Visible=false runat="server">
+                            <asp:Label ID="Label2" runat="server" Text="Data Pupuk Berhasil Dirubah"></asp:Label>
+                            </asp:Panel>
                         </li>
                     </ul>
                     <asp:ImageButton ID="ImageButtonTambah" runat="server" onclick="ImageButtonTambah_Click"  CssClass="link2"
@@ -86,10 +91,15 @@
                         <li>
                             <asp:DropDownList ID="DroplistPupuk" runat="server">
                             </asp:DropDownList>
-                            <asp:Label ID="Label1" runat="server" Text="" Enabled="false"></asp:Label>
+                            <asp:Label ID="Label1" runat="server" Text="" Enabled="false" Visible=false></asp:Label>
                         </li>
                         <li>
                             <asp:TextBox ID="TextBoxHarga" runat="server"></asp:TextBox>
+                        </li>
+                        <li>
+                            <asp:Panel ID="Panel1" Visible=false runat="server">
+                            <asp:Label ID="Label3" runat="server" Text="Data Harga Pupuk Berhasil Dirubah"></asp:Label>
+                            </asp:Panel>
                         </li>
                     </ul>
                     <asp:ImageButton ID="ImageButtonUbah" runat="server" onclick="ImageButtonUbah_Click"  CssClass="link2"

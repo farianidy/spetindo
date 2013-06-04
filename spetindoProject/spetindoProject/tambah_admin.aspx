@@ -38,6 +38,11 @@
                         <li>
                             <asp:TextBox ID="tbPassword" runat="server" TextMode="Password"></asp:TextBox>
                         </li>
+                        <li>
+                            <asp:Panel ID="PanelPengumuman" Visible=false runat="server">
+                            <asp:Label ID="Label1" runat="server" Text="Data Admin Berhasil Ditambahkan"></asp:Label>
+                            </asp:Panel>
+                        </li>
                     </ul>
                     <asp:ImageButton ID="ImageButton1" runat="server" onclick="ImageButton1_Click"  CssClass="link2"
                         ImageUrl="~/images/button/button_tambah.png" />
