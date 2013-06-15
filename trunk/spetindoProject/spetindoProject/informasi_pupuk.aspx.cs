@@ -210,6 +210,7 @@ namespace spetindoProject
                 reader.Close();
                 connect.Close();
             }
+            PanelPupuk.Visible = true;
            
         }
 

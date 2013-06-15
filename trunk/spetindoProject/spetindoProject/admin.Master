@@ -61,7 +61,7 @@
                                             <li class = "current"><a href="index_admin.aspx">Beranda</a></li>
 			                                <li ><a href="#">Tambah</a>
                                                 <ul>
-                                                    <!--<li><a href="tambah_admin.aspx"><span>Tambah Admin</span></a></li>-->        
+                                                    <li><a href="tambah_admin.aspx"><span>Tambah Admin</span></a></li>        
                                                     <li><a href="tambah_hama.aspx"><span>Tambah Hama</span></a></li> 
                                                     <li><a href="tambah_pupuk.aspx"><span>Tambah Pupuk</span></a></li>       
                                                 </ul>
