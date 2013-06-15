@@ -5,8 +5,8 @@ mark, rp, rt, ruby, summary, time {display:inline}
 body {background:#fff;font-family:Arial, Helvetica, sans-serif;font-size:100%;line-height:1em;color:#464646}
 html {min-width:980px}
 html, body {height:100%}
-/* Global Structure = */
-.container {margin:0 auto;width:990px;font-size:.75em}
+/* Global Structure. default text settings */
+.container {margin:0 auto;width:990px;font-size:1em}
 /* Header */
 header .container {height:131px;overflow:hidden;position:relative}
 /* Sidebar */
@@ -28,7 +28,7 @@ footer .container {text-align:center;line-height:1.667em;padding:26px 0}
 .tail-top1 {background-image:url(../images/general/tail-top1.gif)}
 .tail-top2 {background-image:url(../images/general/tail-top2.gif)}
 .tail-top3 {background-image:url(../images/general/tail-top3.gif)}
-/* form defaults */
+/* form defaults . isi input*/
 input, select, textarea {font-family:Arial, Helvetica, sans-serif;font-size:1em;vertical-align:middle;font-weight:normal;color:#393939;margin:0;padding:0}
 fieldset {border:0}
 /* lists */
@@ -77,6 +77,7 @@ a {color:#428301;outline:none}
 a:hover {text-decoration:none}
 h1 {padding:17px 0 0 44px;font-size:36px;line-height:1.2em}
 h1 a {text-decoration:none}
+/*judul sub menu*/
 h2 {color:#464646;font-size:30px;line-height:1.2em;margin-bottom:15px;letter-spacing:-1px}
 h2.extra {padding:30px 0 0 43px}
 h3 {font-size:26px;line-height:1.2em;color:#fff;margin-bottom:30px}
@@ -123,8 +124,8 @@ h5 {font-size:1em;line-height:1.667em;margin-bottom:10px}
 .box .border-top {background-image:url(../images/general/box-tail2.gif);background-repeat:repeat-x;width:100%}
 .box .inner1 {padding:7px 0 0 0}
 /* header */
-header nav {float:right;padding:13px 24px 0 0}
-header nav li {float:left;font-size:18px;line-height:3em;text-transform:uppercase;padding-left:21px;margin-left:19px;background:url(../images/general/divider.gif) repeat-y left top}
+header nav {float:right;padding:10px 24px 0 0}
+header nav li {float:left;font-size:18px;line-height:3em;text-transform:uppercase;padding-left:31px;margin-left:19px;background:url(../images/general/divider.gif) repeat-y left top}
 header nav li:first-child {background:none;padding-left:0;margin-left:0}
 header nav li a {color:#fff;text-decoration:none}
 header nav li.current a, header nav li a:hover {color:#82b704}
