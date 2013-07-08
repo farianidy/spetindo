@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="tentang_kami.aspx.cs" Inherits="spetindoProject.tentang_kami" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/admin.Master" AutoEventWireup="true" CodeBehind="tentangkami.aspx.cs" Inherits="spetindoProject.tentangkami" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentSlider" runat="server">
     <div class="inside bot-indent">
 	    <div id="slogan">
@@ -27,6 +27,5 @@
 		    </div>
 	    </div>
 </asp:Content>
-
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentAsideTemplate" runat="server">
 </asp:Content>
