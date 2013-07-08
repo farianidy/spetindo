@@ -105,7 +105,7 @@
                             </asp:DropDownList>
                         </li>
                         <li>
-                            <asp:TextBox ID="TextBoxLuas" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxLuas" runat="server"></asp:TextBox> Hektar
                         </li>
                         <li>
                             <asp:DropDownList ID="DropDownListStatusN" runat="server" Width="130px" Height="20px">
@@ -136,6 +136,7 @@
                 <!--<asp:GridView ID="GridView1" runat="server" CssClass="mGrid" PagerStyle-CssClass="pgr" GridLines="None"
                     EmptyDataText="Data tidak tersedia." >
                 </asp:GridView>-->
+                <br />
                 <asp:Panel ID="PanelPupuk" Visible=false runat="server">
                 Diberi Pupuk KCL dengan takaran
                 <asp:Label ID="LabelK" runat="server" Text="0"></asp:Label> Kg, Pupuk SP36 dengan takaran

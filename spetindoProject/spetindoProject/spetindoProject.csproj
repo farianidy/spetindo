@@ -70,6 +70,7 @@
     <Content Include="gridview\style.css" />
     <Content Include="hasil_modul_nasihat.aspx" />
     <Content Include="images\aluvial.JPG" />
+    <Content Include="images\ayu.jpg" />
     <Content Include="images\Barometer.jpg" />
     <Content Include="images\button\button_logout.png" />
     <Content Include="images\button\data_selesai.jpg" />
@@ -255,6 +256,7 @@
     <Content Include="tambah_kota.aspx" />
     <Content Include="tambah_prov.aspx" />
     <Content Include="tambah_pupuk.aspx" />
+    <Content Include="tentangkami.aspx" />
     <Content Include="tentang_kami.aspx" />
     <Content Include="Testing.aspx" />
     <Content Include="ubah_hama.aspx" />
@@ -574,6 +576,13 @@
     </Compile>
     <Compile Include="tambah_pupuk.aspx.designer.cs">
       <DependentUpon>tambah_pupuk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tentangkami.aspx.cs">
+      <DependentUpon>tentangkami.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tentangkami.aspx.designer.cs">
+      <DependentUpon>tentangkami.aspx</DependentUpon>
     </Compile>
     <Compile Include="tentang_kami.aspx.cs">
       <DependentUpon>tentang_kami.aspx</DependentUpon>

@@ -12,7 +12,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentTemplate" runat="server">
     <h2 class="extra">Berdasarkan perkiraan perhitungan di bawah ini lahan anda direkomendasikan untuk ditanami 
-        <asp:Label ID="LabelTanamanRekom" runat="server" Text="Label"></asp:Label> karena menghasilkan nilai rekomendasi yang paling besar</h2>
+        <asp:Label ID="LabelTanamanRekom" runat="server" Text="Label" Font-Bold=true></asp:Label> karena menghasilkan nilai rekomendasi yang paling besar</h2>
     <div class="box extra">
 	    <div class="border-right">
 		    <div class="border-bot">
@@ -37,33 +37,33 @@
 													    <article class="col-2 indent">
 														    <h4 class="aligncenter">Hasil Panen</h4>
 														    <ul class="info-list1 alt">
-															    <li><asp:Label ID="Label1" runat="server" Text="Label"> Kwintal</asp:Label></li>
-															    <li><asp:Label ID="Label2" runat="server" Text="Label"> Kwintal</asp:Label></li>
-															    <li><asp:Label ID="Label3" runat="server" Text="Label"> Kwintal</asp:Label></li>
+															    <li><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label> Kg</li>
+															    <li><asp:Label ID="Label2" runat="server" Text="Label"></asp:Label> Kg</li>
+															    <li><asp:Label ID="Label3" runat="server" Text="Label"></asp:Label> Kg</li>
 														    </ul>
 													    </article>
 													    <article class="col-3 indent">
 														    <h4 class="aligncenter">Harga Pasar</h4>
 														    <ul class="info-list1 alt">
-															    <li><asp:Label ID="LabelHargaPadi" runat="server" Text="Label"></asp:Label></li>
-															    <li><asp:Label ID="LabelHargaJagung" runat="server" Text="Label"></asp:Label></li>
-															    <li><asp:Label ID="LabelHargaKedelai" runat="server" Text="Label"></asp:Label></li>
+															    <li>Rp.<asp:Label ID="LabelHargaPadi" runat="server" Text="Label"></asp:Label></li>
+															    <li>Rp.<asp:Label ID="LabelHargaJagung" runat="server" Text="Label"></asp:Label></li>
+															    <li>Rp.<asp:Label ID="LabelHargaKedelai" runat="server" Text="Label"></asp:Label></li>
 														    </ul>
 													    </article>
                                                         <article class="col-4 indent">
 														    <h4 class="aligncenter">Total Pengeluaran</h4>
 														    <ul class="info-list1 alt">
-															    <li><asp:Label ID="LabelPengPadi" runat="server" Text="Label">Rp</asp:Label></li>
-															    <li><asp:Label ID="LabelPengJagung" runat="server" Text="Label">Rp</asp:Label></li>
-															    <li><asp:Label ID="LabelPengKedelai" runat="server" Text="Label">Rp</asp:Label></li>
+															    <li>Rp.<asp:Label ID="LabelPengPadi" runat="server" Text="Label">Rp</asp:Label></li>
+															    <li>Rp.<asp:Label ID="LabelPengJagung" runat="server" Text="Label">Rp</asp:Label></li>
+															    <li>Rp.<asp:Label ID="LabelPengKedelai" runat="server" Text="Label">Rp</asp:Label></li>
 														    </ul>
 													    </article>
 													    <article class="col-5 indent">
 														    <h4 class="aligncenter">Total Keuntungan</h4>
 														    <ul class="info-list1 alt">
-															    <li><asp:Label ID="LabelRekomPadi" runat="server" Text="Label"></asp:Label></li>
-															    <li><asp:Label ID="LabelRekomJagung" runat="server" Text="Label"></asp:Label></li>
-															    <li><asp:Label ID="LabelRekomKedelai" runat="server" Text="Label"></asp:Label></li>
+															    <li>Rp.<asp:Label ID="LabelRekomPadi" runat="server" Text="Label"></asp:Label></li>
+															    <li>Rp.<asp:Label ID="LabelRekomJagung" runat="server" Text="Label"></asp:Label></li>
+															    <li>Rp.<asp:Label ID="LabelRekomKedelai" runat="server" Text="Label"></asp:Label></li>
 														    </ul>
 													    </article>
 													    <div class="clear"></div>

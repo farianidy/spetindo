@@ -10,7 +10,7 @@
 namespace spetindoProject {
     
     
-    public partial class tentang_kami {
+    public partial class tentangkami {
         
         /// <summary>
         /// Ayu control.

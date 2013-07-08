@@ -38,11 +38,13 @@
                             <asp:DropDownList ID="listProvinsi" runat="server" AutoPostBack="True" onselectedindexchanged="listProvinsi_SelectedIndexChanged">
                             </asp:DropDownList>
                         </li>
+                        <li></li>
                         <li>
                             <asp:DropDownList ID="listKota" runat="server">
                             </asp:DropDownList>
                             <asp:Label ID="LabelIDKota" runat="server" Text="" Enabled="false" Visible="false"></asp:Label>
                         </li>
+                        <li></li>
                         <li>
                             <asp:DropDownList ID="listStatus" runat="server">
                             </asp:DropDownList>
@@ -56,10 +58,10 @@
                             <asp:Label ID="LabelIDPupuk" runat="server" Text="" Enabled="false" Visible="false"></asp:Label>
                         </li>
                         <li>
-                            <asp:TextBox ID="TextBoxLuLa" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxLuLa" runat="server"></asp:TextBox> Hektar
                         </li>
                         <li>
-                            <asp:TextBox ID="TextBoxKebPupuk" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxKebPupuk" runat="server"></asp:TextBox> Ton
                         </li>
                         <li>
                             <asp:Panel ID="PanelPengumuman" Visible=false runat="server">

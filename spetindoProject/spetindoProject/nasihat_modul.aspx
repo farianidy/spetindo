@@ -28,10 +28,7 @@
 				    <li>Suhu <br /> <a href="informasi_ukur_suhu.aspx" class="comments_link">Cara Ukur Suhu</a></li>
 				    </br>
                     <li>Ketinggian Tanah <br /> <a href="informasi_ukur_tinggi.aspx" class="comments_link">Cara Ukur Tinggi</a></li>
-				    </br>
                     <li>Luas Lahan</li>
-                    </br>
-                    <li>Hitung Pengeluaran</li>
                     <li>Biaya Sewa Tanah</li>
                     </br>
                     <li>Biaya Tenaga Pekerja</li>
@@ -70,13 +67,13 @@
                             <asp:ListItem Value="16">5359-More Hektar</asp:ListItem>
                         </asp:DropDownList></li>
                     <li></li>
-                    <li><asp:TextBox ID="TextBoxSewaTanah" runat="server"></asp:TextBox></li>
+                    <li>Rp. <asp:TextBox ID="TextBoxSewaTanah" runat="server"></asp:TextBox></li>
                     <li></li>
-                    <li><asp:TextBox ID="TextBoxTenagaKerja" runat="server"></asp:TextBox></li>
+                    <li>Rp. <asp:TextBox ID="TextBoxTenagaKerja" runat="server"></asp:TextBox></li>
                     <li></li>
-                    <li><asp:TextBox ID="TextBoxBiayaPupuk" runat="server"></asp:TextBox></li>
+                    <li>Rp. <asp:TextBox ID="TextBoxBiayaPupuk" runat="server"></asp:TextBox></li>
                     <li></li>
-                    <li><asp:TextBox ID="TextBoxLuasLahan" runat="server"></asp:TextBox></li>
+                    <li><asp:TextBox ID="TextBoxLuasLahan" runat="server"></asp:TextBox> Hektar</li>
                     <li></li>
 
 			    </ul>
