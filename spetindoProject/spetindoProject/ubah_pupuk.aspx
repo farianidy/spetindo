@@ -94,7 +94,7 @@
                             <asp:Label ID="Label1" runat="server" Text="" Enabled="false" Visible=false></asp:Label>
                         </li>
                         <li>
-                            Rp.<asp:TextBox ID="TextBoxHarga" runat="server"></asp:TextBox>
+                            Rp.<asp:TextBox ID="TextBoxHarga" runat="server"></asp:TextBox>/Kg
                         </li>
                         <li>
                             <asp:Panel ID="Panel1" Visible=false runat="server">

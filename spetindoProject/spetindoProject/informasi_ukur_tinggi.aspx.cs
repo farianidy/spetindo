@@ -25,6 +25,8 @@ namespace spetindoProject
                 LabelDataran.Text = "Dataran Rendah";
 
             LabelTinggi.Text = h.ToString();
+
+            PanelTinggi.Visible = true;
         }
 
         protected void ImageButtonKembali_Click(object sender, EventArgs e)
