@@ -60,7 +60,7 @@
                             <asp:TextBox ID="TextBoxNamaHama" runat="server"></asp:TextBox>
                         </li>
                         <li>
-                            <asp:TextBox ID="TextBoxPencegahan" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxPencegahan" runat="server" Width="200px" Height="50px"></asp:TextBox>
                         </li>
                         <li>
                             <asp:Label ID="LabelIDHama" runat="server" Text="" Enabled="false"></asp:Label>

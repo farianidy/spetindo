@@ -35,10 +35,13 @@
                             <p class="p0">Jika hasil perhitungan H <= 700 maka Dataran Tinggi</p>-->
                             
                             <p class="p0"><b>Masukkan Jumlah Tekanan Udara</b></p>
-                            <asp:TextBox ID="TextBoxTekanan" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxTekanan" runat="server"></asp:TextBox> Pascal
                             <asp:Button ID="ButtonHitung" runat="server" 
         Text="Hitung Ketinggian Tanah" onclick="ButtonHitung_Click"></asp:Button>
+                            <asp:Panel ID="PanelTinggi" Visible=false runat="server">
                             <p class="p0"><b>Lahan anda memiliki ketinggian <asp:Label ID="LabelTinggi" runat="server" Text=""></asp:Label> meter dpl sehingga tergolong <asp:Label ID="LabelDataran" runat="server" Text=""></asp:Label></b></p>			    
+                            </asp:Panel>
+                            <br />
                             <asp:ImageButton ID="ImageButtonKembali" runat="server" onclick="ImageButtonKembali_Click" ImageUrl="~/images/button/kembali.png" />
                         </article>
                         </form>

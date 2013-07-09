@@ -50,7 +50,7 @@
                             <td><asp:TextBox ID="TextBoxNama" runat="server"></asp:TextBox></td>
                         </li>
                         <li>
-                            <td><asp:TextBox ID="TextBoxPencegahan" runat="server"></asp:TextBox></td>
+                            <td><asp:TextBox ID="TextBoxPencegahan" runat="server" Width="200px" Height="50px"></asp:TextBox></td>
                         </li>
                         <li>
                             <asp:Panel ID="PanelPengumuman" Visible=false runat="server">
